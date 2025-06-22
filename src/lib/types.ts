@@ -1,8 +1,7 @@
-export type BakeryCategory = 'Brownies' | 'Muffins' | 'Croissants' | 'Cakes' | 'Danish';
+export type BakeryCategory = 'Bento Cakes' | '1/2 Kg Cakes' | 'Dry Cakes' | 'Cake Slices' | 'Danish';
 
 export type Category = {
   name: string;
-  icon: string;
 };
 
 export type BakeryItem = {

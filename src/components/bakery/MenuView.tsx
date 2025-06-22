@@ -82,7 +82,7 @@ const MenuView: React.FC<MenuViewProps> = ({
             <div className="bg-card py-2 px-4 shadow-sm sticky top-[68px] z-20 border-b">
                 <div className="flex justify-around rounded-lg bg-muted p-1">
                     <Button
-                        onClick={() => { setCurrentSection('cakes'); setSelectedCategory('Signature Collection'); }}
+                        onClick={() => { setCurrentSection('cakes'); setSelectedCategory('Cakes'); }}
                         variant={currentSection === 'cakes' ? 'default' : 'ghost'}
                         className="flex-1 transition-all"
                     >
@@ -104,9 +104,8 @@ const MenuView: React.FC<MenuViewProps> = ({
                         <div className="space-y-1">
                             {categories.map((category: Category) => (
                                 <button key={category.name} onClick={() => setSelectedCategory(category.name)}
-                                    className={`w-full p-2 text-xs font-medium transition-all duration-200 flex flex-col items-center text-center gap-1 rounded-none ${selectedCategory === category.name ? 'bg-accent text-accent-foreground border-r-4 border-primary' : 'text-muted-foreground hover:bg-accent/50'}`}>
-                                    <span className="text-lg">{category.icon}</span>
-                                    <span className="leading-tight">{category.name}</span>
+                                    className={`w-full h-16 p-2 text-sm font-medium flex items-center justify-center text-center transition-all duration-200 rounded-none ${selectedCategory === category.name ? 'bg-accent text-accent-foreground border-r-4 border-primary' : 'text-muted-foreground hover:bg-accent/50'}`}>
+                                    {category.name}
                                 </button>
                             ))}
                         </div>

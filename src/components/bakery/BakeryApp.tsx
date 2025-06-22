@@ -13,7 +13,7 @@ const BakeryApp = () => {
     const [currentView, setCurrentView] = useState<'menu' | 'customize' | 'cart'>('menu');
     const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null);
     const [cart, setCart] = useState<CartItem[]>([]);
-    const [selectedCategory, setSelectedCategory] = useState('Signature Collection');
+    const [selectedCategory, setSelectedCategory] = useState('Cakes');
     const [customization, setCustomization] = useState<Customization>({
         quantity: 1,
     });
@@ -95,7 +95,7 @@ const BakeryApp = () => {
     
     const getFilteredItems = () => {
         if (currentSection === 'cakes') {
-            if (selectedCategory === 'Signature Collection') return bakeryItems.slice(0, 4);
+            if (selectedCategory === 'Cakes') return bakeryItems.slice(0, 4);
             return bakeryItems.filter(item => item.category === selectedCategory);
         } else {
             return giftItems;

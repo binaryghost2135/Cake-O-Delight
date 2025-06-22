@@ -86,7 +86,7 @@ export const bakeryItems: BakeryItem[] = [
     { id: 3, name: "Box of 2", description: "A box containing two delicious cupcakes.", image: "https://i.postimg.cc/h423gSKy/Whats-App-Image-2025-06-22-at-8.jpg", category: "Cupcakes", aiHint: "cupcake box", referenceImages: boxOf2CupcakeReferenceImages },
     { id: 4, name: "Box of 4", description: "A box containing four delicious cupcakes.", image: "https://i.postimg.cc/fTZXHdG1/Whats-App-Image-2025-06-22-at-8.jpg", category: "Cupcakes", aiHint: "cupcake box", referenceImages: boxOf4CupcakeReferenceImages },
     { id: 19, name: "Box of 6", description: "A box containing six delicious cupcakes.", image: "https://i.postimg.cc/rsTJCPGP/Whats-App-Image-2025-06-23-at-12.jpg", category: "Cupcakes", aiHint: "cupcake box", referenceImages: boxOf6CupcakeReferenceImages },
-    { id: 20, name: "Box of 12", description: "A box containing twelve delicious cupcakes.", image: "https://placehold.co/100x100.png", category: "Cupcakes", aiHint: "cupcake box" },
+    { id: 20, name: "Box of 12", description: "A box containing twelve delicious cupcakes.", image: "https://i.postimg.cc/ryvdbrvq/Whats-App-Image-2025-06-23-at-12.jpg", category: "Cupcakes", aiHint: "cupcake box" },
 
     // Brownies
     { id: 5, name: "Walnut Brownie", description: "A gooey brownie with crunchy walnuts.", image: "https://placehold.co/100x100.png", category: "Brownies", aiHint: "walnut brownie" },

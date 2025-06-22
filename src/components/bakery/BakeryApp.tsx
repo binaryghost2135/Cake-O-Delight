@@ -69,7 +69,7 @@ const BakeryApp = () => {
             return itemDetail;
         }).join('\n\n');
         const message = `Hi! I'd like to place an order for the following items:\n\n${orderDetails}`;
-        const whatsappUrl = `https://wa.me/917405526423?text=${encodeURIComponent(message)}`;
+        const whatsappUrl = `https://wa.me/919910365323?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');
     };
     

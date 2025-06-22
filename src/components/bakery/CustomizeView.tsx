@@ -57,12 +57,12 @@ const CustomizeView: React.FC<CustomizeViewProps> = ({
                                     <div className="grid grid-cols-2 gap-4">
                                         {selectedItem.referenceImages.map(option => (
                                             <Button 
-                                                key={option.name} 
+                                                key={option.image} 
                                                 variant="outline" 
-                                                onClick={() => setCustomization({...customization, referenceImage: option.name})}
-                                                className={`h-auto p-2 border-2 flex-col gap-2 transition-all ${customization.referenceImage === option.name ? 'border-primary bg-accent text-accent-foreground' : 'border-input'}`}>
-                                                <Image src={option.image} alt={option.name} width={160} height={160} className="rounded-md object-cover" data-ai-hint="cake style" />
-                                                <span className="font-medium text-center">{option.name}</span>
+                                                onClick={() => setCustomization({...customization, referenceImage: option.image})}
+                                                className={`h-auto p-2 border-2 flex-col gap-2 transition-all ${customization.referenceImage === option.image ? 'border-primary bg-accent text-accent-foreground' : 'border-input'}`}>
+                                                <Image src={option.image} alt={option.name || 'Cake Style'} width={160} height={160} className="rounded-md object-cover" data-ai-hint="cake style" />
+                                                {option.name && <span className="font-medium text-center">{option.name}</span>}
                                             </Button>
                                         ))}
                                     </div>

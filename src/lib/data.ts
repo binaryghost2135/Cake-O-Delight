@@ -1,48 +1,48 @@
 import type { BakeryItem, Category, Option } from './types';
 
 const bentoCakeReferenceImages: Option[] = [
-    { name: 'Style 1', image: 'https://i.postimg.cc/ZKmPsk8j/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 2', image: 'https://i.postimg.cc/W4y65h8J/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 3', image: 'https://i.postimg.cc/g2NK6M6s/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 4', image: 'https://i.postimg.cc/sXZPqsHH/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 5', image: 'https://i.postimg.cc/8kMBbk6j/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 6', image: 'https://i.postimg.cc/1zXr0pGQ/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 7', image: 'https://i.postimg.cc/C5TCVXWh/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/ZKmPsk8j/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/W4y65h8J/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/g2NK6M6s/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/sXZPqsHH/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/8kMBbk6j/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/1zXr0pGQ/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/C5TCVXWh/Whats-App-Image-2025-06-22-at-8.jpg' },
 ];
 
 const halfKgCakeReferenceImages: Option[] = [
-    { name: 'Style 1', image: 'https://i.postimg.cc/KzJNtJVx/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 2', image: 'https://i.postimg.cc/440vZ7RL/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 3', image: 'https://i.postimg.cc/sfHmXH7J/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 4', image: 'https://i.postimg.cc/NFK1mYmk/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 5', image: 'https://i.postimg.cc/Z5pxwTgf/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 6', image: 'https://i.postimg.cc/3NNZ125p/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 7', image: 'https://i.postimg.cc/fR9B173f/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 8', image: 'https://i.postimg.cc/FsJyKr99/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 9', image: 'https://i.postimg.cc/BQ8g15Cf/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 10', image: 'https://i.postimg.cc/283H7NrJ/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 11', image: 'https://i.postimg.cc/bvPHM7fq/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 12', image: 'https://i.postimg.cc/3NqFcWYq/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/KzJNtJVx/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/440vZ7RL/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/sfHmXH7J/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/NFK1mYmk/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/Z5pxwTgf/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/3NNZ125p/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/fR9B173f/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/FsJyKr99/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/BQ8g15Cf/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/283H7NrJ/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/bvPHM7fq/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/3NqFcWYq/Whats-App-Image-2025-06-22-at-8.jpg' },
 ];
 
 const oneKgCakeReferenceImages: Option[] = [
-    { name: 'Style 1', image: 'https://i.postimg.cc/LsnqXvpr/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 2', image: 'https://i.postimg.cc/SQ8MCZM4/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 3', image: 'https://i.postimg.cc/BbWPRFRR/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 4', image: 'https://i.postimg.cc/25M1Bvj3/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 5', image: 'https://i.postimg.cc/nLPDYg2F/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 6', image: 'https://i.postimg.cc/htCzc6HL/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 7', image: 'https://i.postimg.cc/XqwBWJbq/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 8', image: 'https://i.postimg.cc/ydRkhdWj/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 9', image: 'https://i.postimg.cc/j5nJ8c3z/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 10', image: 'https://i.postimg.cc/02Y7Rtkn/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/LsnqXvpr/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/SQ8MCZM4/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/BbWPRFRR/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/25M1Bvj3/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/nLPDYg2F/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/htCzc6HL/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/XqwBWJbq/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/ydRkhdWj/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/j5nJ8c3z/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/02Y7Rtkn/Whats-App-Image-2025-06-22-at-8.jpg' },
 ];
 
 const dryCakeReferenceImages: Option[] = [
     { name: 'Mava Cake', image: 'https://i.postimg.cc/50wpZVn3/Whats-App-Image-2025-06-22-at-11.jpg' },
-    { name: 'Style 2', image: 'https://i.postimg.cc/Xq4xWzP0/Whats-App-Image-2025-06-22-at-11.jpg' },
-    { name: 'Style 3', image: 'https://i.postimg.cc/50cn70qy/Whats-App-Image-2025-06-22-at-11.jpg' },
-    { name: 'Style 4', image: 'https://i.postimg.cc/T1003c85/Whats-App-Image-2025-06-22-at-11.jpg' },
+    { name: '', image: 'https://i.postimg.cc/Xq4xWzP0/Whats-App-Image-2025-06-22-at-11.jpg' },
+    { name: '', image: 'https://i.postimg.cc/50cn70qy/Whats-App-Image-2025-06-22-at-11.jpg' },
+    { name: '', image: 'https://i.postimg.cc/T1003c85/Whats-App-Image-2025-06-22-at-11.jpg' },
 ];
 
 

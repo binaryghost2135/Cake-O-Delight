@@ -28,6 +28,6 @@ export type CartItem = {
 };
 
 export type Option = {
-    name: string;
+    name?: string;
     image: string;
 };

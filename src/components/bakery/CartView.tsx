@@ -39,7 +39,13 @@ const CartView: React.FC<CartViewProps> = ({ cart, setCurrentView, handleRemoveF
                         </div>
                     ) : (
                         <div className="p-4 space-y-4 pb-40">
-                            {cart.map(item => (
+                            {cart.map(item => {
+                                const selectedOption = item.item.referenceImages?.find(
+                                    opt => opt.image === item.customization.referenceImage
+                                );
+                                const styleName = selectedOption?.name;
+
+                                return (
                                 <Card key={item.cartId} className="overflow-hidden">
                                     <CardContent className="p-3 flex items-start gap-4">
                                         <Image 
@@ -54,9 +60,9 @@ const CartView: React.FC<CartViewProps> = ({ cart, setCurrentView, handleRemoveF
                                             <div className="flex justify-between items-start">
                                                 <div>
                                                     <h3 className="font-bold text-foreground text-md">{item.item.name}</h3>
-                                                    { item.customization.referenceImage &&
+                                                    { styleName &&
                                                         <p className="text-muted-foreground text-xs mt-1">
-                                                            Style: {item.customization.referenceImage}
+                                                            Style: {styleName}
                                                         </p>
                                                     }
                                                 </div>
@@ -78,7 +84,7 @@ const CartView: React.FC<CartViewProps> = ({ cart, setCurrentView, handleRemoveF
                                         </div>
                                     </CardContent>
                                 </Card>
-                            ))}
+                            )})}
                         </div>
                     )}
                 </ScrollArea>

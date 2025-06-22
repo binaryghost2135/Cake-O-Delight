@@ -21,7 +21,7 @@ const BakeryApp = () => {
         setSelectedItem(item);
         const initialCustomization: Customization = { quantity: 1 };
         if (item.referenceImages && item.referenceImages.length > 0) {
-            initialCustomization.referenceImage = item.referenceImages[0].name;
+            initialCustomization.referenceImage = item.referenceImages[0].image;
         }
         setCustomization(initialCustomization);
         setCurrentView('customize');
@@ -58,7 +58,13 @@ const BakeryApp = () => {
         const orderDetails = cart.map(cartItem => {
             let itemDetail = `${cartItem.item.name} (x${cartItem.customization.quantity})`;
             if (cartItem.customization.referenceImage) {
-                itemDetail += `\n  - Style: ${cartItem.customization.referenceImage}`;
+                const selectedOption = cartItem.item.referenceImages?.find(
+                    opt => opt.image === cartItem.customization.referenceImage
+                );
+                const styleName = selectedOption?.name;
+                if (styleName) {
+                    itemDetail += `\n  - Style: ${styleName}`;
+                }
             }
             return itemDetail;
         }).join('\n\n');

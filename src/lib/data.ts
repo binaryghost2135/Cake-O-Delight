@@ -61,7 +61,7 @@ export const bakeryItems: BakeryItem[] = [
 
     // Brownies
     { id: 5, name: "Walnut Brownie", description: "A gooey brownie with crunchy walnuts.", image: "https://i.postimg.cc/h423gSKy/Whats-App-Image-2025-06-22-at-8.jpg", category: "Brownies", aiHint: "walnut brownie" },
-    { id: 6, name: "Fudge Brownie", description: "Extra chocolaty and fudgy brownie.", image: "https://placehold.co/100x100.png", category: "Brownies", aiHint: "fudge brownie" },
+    { id: 6, name: "Fudge Brownie", description: "Extra chocolaty and fudgy brownie.", image: "https://i.postimg.cc/h423gSKy/Whats-App-Image-2025-06-22-at-8.jpg", category: "Brownies", aiHint: "fudge brownie" },
     
     // Cheesecakes
     { id: 7, name: "New York Cheesecake", description: "A slice of classic New York style cheesecake.", image: "https://placehold.co/100x100.png", category: "Cheesecakes", aiHint: "new york cheesecake" },

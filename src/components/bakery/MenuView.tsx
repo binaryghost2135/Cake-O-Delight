@@ -8,6 +8,7 @@ import { categories } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { ScrollArea } from '@/components/ui/scroll-area';
 
 type MenuViewProps = {
     getFilteredItems: () => MenuItem[];
@@ -70,15 +71,17 @@ const MenuView: React.FC<MenuViewProps> = ({
             </header>
             
             <div className="flex flex-1 overflow-hidden">
-                <nav className="w-24 bg-card border-r pt-4 overflow-y-auto">
-                    <div className="space-y-1">
-                        {categories.map((category: Category) => (
-                            <button key={category.name} onClick={() => setSelectedCategory(category.name)}
-                                className={`w-full h-16 p-2 text-sm font-medium flex items-center justify-center text-center transition-all duration-200 rounded-none ${selectedCategory === category.name ? 'bg-accent text-accent-foreground border-r-4 border-primary' : 'text-muted-foreground hover:bg-accent/50'}`}>
-                                {category.name}
-                            </button>
-                        ))}
-                    </div>
+                <nav className="w-24 bg-card border-r pt-4">
+                    <ScrollArea className="h-full">
+                        <div className="space-y-1 pr-2">
+                            {categories.map((category: Category) => (
+                                <button key={category.name} onClick={() => setSelectedCategory(category.name)}
+                                    className={`w-full h-16 p-2 text-sm font-medium flex items-center justify-center text-center transition-all duration-200 rounded-none ${selectedCategory === category.name ? 'bg-accent text-accent-foreground border-r-4 border-primary' : 'text-muted-foreground hover:bg-accent/50'}`}>
+                                    {category.name}
+                                </button>
+                            ))}
+                        </div>
+                    </ScrollArea>
                 </nav>
                 <main className="flex-1 p-4 overflow-y-auto pb-8">
                      <h2 className="text-xl font-bold text-foreground mb-4">{selectedCategory}</h2>

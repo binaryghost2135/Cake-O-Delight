@@ -45,6 +45,11 @@ const dryCakeReferenceImages: Option[] = [
     { name: '', image: 'https://i.postimg.cc/T1003c85/Whats-App-Image-2025-06-22-at-11.jpg' },
 ];
 
+const boxOf2CupcakeReferenceImages: Option[] = [
+    { name: '', image: 'https://i.postimg.cc/h423gSKy/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/sxHnJJnd/Whats-App-Image-2025-06-22-at-8.jpg' },
+];
+
 
 export const bakeryItems: BakeryItem[] = [
     // Cakes
@@ -54,7 +59,7 @@ export const bakeryItems: BakeryItem[] = [
     { id: 18, name: "Dry Cake", description: "A classic dry cake, perfect with tea.", image: "https://i.postimg.cc/T1003c85/Whats-App-Image-2025-06-22-at-11.jpg", category: "Cakes", aiHint: "dry cake", referenceImages: dryCakeReferenceImages },
 
     // Cupcakes
-    { id: 3, name: "Box of 2", description: "A box containing two delicious cupcakes.", image: "https://i.postimg.cc/h423gSKy/Whats-App-Image-2025-06-22-at-8.jpg", category: "Cupcakes", aiHint: "cupcake box" },
+    { id: 3, name: "Box of 2", description: "A box containing two delicious cupcakes.", image: "https://i.postimg.cc/h423gSKy/Whats-App-Image-2025-06-22-at-8.jpg", category: "Cupcakes", aiHint: "cupcake box", referenceImages: boxOf2CupcakeReferenceImages },
     { id: 4, name: "Box of 4", description: "A box containing four delicious cupcakes.", image: "https://placehold.co/100x100.png", category: "Cupcakes", aiHint: "cupcake box" },
     { id: 19, name: "Box of 6", description: "A box containing six delicious cupcakes.", image: "https://placehold.co/100x100.png", category: "Cupcakes", aiHint: "cupcake box" },
     { id: 20, name: "Box of 12", description: "A box containing twelve delicious cupcakes.", image: "https://placehold.co/100x100.png", category: "Cupcakes", aiHint: "cupcake box" },

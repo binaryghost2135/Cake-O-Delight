@@ -2,12 +2,12 @@ import type { BakeryItem, Category, Option } from './types';
 
 export const bakeryItems: BakeryItem[] = [
     // Cakes
-    { id: 1, name: "Bento Cakes", description: "A small, cute bento cake for any occasion.", originalPrice: 320, discountedPrice: 256, discount: 20, image: "https://placehold.co/100x100.png", category: "Cakes", aiHint: "bento cake" },
-    { id: 2, name: "1/2 Kg Cakes", description: "A delicious 1/2 Kg cake, perfect for small celebrations.", originalPrice: 300, discountedPrice: 240, discount: 20, image: "https://placehold.co/100x100.png", category: "Cakes", aiHint: "cake" },
+    { id: 1, name: "Red Velvet Cake", description: "A slice of classic red velvet cake.", originalPrice: 150, discountedPrice: 120, discount: 20, image: "https://placehold.co/100x100.png", category: "Cakes", aiHint: "red velvet cake" },
+    { id: 2, name: "Chocolate Fudge Cake", description: "Rich and decadent chocolate fudge cake slice.", originalPrice: 140, discountedPrice: 112, discount: 20, image: "https://placehold.co/100x100.png", category: "Cakes", aiHint: "chocolate cake" },
 
     // Cupcakes
-    { id: 3, name: "1Kg Cakes", description: "A full 1Kg cake to celebrate in style.", originalPrice: 150, discountedPrice: 120, discount: 20, image: "https://placehold.co/100x100.png", category: "Cupcakes", aiHint: "cake" },
-    { id: 4, name: "Dry Cakes", description: "A variety of delicious and flavorful dry cakes.", originalPrice: 140, discountedPrice: 112, discount: 20, image: "https://placehold.co/100x100.png", category: "Cupcakes", aiHint: "dry cake" },
+    { id: 3, name: "Blueberry Cupcake", description: "A fluffy cupcake with blueberry frosting.", originalPrice: 90, discountedPrice: 72, discount: 20, image: "https://placehold.co/100x100.png", category: "Cupcakes", aiHint: "blueberry cupcake" },
+    { id: 4, name: "Chocolate Chip Cupcake", description: "Classic vanilla cupcake with chocolate chips.", originalPrice: 80, discountedPrice: 64, discount: 20, image: "https://placehold.co/100x100.png", category: "Cupcakes", aiHint: "chocolate chip cupcake" },
 ];
 
 export const categories: Category[] = [

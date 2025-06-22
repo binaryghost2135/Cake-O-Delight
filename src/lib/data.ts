@@ -1,25 +1,48 @@
 import type { BakeryItem, Category, Option } from './types';
 
 export const bakeryItems: BakeryItem[] = [
-    { id: 1, name: "Double Chocolate Brownie", description: "Rich, fudgy double chocolate brownie.", originalPrice: 180, discountedPrice: 145, discount: 19, image: "https://placehold.co/100x100.png", category: "Bento Cakes", aiHint: "chocolate brownie" },
-    { id: 2, name: "Walnut Brownie", description: "Decadent brownie loaded with crunchy walnuts.", originalPrice: 220, discountedPrice: 175, discount: 20, image: "https://placehold.co/100x100.png", category: "Bento Cakes", aiHint: "walnut brownie" },
-    { id: 3, name: "Blueberry Muffin", description: "Fresh baked blueberry muffin bursting with flavor.", originalPrice: 200, discountedPrice: 160, discount: 20, image: "https://placehold.co/100x100.png", category: "1/2 Kg Cakes", aiHint: "blueberry muffin" },
-    { id: 4, name: "Chocolate Chip Muffin", description: "Classic chocolate chip muffin with premium chips.", originalPrice: 190, discountedPrice: 152, discount: 20, image: "https://placehold.co/100x100.png", category: "1/2 Kg Cakes", aiHint: "chocolate muffin" },
-    { id: 5, name: "Chocolate Croissant", description: "Buttery, flaky croissant filled with rich chocolate.", originalPrice: 250, discountedPrice: 200, discount: 20, image: "https://placehold.co/100x100.png", category: "Dry Cakes", aiHint: "chocolate croissant" },
-    { id: 6, name: "Almond Croissant", description: "Traditional French almond croissant.", originalPrice: 280, discountedPrice: 224, discount: 20, image: "https://placehold.co/100x100.png", category: "Dry Cakes", aiHint: "almond croissant" },
-    { id: 7, name: "Red Velvet Cake Slice", description: "Classic red velvet cake with cream cheese frosting.", originalPrice: 320, discountedPrice: 256, discount: 20, image: "https://placehold.co/100x100.png", category: "Cake Slices", aiHint: "red velvet cake" },
-    { id: 8, name: "Chocolate Fudge Cake", description: "Rich, moist chocolate cake with fudge frosting.", originalPrice: 300, discountedPrice: 240, discount: 20, image: "https://placehold.co/100x100.png", category: "Cake Slices", aiHint: "fudge cake" },
-    { id: 9, name: "Apple Cinnamon Danish", description: "Flaky danish pastry with spiced apple filling.", originalPrice: 220, discountedPrice: 176, discount: 20, image: "https://placehold.co/100x100.png", category: "Danish", aiHint: "apple danish" },
-    { id: 10, name: "Cheese Danish", description: "Traditional cheese danish with creamy cheese.", originalPrice: 200, discountedPrice: 160, discount: 20, image: "https://placehold.co/100x100.png", category: "Danish", aiHint: "cheese danish" }
+    // Cakes
+    { id: 1, name: "Red Velvet Cake", description: "Classic red velvet cake with cream cheese frosting.", originalPrice: 320, discountedPrice: 256, discount: 20, image: "https://placehold.co/100x100.png", category: "Cakes", aiHint: "red velvet cake" },
+    { id: 2, name: "Chocolate Fudge Cake", description: "Rich, moist chocolate cake with fudge frosting.", originalPrice: 300, discountedPrice: 240, discount: 20, image: "https://placehold.co/100x100.png", category: "Cakes", aiHint: "fudge cake" },
+
+    // Cupcakes
+    { id: 3, name: "Blueberry Cupcake", description: "Fresh baked blueberry cupcake bursting with flavor.", originalPrice: 150, discountedPrice: 120, discount: 20, image: "https://placehold.co/100x100.png", category: "Cupcakes", aiHint: "blueberry cupcake" },
+    { id: 4, name: "Chocolate Chip Cupcake", description: "Classic chocolate chip cupcake with premium chips.", originalPrice: 140, discountedPrice: 112, discount: 20, image: "https://placehold.co/100x100.png", category: "Cupcakes", aiHint: "chocolate cupcake" },
+
+    // Brownies
+    { id: 5, name: "Double Chocolate Brownie", description: "Rich, fudgy double chocolate brownie.", originalPrice: 180, discountedPrice: 145, discount: 19, image: "https://placehold.co/100x100.png", category: "Brownies", aiHint: "chocolate brownie" },
+    { id: 6, name: "Walnut Brownie", description: "Decadent brownie loaded with crunchy walnuts.", originalPrice: 220, discountedPrice: 175, discount: 20, image: "https://placehold.co/100x100.png", category: "Brownies", aiHint: "walnut brownie" },
+
+    // Cheesecakes
+    { id: 7, name: "New York Cheesecake", description: "Creamy, classic New York style cheesecake.", originalPrice: 350, discountedPrice: 280, discount: 20, image: "https://placehold.co/100x100.png", category: "Cheesecakes", aiHint: "new york cheesecake" },
+    { id: 8, name: "Strawberry Cheesecake", description: "Cheesecake topped with fresh strawberry sauce.", originalPrice: 380, discountedPrice: 304, discount: 20, image: "https://placehold.co/100x100.png", category: "Cheesecakes", aiHint: "strawberry cheesecake" },
+    
+    // Jar cakes
+    { id: 9, name: "Red Velvet Jar Cake", description: "Layers of red velvet cake and cream cheese frosting in a jar.", originalPrice: 250, discountedPrice: 200, discount: 20, image: "https://placehold.co/100x100.png", category: "Jar cakes", aiHint: "jar cake" },
+    { id: 10, name: "Chocolate Jar Cake", description: "Decadent chocolate cake and fudge in a convenient jar.", originalPrice: 240, discountedPrice: 192, discount: 20, image: "https://placehold.co/100x100.png", category: "Jar cakes", aiHint: "chocolate jar cake" },
+
+    // Bombolonis
+    { id: 11, name: "Custard Bomboloni", description: "Italian doughnut filled with creamy custard.", originalPrice: 180, discountedPrice: 144, discount: 20, image: "https://placehold.co/100x100.png", category: "Bombolonis", aiHint: "custard bomboloni" },
+    { id: 12, name: "Chocolate Bomboloni", description: "Soft doughnut filled with rich chocolate cream.", originalPrice: 190, discountedPrice: 152, discount: 20, image: "https://placehold.co/100x100.png", category: "Bombolonis", aiHint: "chocolate bomboloni" },
+
+    // HAMPERS
+    { id: 13, name: "Festive Hamper", description: "A beautiful hamper with a selection of our best treats.", originalPrice: 1500, discountedPrice: 1200, discount: 20, image: "https://placehold.co/100x100.png", category: "HAMPERS", aiHint: "gift hamper" },
+    { id: 14, name: "Celebration Hamper", description: "The perfect hamper for any celebration.", originalPrice: 2000, discountedPrice: 1600, discount: 20, image: "https://placehold.co/100x100.png", category: "HAMPERS", aiHint: "celebration hamper" },
+
+    // Combos
+    { id: 15, name: "Coffee & Cake Combo", description: "Your choice of coffee with a slice of cake.", originalPrice: 400, discountedPrice: 320, discount: 20, image: "https://placehold.co/100x100.png", category: "Combos", aiHint: "coffee cake" },
+    { id: 16, name: "Brownie & Ice Cream", description: "A warm brownie served with a scoop of vanilla ice cream.", originalPrice: 300, discountedPrice: 240, discount: 20, image: "https://placehold.co/100x100.png", category: "Combos", aiHint: "brownie ice cream" },
 ];
 
 export const categories: Category[] = [
     { name: 'Cakes' },
-    { name: 'Bento Cakes' },
-    { name: '1/2 Kg Cakes' },
-    { name: 'Dry Cakes' },
-    { name: 'Cake Slices' },
-    { name: 'Danish' }
+    { name: 'Cupcakes' },
+    { name: 'Brownies' },
+    { name: 'Cheesecakes' },
+    { name: 'Jar cakes' },
+    { name: 'Bombolonis' },
+    { name: 'HAMPERS' },
+    { name: 'Combos' }
 ];
 
 export const referenceImageOptions: Option[] = [

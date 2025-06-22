@@ -1,4 +1,4 @@
-export type BakeryCategory = 'Bento Cakes' | '1/2 Kg Cakes' | 'Dry Cakes' | 'Cake Slices' | 'Danish';
+export type BakeryCategory = 'Cakes' | 'Cupcakes' | 'Brownies' | 'Cheesecakes' | 'Jar cakes' | 'Bombolonis' | 'HAMPERS' | 'Combos';
 
 export type Category = {
   name: string;

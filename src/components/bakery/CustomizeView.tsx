@@ -63,7 +63,7 @@ const CustomizeView: React.FC<CustomizeViewProps> = ({
                                     {referenceImageOptions.map(option => (
                                         <Button key={option.name} variant={customization.referenceImage === option.name ? 'default' : 'outline'} onClick={() => setCustomization({...customization, referenceImage: option.name})}
                                             className="h-auto p-1 border-2 transition-all data-[state=active]:bg-accent data-[state=active]:text-accent-foreground">
-                                            <Image src={option.image} alt={option.name} width={90} height={90} className="rounded-md object-cover" data-ai-hint="cake style" />
+                                            <Image src={option.image} alt={option.name} width={110} height={110} className="rounded-md object-cover" data-ai-hint="cake style" />
                                         </Button>
                                     ))}
                                 </div>

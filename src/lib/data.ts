@@ -110,6 +110,14 @@ export const bakeryItems: BakeryItem[] = [
     { id: 11, name: "Custard Bomboloni", description: "Italian doughnut filled with creamy custard.", image: "https://placehold.co/100x100.png", category: "Bombolonis", aiHint: "custard bomboloni" },
     { id: 12, name: "Chocolate Bomboloni", description: "Soft doughnut filled with rich chocolate.", image: "https://placehold.co/100x100.png", category: "Bombolonis", aiHint: "chocolate bomboloni" },
 
+    // Chocolates
+    { id: 21, name: "Assorted Chocolates Box", description: "A box of fine assorted chocolates.", image: "https://placehold.co/100x100.png", category: "Chocolates", aiHint: "assorted chocolates" },
+    { id: 22, name: "Chocolate Bar", description: "A rich and decadent chocolate bar.", image: "https://placehold.co/100x100.png", category: "Chocolates", aiHint: "chocolate bar" },
+
+    // Cookies
+    { id: 23, name: "Chocolate Chip Cookies", description: "Classic cookies with chocolate chips.", image: "https://placehold.co/100x100.png", category: "Cookies", aiHint: "chocolate chip cookies" },
+    { id: 24, name: "Oatmeal Cookies", description: "Healthy and delicious oatmeal cookies.", image: "https://placehold.co/100x100.png", category: "Cookies", aiHint: "oatmeal cookies" },
+
     // HAMPERS
     { id: 13, name: "Festive Hamper", description: "A beautiful hamper with assorted goodies.", image: "https://placehold.co/100x100.png", category: "HAMPERS", aiHint: "festive hamper" },
     { id: 14, name: "Celebration Hamper", description: "The perfect gift hamper for any celebration.", image: "https://placehold.co/100x100.png", category: "HAMPERS", aiHint: "celebration hamper" },
@@ -126,6 +134,8 @@ export const categories: Category[] = [
     { name: 'Cheesecakes' },
     { name: 'Jar cakes' },
     { name: 'Bombolonis' },
+    { name: 'Chocolates' },
+    { name: 'Cookies' },
     { name: 'HAMPERS' },
     { name: 'Combos' },
 ];

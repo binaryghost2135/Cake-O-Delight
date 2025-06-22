@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import type { BakeryItem, GiftItem, MenuItem, Customization, CartItem } from '@/lib/types';
 import { bakeryItems, giftItems, sizeOptions, beverageOptions, addonOptions } from '@/lib/data';
 import MenuView from './MenuView';
@@ -21,6 +21,7 @@ const BakeryApp = () => {
         quantity: 1,
     });
     const [currentSection, setCurrentSection] = useState<'cakes' | 'gifts'>('cakes');
+    const cartIdCounter = useRef(0);
 
     const getOptionPrice = (options: { name: string, price: number }[], selectedName: string) => {
         const option = options.find(opt => opt.name === selectedName);
@@ -60,10 +61,11 @@ const BakeryApp = () => {
     const handleAddToCart = () => {
         if (!selectedItem) return;
         const itemCurrentPrice = calculateItemCustomizationPrice(selectedItem, customization);
+        cartIdCounter.current += 1;
         const cartItem: CartItem = { 
             item: selectedItem, 
             customization, 
-            cartId: Date.now(), 
+            cartId: cartIdCounter.current, 
             itemCurrentPrice 
         };
         setCart([...cart, cartItem]);

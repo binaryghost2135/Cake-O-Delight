@@ -83,13 +83,17 @@ const MenuView: React.FC<MenuViewProps> = ({
                         </div>
                     </ScrollArea>
                 </nav>
-                <main className="flex-1 p-4 overflow-y-auto pb-8">
-                     <h2 className="text-xl font-bold text-foreground mb-4">{selectedCategory}</h2>
-                    <div className="space-y-4">
-                        {filteredItems.map((item) => (
-                           <MenuItemCard key={item.id} item={item} onAdd={() => handleSelectItem(item)} />
-                        ))}
-                    </div>
+                <main className="flex-1 overflow-hidden">
+                    <ScrollArea className="h-full">
+                        <div className="p-4 pb-8">
+                            <h2 className="text-xl font-bold text-foreground mb-4">{selectedCategory}</h2>
+                            <div className="space-y-4">
+                                {filteredItems.map((item) => (
+                                   <MenuItemCard key={item.id} item={item} onAdd={() => handleSelectItem(item)} />
+                                ))}
+                            </div>
+                        </div>
+                    </ScrollArea>
                 </main>
             </div>
         </div>

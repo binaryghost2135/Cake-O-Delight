@@ -6,6 +6,7 @@ import { ArrowLeft, Plus, Minus } from 'lucide-react';
 import type { MenuItem, Customization, Option } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { ScrollArea } from '@/components/ui/scroll-area';
 
 type CustomizeViewProps = {
     selectedItem: MenuItem;
@@ -31,41 +32,45 @@ const CustomizeView: React.FC<CustomizeViewProps> = ({
                 <h1 className="text-xl font-bold text-foreground">Customise Item</h1>
             </header>
 
-            <main className="flex-grow overflow-y-auto p-4 space-y-4 pb-40">
-                <Card>
-                    <CardContent className="p-4 flex items-center gap-4">
-                        <Image 
-                            src={selectedItem.image} 
-                            alt={selectedItem.name} 
-                            width={80} 
-                            height={80} 
-                            className="rounded-lg object-cover w-20 h-20 bg-secondary"
-                            data-ai-hint={selectedItem.aiHint}
-                        />
-                        <div className="flex-1">
-                            <h3 className="font-bold text-foreground text-lg">{selectedItem.name}</h3>
-                            <p className="text-lg font-bold text-foreground/80 mt-1">
-                                ₹{selectedItem.discountedPrice}
-                            </p>
-                        </div>
-                    </CardContent>
-                </Card>
+            <main className="flex-grow overflow-hidden">
+                <ScrollArea className="h-full">
+                    <div className="p-4 space-y-4 pb-40">
+                        <Card>
+                            <CardContent className="p-4 flex items-center gap-4">
+                                <Image 
+                                    src={selectedItem.image} 
+                                    alt={selectedItem.name} 
+                                    width={80} 
+                                    height={80} 
+                                    className="rounded-lg object-cover w-20 h-20 bg-secondary"
+                                    data-ai-hint={selectedItem.aiHint}
+                                />
+                                <div className="flex-1">
+                                    <h3 className="font-bold text-foreground text-lg">{selectedItem.name}</h3>
+                                    <p className="text-lg font-bold text-foreground/80 mt-1">
+                                        ₹{selectedItem.discountedPrice}
+                                    </p>
+                                </div>
+                            </CardContent>
+                        </Card>
 
-                <Card>
-                    <CardHeader>
-                        <CardTitle className="text-lg">Reference Images</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <div className="grid grid-cols-3 gap-3">
-                            {referenceImageOptions.map(option => (
-                                <Button key={option.name} variant={customization.referenceImage === option.name ? 'default' : 'outline'} onClick={() => setCustomization({...customization, referenceImage: option.name})}
-                                    className="h-auto p-1 border-2 transition-all data-[state=active]:bg-accent data-[state=active]:text-accent-foreground">
-                                    <Image src={option.image} alt={option.name} width={90} height={90} className="rounded-md object-cover" data-ai-hint="cake style" />
-                                </Button>
-                            ))}
-                        </div>
-                    </CardContent>
-                </Card>
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="text-lg">Reference Images</CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <div className="grid grid-cols-3 gap-3">
+                                    {referenceImageOptions.map(option => (
+                                        <Button key={option.name} variant={customization.referenceImage === option.name ? 'default' : 'outline'} onClick={() => setCustomization({...customization, referenceImage: option.name})}
+                                            className="h-auto p-1 border-2 transition-all data-[state=active]:bg-accent data-[state=active]:text-accent-foreground">
+                                            <Image src={option.image} alt={option.name} width={90} height={90} className="rounded-md object-cover" data-ai-hint="cake style" />
+                                        </Button>
+                                    ))}
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </div>
+                </ScrollArea>
             </main>
 
             <footer className="sticky bottom-0 left-0 right-0 z-20 bg-card p-4 border-t shadow-[0_-4px_12px_rgba(0,0,0,0.05)]">

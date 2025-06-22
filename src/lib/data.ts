@@ -48,14 +48,11 @@ export const categories: Category[] = [
 ];
 
 export const referenceImageOptions: Option[] = [
-    { name: 'Style 1', image: 'https://placehold.co/90x90.png' },
-    { name: 'Style 2', image: 'https://placehold.co/90x90.png' },
-    { name: 'Style 3', image: 'https://placehold.co/90x90.png' },
-    { name: 'Style 4', image: 'https://placehold.co/90x90.png' },
-    { name: 'Style 5', image: 'https://placehold.co/90x90.png' },
-    { name: 'Style 6', image: 'https://placehold.co/90x90.png' },
-    { name: 'Style 7', image: 'https://placehold.co/90x90.png' },
-    { name: 'Style 8', image: 'https://placehold.co/90x90.png' },
-    { name: 'Style 9', image: 'https://placehold.co/90x90.png' },
-    { name: 'Style 10', image: 'https://placehold.co/90x90.png' }
+    { name: 'Style 1', image: 'https://i.postimg.cc/ZKmPsk8j/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: 'Style 2', image: 'https://i.postimg.cc/W4y65h8J/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: 'Style 3', image: 'https://i.postimg.cc/g2NK6M6s/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: 'Style 4', image: 'https://i.postimg.cc/sXZPqsHH/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: 'Style 5', image: 'https://i.postimg.cc/8kMBbk6j/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: 'Style 6', image: 'https://i.postimg.cc/1zXr0pGQ/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: 'Style 7', image: 'https://i.postimg.cc/C5TCVXWh/Whats-App-Image-2025-06-22-at-8.jpg' },
 ];

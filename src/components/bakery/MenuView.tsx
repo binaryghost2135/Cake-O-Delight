@@ -34,11 +34,7 @@ const MenuItemCard: React.FC<{ item: MenuItem, onAdd: () => void }> = ({ item, o
                 <div className="flex-1">
                     <h3 className="font-bold text-foreground text-md">{item.name}</h3>
                     <p className="text-muted-foreground text-xs my-1">{item.description}</p>
-                    <div className="flex items-baseline my-2 gap-2">
-                        <span className="text-lg font-bold text-foreground">₹{item.discountedPrice}</span>
-                        <span className="text-sm text-muted-foreground line-through">₹{item.originalPrice}</span>
-                    </div>
-                    <Button onClick={onAdd} size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold">
+                    <Button onClick={onAdd} size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold mt-2">
                         Add <Plus className="w-4 h-4 ml-1" />
                     </Button>
                 </div>

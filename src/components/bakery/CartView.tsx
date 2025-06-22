@@ -13,11 +13,10 @@ type CartViewProps = {
     setCurrentView: (view: 'menu' | 'customize' | 'cart') => void;
     handleRemoveFromCart: (cartId: number) => void;
     updateCartQuantity: (cartId: number, newQuantity: number) => void;
-    getTotalPrice: () => number;
     sendToWhatsApp: () => void;
 };
 
-const CartView: React.FC<CartViewProps> = ({ cart, setCurrentView, handleRemoveFromCart, updateCartQuantity, getTotalPrice, sendToWhatsApp }) => {
+const CartView: React.FC<CartViewProps> = ({ cart, setCurrentView, handleRemoveFromCart, updateCartQuantity, sendToWhatsApp }) => {
     return (
         <div className="flex flex-col h-screen bg-background animate-fade-in">
             <header className="bg-card px-4 py-4 flex items-center shadow-sm sticky top-0 z-10 border-b">
@@ -65,8 +64,7 @@ const CartView: React.FC<CartViewProps> = ({ cart, setCurrentView, handleRemoveF
                                                     <Trash2 className="w-5 h-5"/>
                                                 </Button>
                                             </div>
-                                            <div className="flex items-center justify-between mt-2">
-                                                <p className="font-bold text-foreground text-lg">₹{item.itemCurrentPrice * item.customization.quantity}</p>
+                                            <div className="flex items-center justify-end mt-2">
                                                 <div className="flex items-center justify-end gap-3">
                                                     <Button onClick={() => updateCartQuantity(item.cartId, item.customization.quantity - 1)} size="icon" className="bg-secondary hover:bg-accent h-8 w-8 rounded-full">
                                                         <Minus className="w-4 h-4 text-secondary-foreground"/>
@@ -88,10 +86,6 @@ const CartView: React.FC<CartViewProps> = ({ cart, setCurrentView, handleRemoveF
             
             {cart.length > 0 && (
                 <footer className="sticky bottom-0 left-0 right-0 z-10 bg-card p-4 border-t shadow-[0_-4px_12px_rgba(0,0,0,0.05)]">
-                     <div className="flex justify-between items-center mb-4">
-                       <span className="text-muted-foreground font-semibold text-lg">Total</span>
-                       <span className="text-2xl font-bold text-foreground">₹{getTotalPrice()}</span>
-                    </div>
                    <Button onClick={sendToWhatsApp} size="lg" className="w-full bg-green-500 hover:bg-green-600 text-white font-bold shadow-lg text-base">
                        <ShoppingCart className="w-5 h-5 mr-2" /> Order via WhatsApp
                    </Button>

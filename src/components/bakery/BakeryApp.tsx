@@ -17,17 +17,6 @@ const BakeryApp = () => {
     });
     const cartIdCounter = useRef(0);
 
-    const calculateItemCustomizationPrice = (item: MenuItem, customs: Customization) => {
-        if (!item) return 0;
-        return item.discountedPrice;
-    };
-
-    const getTotalPrice = () => {
-        return cart.reduce((total, cartItem) => {
-            return total + (cartItem.itemCurrentPrice * cartItem.customization.quantity);
-        }, 0);
-    };
-
     const handleSelectItem = (item: MenuItem) => {
         setSelectedItem(item);
         const initialCustomization: Customization = { quantity: 1 };
@@ -40,13 +29,11 @@ const BakeryApp = () => {
 
     const handleAddToCart = () => {
         if (!selectedItem) return;
-        const itemCurrentPrice = calculateItemCustomizationPrice(selectedItem, customization);
         cartIdCounter.current += 1;
         const cartItem: CartItem = { 
             item: selectedItem, 
             customization, 
             cartId: cartIdCounter.current, 
-            itemCurrentPrice 
         };
         setCart([...cart, cartItem]);
         setCurrentView('menu');
@@ -69,13 +56,13 @@ const BakeryApp = () => {
 
     const sendToWhatsApp = () => {
         const orderDetails = cart.map(cartItem => {
-            let itemDetail = `${cartItem.item.name} (x${cartItem.customization.quantity}) - ₹${cartItem.itemCurrentPrice * cartItem.customization.quantity}`;
+            let itemDetail = `${cartItem.item.name} (x${cartItem.customization.quantity})`;
             if (cartItem.customization.referenceImage) {
                 itemDetail += `\n  - Style: ${cartItem.customization.referenceImage}`;
             }
             return itemDetail;
         }).join('\n\n');
-        const message = `Hi! I'd like to place an order:\n\n${orderDetails}\n\n*Total: ₹${getTotalPrice()}*`;
+        const message = `Hi! I'd like to place an order for the following items:\n\n${orderDetails}`;
         const whatsappUrl = `https://wa.me/917405526423?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');
     };
@@ -92,7 +79,6 @@ const BakeryApp = () => {
             setCustomization={setCustomization}
             handleAddToCart={handleAddToCart}
             setCurrentView={setCurrentView}
-            calculateItemCustomizationPrice={() => calculateItemCustomizationPrice(selectedItem, customization)}
         />;
     }
 
@@ -102,7 +88,6 @@ const BakeryApp = () => {
             setCurrentView={setCurrentView}
             handleRemoveFromCart={handleRemoveFromCart}
             updateCartQuantity={updateCartQuantity}
-            getTotalPrice={getTotalPrice}
             sendToWhatsApp={sendToWhatsApp}
         />;
     }

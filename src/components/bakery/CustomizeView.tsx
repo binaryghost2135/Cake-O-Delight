@@ -14,12 +14,10 @@ type CustomizeViewProps = {
     setCustomization: React.Dispatch<React.SetStateAction<Customization>>;
     handleAddToCart: () => void;
     setCurrentView: (view: 'menu' | 'customize' | 'cart') => void;
-    calculateItemCustomizationPrice: () => number;
 };
 
 const CustomizeView: React.FC<CustomizeViewProps> = ({
-    selectedItem, customization, setCustomization, handleAddToCart, setCurrentView,
-    calculateItemCustomizationPrice
+    selectedItem, customization, setCustomization, handleAddToCart, setCurrentView
 }) => {
 
     return (
@@ -46,9 +44,6 @@ const CustomizeView: React.FC<CustomizeViewProps> = ({
                                 />
                                 <div className="flex-1">
                                     <h3 className="font-bold text-foreground text-lg">{selectedItem.name}</h3>
-                                    <p className="text-lg font-bold text-foreground/80 mt-1">
-                                        ₹{selectedItem.discountedPrice}
-                                    </p>
                                 </div>
                             </CardContent>
                         </Card>
@@ -86,7 +81,7 @@ const CustomizeView: React.FC<CustomizeViewProps> = ({
                         </Button>
                     </div>
                     <Button onClick={handleAddToCart} size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base">
-                        Add - ₹{calculateItemCustomizationPrice() * customization.quantity}
+                        Add to Cart
                     </Button>
                 </div>
             </footer>

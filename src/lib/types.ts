@@ -8,9 +8,6 @@ export type BakeryItem = {
   id: number;
   name: string;
   description: string;
-  originalPrice: number;
-  discountedPrice: number;
-  discount: number;
   image: string;
   category: BakeryCategory;
   aiHint: string;
@@ -28,7 +25,6 @@ export type CartItem = {
   cartId: number;
   item: MenuItem;
   customization: Customization;
-  itemCurrentPrice: number;
 };
 
 export type Option = {

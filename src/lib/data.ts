@@ -1,0 +1,51 @@
+import type { BakeryItem, GiftItem, Category, Option } from './types';
+
+export const bakeryItems: BakeryItem[] = [
+    { id: 1, name: "Double Chocolate Brownie Combo", description: "Rich, fudgy double chocolate brownie...", originalPrice: 180, discountedPrice: 145, discount: 19, image: "https://placehold.co/100x100.png", category: "Brownies", aiHint: "chocolate brownie" },
+    { id: 2, name: "Walnut Brownie Combo", description: "Decadent brownie loaded with crunchy walnuts...", originalPrice: 220, discountedPrice: 175, discount: 20, image: "https://placehold.co/100x100.png", category: "Brownies", aiHint: "walnut brownie" },
+    { id: 3, name: "Blueberry Muffin Combo", description: "Fresh baked blueberry muffin bursting with flavor...", originalPrice: 200, discountedPrice: 160, discount: 20, image: "https://placehold.co/100x100.png", category: "Muffins", aiHint: "blueberry muffin" },
+    { id: 4, name: "Chocolate Chip Muffin Combo", description: "Classic chocolate chip muffin with premium chips...", originalPrice: 190, discountedPrice: 152, discount: 20, image: "https://placehold.co/100x100.png", category: "Muffins", aiHint: "chocolate muffin" },
+    { id: 5, name: "Chocolate Croissant Combo", description: "Buttery, flaky croissant filled with rich chocolate...", originalPrice: 250, discountedPrice: 200, discount: 20, image: "https://placehold.co/100x100.png", category: "Croissants", aiHint: "chocolate croissant" },
+    { id: 6, name: "Almond Croissant Combo", description: "Traditional French almond croissant...", originalPrice: 280, discountedPrice: 224, discount: 20, image: "https://placehold.co/100x100.png", category: "Croissants", aiHint: "almond croissant" },
+    { id: 7, name: "Red Velvet Cake Slice Combo", description: "Classic red velvet cake with cream cheese frosting...", originalPrice: 320, discountedPrice: 256, discount: 20, image: "https://placehold.co/100x100.png", category: "Cakes", aiHint: "red velvet cake" },
+    { id: 8, name: "Chocolate Fudge Cake Combo", description: "Rich, moist chocolate cake with fudge frosting...", originalPrice: 300, discountedPrice: 240, discount: 20, image: "https://placehold.co/100x100.png", category: "Cakes", aiHint: "fudge cake" },
+    { id: 9, name: "Apple Cinnamon Danish Combo", description: "Flaky danish pastry with spiced apple filling...", originalPrice: 220, discountedPrice: 176, discount: 20, image: "https://placehold.co/100x100.png", category: "Danish", aiHint: "apple danish" },
+    { id: 10, name: "Cheese Danish Combo", description: "Traditional cheese danish with creamy cheese...", originalPrice: 200, discountedPrice: 160, discount: 20, image: "https://placehold.co/100x100.png", category: "Danish", aiHint: "cheese danish" }
+];
+
+export const categories: Category[] = [
+    { name: 'Signature Collection', icon: '⭐' },
+    { name: 'Brownies', icon: '🍫' },
+    { name: 'Muffins', icon: '🧁' },
+    { name: 'Croissants', icon: '🥐' },
+    { name: 'Cakes', icon: '🍰' },
+    { name: 'Danish', icon: '🥧' }
+];
+
+export const sizeOptions: Option[] = [
+    { name: 'Small', icon: 'S', price: 0 },
+    { name: 'Medium', icon: 'M', price: 50 },
+    { name: 'Large', icon: 'L', price: 100 }
+];
+export const beverageOptions: Option[] = [
+    { name: 'Tea', icon: '🫖', price: 30 },
+    { name: 'Coffee', icon: '☕', price: 40 },
+    { name: 'Hot Chocolate', icon: '🍫', price: 50 },
+    { name: 'Fresh Juice', icon: '🍹', price: 70 },
+    { name: 'Milk', icon: '🥛', price: 20 }
+];
+export const addonOptions: Option[] = [
+    { name: 'None', icon: '🚫', price: 0 },
+    { name: 'Extra Sugar', icon: '🍬', price: 5 },
+    { name: 'Honey', icon: '🍯', price: 10 },
+    { name: 'Whipped Cream', icon: '🍦', price: 20 },
+    { name: 'Extra Shot', icon: '✨', price: 15 }
+];
+
+export const giftItems: GiftItem[] = [
+    { id: 101, name: "Birthday Gift Basket", description: "Curated basket with chocolates, cookies, and a card.", price: 750, image: "https://placehold.co/100x100.png", aiHint: "gift basket" },
+    { id: 102, name: "Gourmet Coffee Kit", description: "Premium coffee beans, elegant French press, and mugs.", price: 1200, image: "https://placehold.co/100x100.png", aiHint: "coffee kit" },
+    { id: 103, name: "Assorted Cookie Box", description: "A delightful selection of 12 artisan cookies.", price: 450, image: "https://placehold.co/100x100.png", aiHint: "cookie box" },
+    { id: 104, name: "Customized Photo Mug", description: "Personalized mug with your favorite photo and message.", price: 300, image: "https://placehold.co/100x100.png", aiHint: "photo mug" },
+    { id: 105, name: "Chocolate Truffle Collection", description: "A luxurious box of handmade chocolate truffles.", price: 600, image: "https://placehold.co/100x100.png", aiHint: "chocolate truffles" },
+];

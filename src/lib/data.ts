@@ -14,7 +14,7 @@ export const bakeryItems: BakeryItem[] = [
 ];
 
 export const categories: Category[] = [
-    { name: 'Menu' },
+    { name: 'Cakes' },
     { name: 'Bento Cakes' },
     { name: '1/2 Kg Cakes' },
     { name: 'Dry Cakes' },

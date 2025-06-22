@@ -77,7 +77,6 @@ const BakeryApp = () => {
     };
     
     const getFilteredItems = () => {
-        if (selectedCategory === 'Cakes') return bakeryItems;
         return bakeryItems.filter(item => item.category === selectedCategory);
     };
 

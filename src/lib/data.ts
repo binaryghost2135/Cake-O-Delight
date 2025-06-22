@@ -1,8 +1,18 @@
 import type { BakeryItem, Category, Option } from './types';
 
+const bentoCakeReferenceImages: Option[] = [
+    { name: 'Style 1', image: 'https://i.postimg.cc/ZKmPsk8j/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: 'Style 2', image: 'https://i.postimg.cc/W4y65h8J/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: 'Style 3', image: 'https://i.postimg.cc/g2NK6M6s/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: 'Style 4', image: 'https://i.postimg.cc/sXZPqsHH/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: 'Style 5', image: 'https://i.postimg.cc/8kMBbk6j/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: 'Style 6', image: 'https://i.postimg.cc/1zXr0pGQ/Whats-App-Image-2025-06-22-at-8.jpg' },
+    { name: 'Style 7', image: 'https://i.postimg.cc/C5TCVXWh/Whats-App-Image-2025-06-22-at-8.jpg' },
+];
+
 export const bakeryItems: BakeryItem[] = [
     // Cakes
-    { id: 1, name: "Bento Cake", description: "A cute, personal-sized bento cake.", originalPrice: 300, discountedPrice: 250, discount: 17, image: "https://i.postimg.cc/1zXr0pGQ/Whats-App-Image-2025-06-22-at-8.jpg", category: "Cakes", aiHint: "bento cake" },
+    { id: 1, name: "Bento Cake", description: "A cute, personal-sized bento cake.", originalPrice: 300, discountedPrice: 250, discount: 17, image: "https://i.postimg.cc/1zXr0pGQ/Whats-App-Image-2025-06-22-at-8.jpg", category: "Cakes", aiHint: "bento cake", referenceImages: bentoCakeReferenceImages },
     { id: 2, name: "1/2 Kg Cake", description: "Half a kilogram of delicious cake.", originalPrice: 600, discountedPrice: 500, discount: 17, image: "https://placehold.co/100x100.png", category: "Cakes", aiHint: "half kg cake" },
     { id: 17, name: "1 Kg Cake", description: "A full kilogram of cake for your celebration.", originalPrice: 1200, discountedPrice: 1000, discount: 17, image: "https://placehold.co/100x100.png", category: "Cakes", aiHint: "one kg cake" },
     { id: 18, name: "Dry Cake", description: "A classic dry cake, perfect with tea.", originalPrice: 400, discountedPrice: 350, discount: 13, image: "https://placehold.co/100x100.png", category: "Cakes", aiHint: "dry cake" },
@@ -45,14 +55,4 @@ export const categories: Category[] = [
     { name: 'Bombolonis' },
     { name: 'HAMPERS' },
     { name: 'Combos' },
-];
-
-export const referenceImageOptions: Option[] = [
-    { name: 'Style 1', image: 'https://i.postimg.cc/ZKmPsk8j/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 2', image: 'https://i.postimg.cc/W4y65h8J/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 3', image: 'https://i.postimg.cc/g2NK6M6s/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 4', image: 'https://i.postimg.cc/sXZPqsHH/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 5', image: 'https://i.postimg.cc/8kMBbk6j/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 6', image: 'https://i.postimg.cc/1zXr0pGQ/Whats-App-Image-2025-06-22-at-8.jpg' },
-    { name: 'Style 7', image: 'https://i.postimg.cc/C5TCVXWh/Whats-App-Image-2025-06-22-at-8.jpg' },
 ];

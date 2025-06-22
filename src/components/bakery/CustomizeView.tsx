@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { ArrowLeft, Plus, Minus } from 'lucide-react';
-import type { MenuItem, Customization, Option } from '@/lib/types';
+import type { MenuItem, Customization } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ScrollArea } from '@/components/ui/scroll-area';
@@ -14,13 +14,12 @@ type CustomizeViewProps = {
     setCustomization: React.Dispatch<React.SetStateAction<Customization>>;
     handleAddToCart: () => void;
     setCurrentView: (view: 'menu' | 'customize' | 'cart') => void;
-    referenceImageOptions: Option[];
     calculateItemCustomizationPrice: () => number;
 };
 
 const CustomizeView: React.FC<CustomizeViewProps> = ({
     selectedItem, customization, setCustomization, handleAddToCart, setCurrentView,
-    referenceImageOptions, calculateItemCustomizationPrice
+    calculateItemCustomizationPrice
 }) => {
 
     return (
@@ -54,21 +53,23 @@ const CustomizeView: React.FC<CustomizeViewProps> = ({
                             </CardContent>
                         </Card>
 
-                        <Card>
-                            <CardHeader>
-                                <CardTitle className="text-lg">Reference Images</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <div className="grid grid-cols-2 gap-4">
-                                    {referenceImageOptions.map(option => (
-                                        <Button key={option.name} variant={customization.referenceImage === option.name ? 'default' : 'outline'} onClick={() => setCustomization({...customization, referenceImage: option.name})}
-                                            className="h-auto p-1 border-2 transition-all data-[state=active]:bg-accent data-[state=active]:text-accent-foreground">
-                                            <Image src={option.image} alt={option.name} width={160} height={160} className="rounded-md object-cover" data-ai-hint="cake style" />
-                                        </Button>
-                                    ))}
-                                </div>
-                            </CardContent>
-                        </Card>
+                        {selectedItem.referenceImages && selectedItem.referenceImages.length > 0 && (
+                            <Card>
+                                <CardHeader>
+                                    <CardTitle className="text-lg">Reference Images</CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                    <div className="grid grid-cols-2 gap-4">
+                                        {selectedItem.referenceImages.map(option => (
+                                            <Button key={option.name} variant={customization.referenceImage === option.name ? 'default' : 'outline'} onClick={() => setCustomization({...customization, referenceImage: option.name})}
+                                                className="h-auto p-1 border-2 transition-all data-[state=active]:bg-accent data-[state=active]:text-accent-foreground">
+                                                <Image src={option.image} alt={option.name} width={160} height={160} className="rounded-md object-cover" data-ai-hint="cake style" />
+                                            </Button>
+                                        ))}
+                                    </div>
+                                </CardContent>
+                            </Card>
+                        )}
                     </div>
                 </ScrollArea>
             </main>

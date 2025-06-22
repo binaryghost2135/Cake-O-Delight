@@ -2,7 +2,7 @@
 
 import React, { useState, useRef } from 'react';
 import type { MenuItem, Customization, CartItem } from '@/lib/types';
-import { bakeryItems, referenceImageOptions } from '@/lib/data';
+import { bakeryItems } from '@/lib/data';
 import MenuView from './MenuView';
 import CustomizeView from './CustomizeView';
 import CartView from './CartView';
@@ -30,7 +30,11 @@ const BakeryApp = () => {
 
     const handleSelectItem = (item: MenuItem) => {
         setSelectedItem(item);
-        setCustomization({ referenceImage: 'Style 1', quantity: 1 });
+        const initialCustomization: Customization = { quantity: 1 };
+        if (item.referenceImages && item.referenceImages.length > 0) {
+            initialCustomization.referenceImage = item.referenceImages[0].name;
+        }
+        setCustomization(initialCustomization);
         setCurrentView('customize');
     };
 
@@ -88,7 +92,6 @@ const BakeryApp = () => {
             setCustomization={setCustomization}
             handleAddToCart={handleAddToCart}
             setCurrentView={setCurrentView}
-            referenceImageOptions={referenceImageOptions}
             calculateItemCustomizationPrice={() => calculateItemCustomizationPrice(selectedItem, customization)}
         />;
     }

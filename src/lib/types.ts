@@ -29,9 +29,7 @@ export type GiftItem = {
 export type MenuItem = BakeryItem | GiftItem;
 
 export type Customization = {
-  size: string;
-  beverage: string;
-  addon: string;
+  referenceImage?: string;
   quantity: number;
 };
 
@@ -44,6 +42,6 @@ export type CartItem = {
 
 export type Option = {
     name: string;
-    icon: string;
+    image: string;
     price: number;
 };

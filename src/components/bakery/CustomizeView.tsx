@@ -13,9 +13,7 @@ type CustomizeViewProps = {
     setCustomization: React.Dispatch<React.SetStateAction<Customization>>;
     handleAddToCart: () => void;
     setCurrentView: (view: 'menu' | 'customize' | 'cart') => void;
-    sizeOptions: Option[];
-    beverageOptions: Option[];
-    addonOptions: Option[];
+    referenceImageOptions: Option[];
     calculateItemCustomizationPrice: () => number;
 };
 
@@ -23,7 +21,7 @@ const isBakeryItem = (item: MenuItem): item is import('@/lib/types').BakeryItem 
 
 const CustomizeView: React.FC<CustomizeViewProps> = ({
     selectedItem, customization, setCustomization, handleAddToCart, setCurrentView,
-    sizeOptions, beverageOptions, addonOptions, calculateItemCustomizationPrice
+    referenceImageOptions, calculateItemCustomizationPrice
 }) => {
     const isCake = isBakeryItem(selectedItem);
 
@@ -48,7 +46,7 @@ const CustomizeView: React.FC<CustomizeViewProps> = ({
                             data-ai-hint={selectedItem.aiHint}
                         />
                         <div className="flex-1">
-                            <h3 className="font-bold text-foreground text-lg">{selectedItem.name.replace(' Combo', '')}</h3>
+                            <h3 className="font-bold text-foreground text-lg">{selectedItem.name}</h3>
                             <p className="text-lg font-bold text-foreground/80 mt-1">
                                 ₹{isCake ? selectedItem.discountedPrice : selectedItem.price}
                             </p>
@@ -57,64 +55,24 @@ const CustomizeView: React.FC<CustomizeViewProps> = ({
                 </Card>
 
                 {isCake && (
-                    <>
-                        <Card>
-                            <CardHeader>
-                                <CardTitle className="text-lg">Choice of Size</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <div className="grid grid-cols-3 gap-4 text-center">
-                                    {sizeOptions.map(option => (
-                                        <Button key={option.name} variant={customization.size === option.name ? 'default' : 'outline'} onClick={() => setCustomization({...customization, size: option.name})}
-                                            className="h-auto p-3 flex flex-col gap-1 border-2 transition-all data-[state=active]:bg-accent data-[state=active]:text-accent-foreground">
-                                            <span className="text-2xl font-bold">{option.icon}</span>
-                                            <span className="block text-sm font-medium">
-                                                {option.name} {option.price > 0 && <span className="text-xs text-muted-foreground"> (+₹{option.price})</span>}
-                                            </span>
-                                        </Button>
-                                    ))}
-                                </div>
-                            </CardContent>
-                        </Card>
-
-                        <Card>
-                            <CardHeader>
-                                <CardTitle className="text-lg">Choice of Beverage</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <div className="grid grid-cols-3 gap-4">
-                                    {beverageOptions.map(option => (
-                                        <Button key={option.name} variant={customization.beverage === option.name ? 'default' : 'outline'} onClick={() => setCustomization({...customization, beverage: option.name})}
-                                            className="h-auto flex flex-col items-center p-3 gap-2 border-2 transition-all">
-                                            <span className="text-3xl">{option.icon}</span>
-                                            <span className="text-sm font-medium text-center">
-                                                {option.name} {option.price > 0 && <span className="block text-xs text-muted-foreground">(+₹{option.price})</span>}
-                                            </span>
-                                        </Button>
-                                    ))}
-                                </div>
-                            </CardContent>
-                        </Card>
-
-                        <Card>
-                            <CardHeader>
-                                <CardTitle className="text-lg">Choice of Add-on</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <div className="grid grid-cols-3 gap-4">
-                                    {addonOptions.map(option => (
-                                        <Button key={option.name} variant={customization.addon === option.name ? 'default' : 'outline'} onClick={() => setCustomization({...customization, addon: option.name})}
-                                            className="h-auto flex flex-col items-center p-3 gap-2 border-2 transition-all">
-                                            <span className="text-3xl">{option.icon}</span>
-                                            <span className="text-xs text-center font-medium">
-                                                {option.name} {option.price > 0 && <span className="block text-xs text-muted-foreground">(+₹{option.price})</span>}
-                                            </span>
-                                        </Button>
-                                    ))}
-                                </div>
-                            </CardContent>
-                        </Card>
-                    </>
+                    <Card>
+                        <CardHeader>
+                            <CardTitle className="text-lg">Reference Images</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <div className="grid grid-cols-3 gap-2 text-center">
+                                {referenceImageOptions.map(option => (
+                                    <Button key={option.name} variant={customization.referenceImage === option.name ? 'default' : 'outline'} onClick={() => setCustomization({...customization, referenceImage: option.name})}
+                                        className="h-auto p-2 flex flex-col gap-2 border-2 transition-all data-[state=active]:bg-accent data-[state=active]:text-accent-foreground">
+                                        <Image src={option.image} alt={option.name} width={80} height={80} className="rounded-md object-cover" data-ai-hint="cake style" />
+                                        <span className="block text-sm font-medium">
+                                            {option.name} {option.price > 0 && <span className="text-xs text-muted-foreground"> (+₹{option.price})</span>}
+                                        </span>
+                                    </Button>
+                                ))}
+                            </div>
+                        </CardContent>
+                    </Card>
                 )}
             </main>
 

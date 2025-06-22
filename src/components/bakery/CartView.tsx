@@ -56,9 +56,9 @@ const CartView: React.FC<CartViewProps> = ({ cart, setCurrentView, handleRemoveF
                                         <div className="flex justify-between items-start">
                                             <div>
                                                 <h3 className="font-bold text-foreground text-md">{item.item.name}</h3>
-                                                { isBakeryItem(item.item) &&
+                                                { isBakeryItem(item.item) && item.customization.referenceImage &&
                                                     <p className="text-muted-foreground text-xs mt-1">
-                                                        {item.customization.size}, {item.customization.beverage}, {item.customization.addon}
+                                                        Style: {item.customization.referenceImage}
                                                     </p>
                                                 }
                                             </div>

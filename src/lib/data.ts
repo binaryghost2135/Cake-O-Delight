@@ -95,8 +95,8 @@ export const bakeryItems: BakeryItem[] = [
     { id: 20, name: "Box of 12", description: "A box containing twelve delicious cupcakes.", image: "https://i.postimg.cc/ryvdbrvq/Whats-App-Image-2025-06-23-at-12.jpg", category: "Cupcakes", aiHint: "cupcake box", referenceImages: boxOf12CupcakeReferenceImages },
 
     // Brownies
-    { id: 5, name: "Walnut Brownie", description: "A gooey brownie with crunchy walnuts.", image: "https://placehold.co/100x100.png", category: "Brownies", aiHint: "walnut brownie" },
-    { id: 6, name: "Fudge Brownie", description: "Extra chocolaty and fudgy brownie.", image: "https://placehold.co/100x100.png", category: "Brownies", aiHint: "fudge brownie" },
+    { id: 5, name: "Box of 2", description: "A box of 2 gooey brownies.", image: "https://placehold.co/100x100.png", category: "Brownies", aiHint: "brownie box" },
+    { id: 6, name: "Box of 4", description: "A box of 4 fudgy brownies.", image: "https://placehold.co/100x100.png", category: "Brownies", aiHint: "brownie box" },
     
     // Cheesecakes
     { id: 7, name: "New York Cheesecake", description: "A slice of classic New York style cheesecake.", image: "https://placehold.co/100x100.png", category: "Cheesecakes", aiHint: "new york cheesecake" },

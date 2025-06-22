@@ -58,7 +58,6 @@ const MenuView: React.FC<MenuViewProps> = ({
             <header className="bg-card px-4 py-4 flex items-center justify-between shadow-sm sticky top-0 z-20 border-b">
                 <div>
                     <h1 className="text-2xl font-pacifico text-primary">Cake-O-Delight</h1>
-                    <p className="text-sm text-muted-foreground">Menu</p>
                 </div>
                 <Button onClick={() => setCurrentView('cart')} variant="ghost" size="icon" className="relative text-primary">
                     <ShoppingCart className="w-6 h-6" />

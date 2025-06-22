@@ -44,7 +44,7 @@ export const bakeryItems: BakeryItem[] = [
     { id: 1, name: "Bento Cake", description: "A cute, personal-sized bento cake.", image: "https://i.postimg.cc/1zXr0pGQ/Whats-App-Image-2025-06-22-at-8.jpg", category: "Cakes", aiHint: "bento cake", referenceImages: bentoCakeReferenceImages },
     { id: 2, name: "1/2 Kg Cake", description: "Half a kilogram of delicious cake.", image: "https://i.postimg.cc/KzJNtJVx/Whats-App-Image-2025-06-22-at-8.jpg", category: "Cakes", aiHint: "half kg cake", referenceImages: halfKgCakeReferenceImages },
     { id: 17, name: "1 Kg Cake", description: "A full kilogram of cake for your celebration.", image: "https://i.postimg.cc/ydRkhdWj/Whats-App-Image-2025-06-22-at-8.jpg", category: "Cakes", aiHint: "one kg cake", referenceImages: oneKgCakeReferenceImages },
-    { id: 18, name: "Dry Cake", description: "A classic dry cake, perfect with tea.", image: "https://placehold.co/100x100.png", category: "Cakes", aiHint: "dry cake" },
+    { id: 18, name: "Dry Cake", description: "A classic dry cake, perfect with tea.", image: "https://i.postimg.cc/T1003c85/Whats-App-Image-2025-06-22-at-11.jpg", category: "Cakes", aiHint: "dry cake" },
 
     // Cupcakes
     { id: 3, name: "Blueberry Cupcake", description: "A fluffy cupcake with blueberry frosting.", image: "https://placehold.co/100x100.png", category: "Cupcakes", aiHint: "blueberry cupcake" },

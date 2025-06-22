@@ -23,9 +23,16 @@ export const categories: Category[] = [
 ];
 
 export const referenceImageOptions: Option[] = [
-    { name: 'Classic', image: 'https://placehold.co/100x100.png', price: 0 },
-    { name: 'Modern', image: 'https://placehold.co/100x100.png', price: 20 },
-    { name: 'Artistic', image: 'https://placehold.co/100x100.png', price: 40 }
+    { name: 'Style 1', image: 'https://placehold.co/100x100.png' },
+    { name: 'Style 2', image: 'https://placehold.co/100x100.png' },
+    { name: 'Style 3', image: 'https://placehold.co/100x100.png' },
+    { name: 'Style 4', image: 'https://placehold.co/100x100.png' },
+    { name: 'Style 5', image: 'https://placehold.co/100x100.png' },
+    { name: 'Style 6', image: 'https://placehold.co/100x100.png' },
+    { name: 'Style 7', image: 'https://placehold.co/100x100.png' },
+    { name: 'Style 8', image: 'https://placehold.co/100x100.png' },
+    { name: 'Style 9', image: 'https://placehold.co/100x100.png' },
+    { name: 'Style 10', image: 'https://placehold.co/100x100.png' }
 ];
 
 export const giftItems: GiftItem[] = [

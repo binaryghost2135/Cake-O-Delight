@@ -20,18 +20,11 @@ const BakeryApp = () => {
     const [currentSection, setCurrentSection] = useState<'cakes' | 'gifts'>('cakes');
     const cartIdCounter = useRef(0);
 
-    const getOptionPrice = (options: { name: string, price: number }[], selectedName: string) => {
-        const option = options.find(opt => opt.name === selectedName);
-        return option ? option.price : 0;
-    };
-
     const calculateItemCustomizationPrice = (item: MenuItem, customs: Customization) => {
         if (!item) return 0;
         
         if (isBakeryItem(item)) {
-            const basePrice = item.discountedPrice;
-            const refImagePrice = customs.referenceImage ? getOptionPrice(referenceImageOptions, customs.referenceImage) : 0;
-            return (basePrice + refImagePrice);
+            return item.discountedPrice;
         } else {
             return item.price;
         }
@@ -46,7 +39,7 @@ const BakeryApp = () => {
     const handleSelectItem = (item: MenuItem) => {
         setSelectedItem(item);
         if (isBakeryItem(item)) {
-            setCustomization({ referenceImage: 'Classic', quantity: 1 });
+            setCustomization({ referenceImage: 'Style 1', quantity: 1 });
         } else {
             setCustomization({ quantity: 1 });
         }

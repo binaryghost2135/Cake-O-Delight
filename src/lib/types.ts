@@ -43,5 +43,4 @@ export type CartItem = {
 export type Option = {
     name: string;
     image: string;
-    price: number;
 };

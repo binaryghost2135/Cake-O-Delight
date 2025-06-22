@@ -60,14 +60,11 @@ const CustomizeView: React.FC<CustomizeViewProps> = ({
                             <CardTitle className="text-lg">Reference Images</CardTitle>
                         </CardHeader>
                         <CardContent>
-                            <div className="grid grid-cols-3 gap-2 text-center">
+                            <div className="grid grid-cols-5 gap-2">
                                 {referenceImageOptions.map(option => (
                                     <Button key={option.name} variant={customization.referenceImage === option.name ? 'default' : 'outline'} onClick={() => setCustomization({...customization, referenceImage: option.name})}
-                                        className="h-auto p-2 flex flex-col gap-2 border-2 transition-all data-[state=active]:bg-accent data-[state=active]:text-accent-foreground">
+                                        className="h-auto p-1 border-2 transition-all data-[state=active]:bg-accent data-[state=active]:text-accent-foreground">
                                         <Image src={option.image} alt={option.name} width={80} height={80} className="rounded-md object-cover" data-ai-hint="cake style" />
-                                        <span className="block text-sm font-medium">
-                                            {option.name} {option.price > 0 && <span className="text-xs text-muted-foreground"> (+₹{option.price})</span>}
-                                        </span>
                                     </Button>
                                 ))}
                             </div>

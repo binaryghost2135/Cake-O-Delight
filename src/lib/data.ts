@@ -57,6 +57,24 @@ const boxOf4CupcakeReferenceImages: Option[] = [
     { name: '', image: 'https://i.postimg.cc/KjhLh3Rk/Whats-App-Image-2025-06-22-at-8.jpg' },
 ];
 
+const boxOf6CupcakeReferenceImages: Option[] = [
+    { name: '', image: 'https://i.postimg.cc/T3sJHwqm/Whats-App-Image-2025-06-23-at-12.jpg' },
+    { name: '', image: 'https://i.postimg.cc/nr11dG0c/Whats-App-Image-2025-06-23-at-12.jpg' },
+    { name: '', image: 'https://i.postimg.cc/vHqrcBKj/Whats-App-Image-2025-06-23-at-12.jpg' },
+    { name: '', image: 'https://i.postimg.cc/nz4Kz18Y/Whats-App-Image-2025-06-23-at-12.jpg' },
+    { name: '', image: 'https://i.postimg.cc/SQG7bVfm/Whats-App-Image-2025-06-23-at-12.jpg' },
+    { name: '', image: 'https://i.postimg.cc/gcy4kGmF/Whats-App-Image-2025-06-23-at-12.jpg' },
+    { name: '', image: 'https://i.postimg.cc/138p6Shz/Whats-App-Image-2025-06-23-at-12.jpg' },
+    { name: '', image: 'https://i.postimg.cc/3N3XDDYM/Whats-App-Image-2025-06-23-at-12.jpg' },
+    { name: '', image: 'https://i.postimg.cc/rsTJCPGP/Whats-App-Image-2025-06-23-at-12.jpg' },
+    { name: '', image: 'https://i.postimg.cc/1tQ6LNgg/Whats-App-Image-2025-06-23-at-12.jpg' },
+    { name: '', image: 'https://i.postimg.cc/kXXNJ8TK/Whats-App-Image-2025-06-23-at-12.jpg' },
+    { name: '', image: 'https://i.postimg.cc/63JLtmPp/Whats-App-Image-2025-06-23-at-12.jpg' },
+    { name: '', image: 'https://i.postimg.cc/5NxgXD2H/Whats-App-Image-2025-06-23-at-12.jpg' },
+    { name: '', image: 'https://i.postimg.cc/xdWgqCXY/Whats-App-Image-2025-06-23-at-12.jpg' },
+    { name: '', image: 'https://i.postimg.cc/mgK7ynBy/Whats-App-Image-2025-06-23-at-12.jpg' },
+];
+
 export const bakeryItems: BakeryItem[] = [
     // Cakes
     { id: 1, name: "Bento Cake", description: "A cute, personal-sized bento cake.", image: "https://i.postimg.cc/1zXr0pGQ/Whats-App-Image-2025-06-22-at-8.jpg", category: "Cakes", aiHint: "bento cake", referenceImages: bentoCakeReferenceImages },
@@ -67,7 +85,7 @@ export const bakeryItems: BakeryItem[] = [
     // Cupcakes
     { id: 3, name: "Box of 2", description: "A box containing two delicious cupcakes.", image: "https://i.postimg.cc/h423gSKy/Whats-App-Image-2025-06-22-at-8.jpg", category: "Cupcakes", aiHint: "cupcake box", referenceImages: boxOf2CupcakeReferenceImages },
     { id: 4, name: "Box of 4", description: "A box containing four delicious cupcakes.", image: "https://i.postimg.cc/fTZXHdG1/Whats-App-Image-2025-06-22-at-8.jpg", category: "Cupcakes", aiHint: "cupcake box", referenceImages: boxOf4CupcakeReferenceImages },
-    { id: 19, name: "Box of 6", description: "A box containing six delicious cupcakes.", image: "https://i.postimg.cc/rsTJCPGP/Whats-App-Image-2025-06-23-at-12.jpg", category: "Cupcakes", aiHint: "cupcake box" },
+    { id: 19, name: "Box of 6", description: "A box containing six delicious cupcakes.", image: "https://i.postimg.cc/rsTJCPGP/Whats-App-Image-2025-06-23-at-12.jpg", category: "Cupcakes", aiHint: "cupcake box", referenceImages: boxOf6CupcakeReferenceImages },
     { id: 20, name: "Box of 12", description: "A box containing twelve delicious cupcakes.", image: "https://placehold.co/100x100.png", category: "Cupcakes", aiHint: "cupcake box" },
 
     // Brownies

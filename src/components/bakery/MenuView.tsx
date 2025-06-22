@@ -100,7 +100,7 @@ const MenuView: React.FC<MenuViewProps> = ({
 
             <div className="flex flex-1 overflow-hidden">
                 {currentSection === 'cakes' && (
-                    <nav className="w-28 bg-card border-r pt-4 overflow-y-auto">
+                    <nav className="w-24 bg-card border-r pt-4 overflow-y-auto">
                         <div className="space-y-1">
                             {categories.map((category: Category) => (
                                 <button key={category.name} onClick={() => setSelectedCategory(category.name)}

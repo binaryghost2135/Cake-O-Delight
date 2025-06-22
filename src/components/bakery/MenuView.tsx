@@ -68,7 +68,7 @@ const MenuView: React.FC<MenuViewProps> = ({
     return (
         <div className="flex flex-col h-screen bg-background">
             <header className="bg-card px-4 py-4 flex items-center justify-between shadow-sm sticky top-0 z-20 border-b">
-                <h1 className="text-2xl font-pacifico text-primary">Cake-O-Delicious</h1>
+                <h1 className="text-2xl font-pacifico text-primary">Cake-O-Delight</h1>
                 <Button onClick={() => setCurrentView('cart')} variant="ghost" size="icon" className="relative text-primary">
                     <ShoppingCart className="w-6 h-6" />
                     {totalCartItems > 0 && (

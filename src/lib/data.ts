@@ -1,4 +1,4 @@
-import type { BakeryItem, GiftItem, Category, Option } from './types';
+import type { BakeryItem, Category, Option } from './types';
 
 export const bakeryItems: BakeryItem[] = [
     { id: 1, name: "Double Chocolate Brownie", description: "Rich, fudgy double chocolate brownie.", originalPrice: 180, discountedPrice: 145, discount: 19, image: "https://placehold.co/100x100.png", category: "Bento Cakes", aiHint: "chocolate brownie" },
@@ -33,12 +33,4 @@ export const referenceImageOptions: Option[] = [
     { name: 'Style 8', image: 'https://placehold.co/90x90.png' },
     { name: 'Style 9', image: 'https://placehold.co/90x90.png' },
     { name: 'Style 10', image: 'https://placehold.co/90x90.png' }
-];
-
-export const giftItems: GiftItem[] = [
-    { id: 101, name: "Birthday Gift Basket", description: "Curated basket with chocolates, cookies, and a card.", price: 750, image: "https://placehold.co/100x100.png", aiHint: "gift basket" },
-    { id: 102, name: "Gourmet Coffee Kit", description: "Premium coffee beans, elegant French press, and mugs.", price: 1200, image: "https://placehold.co/100x100.png", aiHint: "coffee kit" },
-    { id: 103, name: "Assorted Cookie Box", description: "A delightful selection of 12 artisan cookies.", price: 450, image: "https://placehold.co/100x100.png", aiHint: "cookie box" },
-    { id: 104, name: "Customized Photo Mug", description: "Personalized mug with your favorite photo and message.", price: 300, image: "https://placehold.co/100x100.png", aiHint: "photo mug" },
-    { id: 105, name: "Chocolate Truffle Collection", description: "A luxurious box of handmade chocolate truffles.", price: 600, image: "https://placehold.co/100x100.png", aiHint: "chocolate truffles" },
 ];

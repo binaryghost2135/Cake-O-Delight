@@ -17,13 +17,10 @@ type CustomizeViewProps = {
     calculateItemCustomizationPrice: () => number;
 };
 
-const isBakeryItem = (item: MenuItem): item is import('@/lib/types').BakeryItem => 'category' in item;
-
 const CustomizeView: React.FC<CustomizeViewProps> = ({
     selectedItem, customization, setCustomization, handleAddToCart, setCurrentView,
     referenceImageOptions, calculateItemCustomizationPrice
 }) => {
-    const isCake = isBakeryItem(selectedItem);
 
     return (
         <div className="flex flex-col h-screen bg-background animate-fade-in">
@@ -48,29 +45,27 @@ const CustomizeView: React.FC<CustomizeViewProps> = ({
                         <div className="flex-1">
                             <h3 className="font-bold text-foreground text-lg">{selectedItem.name}</h3>
                             <p className="text-lg font-bold text-foreground/80 mt-1">
-                                ₹{isCake ? selectedItem.discountedPrice : selectedItem.price}
+                                ₹{selectedItem.discountedPrice}
                             </p>
                         </div>
                     </CardContent>
                 </Card>
 
-                {isCake && (
-                    <Card>
-                        <CardHeader>
-                            <CardTitle className="text-lg">Reference Images</CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            <div className="grid grid-cols-3 gap-3">
-                                {referenceImageOptions.map(option => (
-                                    <Button key={option.name} variant={customization.referenceImage === option.name ? 'default' : 'outline'} onClick={() => setCustomization({...customization, referenceImage: option.name})}
-                                        className="h-auto p-1 border-2 transition-all data-[state=active]:bg-accent data-[state=active]:text-accent-foreground">
-                                        <Image src={option.image} alt={option.name} width={90} height={90} className="rounded-md object-cover" data-ai-hint="cake style" />
-                                    </Button>
-                                ))}
-                            </div>
-                        </CardContent>
-                    </Card>
-                )}
+                <Card>
+                    <CardHeader>
+                        <CardTitle className="text-lg">Reference Images</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <div className="grid grid-cols-3 gap-3">
+                            {referenceImageOptions.map(option => (
+                                <Button key={option.name} variant={customization.referenceImage === option.name ? 'default' : 'outline'} onClick={() => setCustomization({...customization, referenceImage: option.name})}
+                                    className="h-auto p-1 border-2 transition-all data-[state=active]:bg-accent data-[state=active]:text-accent-foreground">
+                                    <Image src={option.image} alt={option.name} width={90} height={90} className="rounded-md object-cover" data-ai-hint="cake style" />
+                                </Button>
+                            ))}
+                        </div>
+                    </CardContent>
+                </Card>
             </main>
 
             <footer className="sticky bottom-0 left-0 right-0 z-20 bg-card p-4 border-t shadow-[0_-4px_12px_rgba(0,0,0,0.05)]">

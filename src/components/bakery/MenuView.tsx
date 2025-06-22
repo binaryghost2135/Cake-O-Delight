@@ -16,15 +16,9 @@ type MenuViewProps = {
     setCurrentView: (view: 'menu' | 'customize' | 'cart') => void;
     selectedCategory: string;
     setSelectedCategory: (category: string) => void;
-    currentSection: 'cakes' | 'gifts';
-    setCurrentSection: (section: 'cakes' | 'gifts') => void;
 };
 
-const isBakeryItem = (item: MenuItem): item is import('@/lib/types').BakeryItem => 'category' in item;
-
 const MenuItemCard: React.FC<{ item: MenuItem, onAdd: () => void }> = ({ item, onAdd }) => {
-    const isCake = isBakeryItem(item);
-
     return (
         <Card className="overflow-hidden transition-shadow hover:shadow-md animate-fade-in">
             <CardContent className="p-3 flex items-center gap-4">
@@ -40,14 +34,8 @@ const MenuItemCard: React.FC<{ item: MenuItem, onAdd: () => void }> = ({ item, o
                     <h3 className="font-bold text-foreground text-md">{item.name}</h3>
                     <p className="text-muted-foreground text-xs my-1">{item.description}</p>
                     <div className="flex items-baseline my-2 gap-2">
-                        {isCake ? (
-                            <>
-                                <span className="text-lg font-bold text-foreground">₹{item.discountedPrice}</span>
-                                <span className="text-sm text-muted-foreground line-through">₹{item.originalPrice}</span>
-                            </>
-                        ) : (
-                            <span className="text-lg font-bold text-foreground">₹{item.price}</span>
-                        )}
+                        <span className="text-lg font-bold text-foreground">₹{item.discountedPrice}</span>
+                        <span className="text-sm text-muted-foreground line-through">₹{item.originalPrice}</span>
                     </div>
                     <Button onClick={onAdd} size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold">
                         Add <Plus className="w-4 h-4 ml-1" />
@@ -60,7 +48,7 @@ const MenuItemCard: React.FC<{ item: MenuItem, onAdd: () => void }> = ({ item, o
 
 const MenuView: React.FC<MenuViewProps> = ({
     getFilteredItems, cart, handleSelectItem, setCurrentView,
-    selectedCategory, setSelectedCategory, currentSection, setCurrentSection
+    selectedCategory, setSelectedCategory
 }) => {
     const totalCartItems = cart.reduce((acc, item) => acc + item.customization.quantity, 0);
     const filteredItems = getFilteredItems();
@@ -79,40 +67,19 @@ const MenuView: React.FC<MenuViewProps> = ({
                 </Button>
             </header>
             
-            <div className="bg-card py-2 px-4 shadow-sm sticky top-[68px] z-20 border-b">
-                <div className="flex justify-around rounded-lg bg-muted p-1">
-                    <Button
-                        onClick={() => { setCurrentSection('cakes'); setSelectedCategory('Cakes'); }}
-                        variant={currentSection === 'cakes' ? 'default' : 'ghost'}
-                        className="flex-1 transition-all"
-                    >
-                        Cakes
-                    </Button>
-                    <Button
-                        onClick={() => setCurrentSection('gifts')}
-                        variant={currentSection === 'gifts' ? 'default' : 'ghost'}
-                        className="flex-1 transition-all"
-                    >
-                        Gifts
-                    </Button>
-                </div>
-            </div>
-
             <div className="flex flex-1 overflow-hidden">
-                {currentSection === 'cakes' && (
-                    <nav className="w-24 bg-card border-r pt-4 overflow-y-auto">
-                        <div className="space-y-1">
-                            {categories.map((category: Category) => (
-                                <button key={category.name} onClick={() => setSelectedCategory(category.name)}
-                                    className={`w-full h-16 p-2 text-sm font-medium flex items-center justify-center text-center transition-all duration-200 rounded-none ${selectedCategory === category.name ? 'bg-accent text-accent-foreground border-r-4 border-primary' : 'text-muted-foreground hover:bg-accent/50'}`}>
-                                    {category.name}
-                                </button>
-                            ))}
-                        </div>
-                    </nav>
-                )}
+                <nav className="w-24 bg-card border-r pt-4 overflow-y-auto">
+                    <div className="space-y-1">
+                        {categories.map((category: Category) => (
+                            <button key={category.name} onClick={() => setSelectedCategory(category.name)}
+                                className={`w-full h-16 p-2 text-sm font-medium flex items-center justify-center text-center transition-all duration-200 rounded-none ${selectedCategory === category.name ? 'bg-accent text-accent-foreground border-r-4 border-primary' : 'text-muted-foreground hover:bg-accent/50'}`}>
+                                {category.name}
+                            </button>
+                        ))}
+                    </div>
+                </nav>
                 <main className="flex-1 p-4 overflow-y-auto pb-8">
-                     <h2 className="text-xl font-bold text-foreground mb-4">{currentSection === 'cakes' ? selectedCategory : 'Gift Collection'}</h2>
+                     <h2 className="text-xl font-bold text-foreground mb-4">{selectedCategory}</h2>
                     <div className="space-y-4">
                         {filteredItems.map((item) => (
                            <MenuItemCard key={item.id} item={item} onAdd={() => handleSelectItem(item)} />

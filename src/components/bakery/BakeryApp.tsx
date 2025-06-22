@@ -1,13 +1,11 @@
 "use client";
 
 import React, { useState, useRef } from 'react';
-import type { BakeryItem, GiftItem, MenuItem, Customization, CartItem } from '@/lib/types';
-import { bakeryItems, giftItems, referenceImageOptions } from '@/lib/data';
+import type { MenuItem, Customization, CartItem } from '@/lib/types';
+import { bakeryItems, referenceImageOptions } from '@/lib/data';
 import MenuView from './MenuView';
 import CustomizeView from './CustomizeView';
 import CartView from './CartView';
-
-const isBakeryItem = (item: MenuItem): item is BakeryItem => 'category' in item;
 
 const BakeryApp = () => {
     const [currentView, setCurrentView] = useState<'menu' | 'customize' | 'cart'>('menu');
@@ -17,17 +15,11 @@ const BakeryApp = () => {
     const [customization, setCustomization] = useState<Customization>({
         quantity: 1,
     });
-    const [currentSection, setCurrentSection] = useState<'cakes' | 'gifts'>('cakes');
     const cartIdCounter = useRef(0);
 
     const calculateItemCustomizationPrice = (item: MenuItem, customs: Customization) => {
         if (!item) return 0;
-        
-        if (isBakeryItem(item)) {
-            return item.discountedPrice;
-        } else {
-            return item.price;
-        }
+        return item.discountedPrice;
     };
 
     const getTotalPrice = () => {
@@ -38,11 +30,7 @@ const BakeryApp = () => {
 
     const handleSelectItem = (item: MenuItem) => {
         setSelectedItem(item);
-        if (isBakeryItem(item)) {
-            setCustomization({ referenceImage: 'Style 1', quantity: 1 });
-        } else {
-            setCustomization({ quantity: 1 });
-        }
+        setCustomization({ referenceImage: 'Style 1', quantity: 1 });
         setCurrentView('customize');
     };
 
@@ -77,14 +65,9 @@ const BakeryApp = () => {
 
     const sendToWhatsApp = () => {
         const orderDetails = cart.map(cartItem => {
-            let itemDetail = '';
-            if (isBakeryItem(cartItem.item)) {
-                itemDetail = `${cartItem.item.name} (x${cartItem.customization.quantity}) - ₹${cartItem.itemCurrentPrice * cartItem.customization.quantity}`;
-                if (cartItem.customization.referenceImage) {
-                    itemDetail += `\n  - Style: ${cartItem.customization.referenceImage}`;
-                }
-            } else {
-                itemDetail = `${cartItem.item.name} (x${cartItem.customization.quantity}) - ₹${cartItem.itemCurrentPrice * cartItem.customization.quantity}`;
+            let itemDetail = `${cartItem.item.name} (x${cartItem.customization.quantity}) - ₹${cartItem.itemCurrentPrice * cartItem.customization.quantity}`;
+            if (cartItem.customization.referenceImage) {
+                itemDetail += `\n  - Style: ${cartItem.customization.referenceImage}`;
             }
             return itemDetail;
         }).join('\n\n');
@@ -94,12 +77,8 @@ const BakeryApp = () => {
     };
     
     const getFilteredItems = () => {
-        if (currentSection === 'cakes') {
-            if (selectedCategory === 'Cakes') return bakeryItems.slice(0, 4);
-            return bakeryItems.filter(item => item.category === selectedCategory);
-        } else {
-            return giftItems;
-        }
+        if (selectedCategory === 'Cakes') return bakeryItems.slice(0, 4);
+        return bakeryItems.filter(item => item.category === selectedCategory);
     };
 
 
@@ -133,8 +112,6 @@ const BakeryApp = () => {
         setCurrentView={setCurrentView}
         selectedCategory={selectedCategory}
         setSelectedCategory={setSelectedCategory}
-        currentSection={currentSection}
-        setCurrentSection={setCurrentSection}
     />;
 };
 

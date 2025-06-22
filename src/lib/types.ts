@@ -16,16 +16,7 @@ export type BakeryItem = {
   aiHint: string;
 };
 
-export type GiftItem = {
-  id: number;
-  name: string;
-  description: string;
-  price: number;
-  image: string;
-  aiHint: string;
-};
-
-export type MenuItem = BakeryItem | GiftItem;
+export type MenuItem = BakeryItem;
 
 export type Customization = {
   referenceImage?: string;

@@ -86,6 +86,17 @@ const boxOf2BrownieReferenceImages: Option[] = [
     { name: '', image: 'https://i.postimg.cc/J4xQWKmb/Whats-App-Image-2025-06-23-at-1.jpg' },
 ];
 
+const boxOf4BrownieReferenceImages: Option[] = [
+    { name: '', image: 'https://i.postimg.cc/nh698Qs4/Whats-App-Image-2025-06-23-at-1.jpg' },
+    { name: '', image: 'https://i.postimg.cc/BbMPRYDb/Whats-App-Image-2025-06-23-at-1.jpg' },
+    { name: '', image: 'https://i.postimg.cc/0QCzJWVn/Whats-App-Image-2025-06-23-at-1.jpg' },
+    { name: '', image: 'https://i.postimg.cc/pXcnZSR1/Whats-App-Image-2025-06-23-at-1.jpg' },
+    { name: '', image: 'https://i.postimg.cc/HW2MJxKm/Whats-App-Image-2025-06-23-at-1.jpg' },
+    { name: '', image: 'https://i.postimg.cc/vZ1xSvm8/Whats-App-Image-2025-06-23-at-1.jpg' },
+    { name: '', image: 'https://i.postimg.cc/Y9740Kzj/Whats-App-Image-2025-06-23-at-1.jpg' },
+    { name: '', image: 'https://i.postimg.cc/L681jSK1/Whats-App-Image-2025-06-23-at-1.jpg' },
+];
+
 export const bakeryItems: BakeryItem[] = [
     // Cakes
     { id: 1, name: "Bento Cake", description: "A cute, personal-sized bento cake.", image: "https://i.postimg.cc/1zXr0pGQ/Whats-App-Image-2025-06-22-at-8.jpg", category: "Cakes", aiHint: "bento cake", referenceImages: bentoCakeReferenceImages },
@@ -101,7 +112,7 @@ export const bakeryItems: BakeryItem[] = [
 
     // Brownies
     { id: 5, name: "Box of 2", description: "A box of 2 gooey brownies.", image: "https://i.postimg.cc/bNpRM4Xy/Whats-App-Image-2025-06-23-at-1.jpg", category: "Brownies", aiHint: "brownie box", referenceImages: boxOf2BrownieReferenceImages },
-    { id: 6, name: "Box of 4", description: "A box of 4 fudgy brownies.", image: "https://i.postimg.cc/0QCzJWVn/Whats-App-Image-2025-06-23-at-1.jpg", category: "Brownies", aiHint: "brownie box" },
+    { id: 6, name: "Box of 4", description: "A box of 4 fudgy brownies.", image: "https://i.postimg.cc/0QCzJWVn/Whats-App-Image-2025-06-23-at-1.jpg", category: "Brownies", aiHint: "brownie box", referenceImages: boxOf4BrownieReferenceImages },
     { id: 25, name: "Box of 6", description: "A box of 6 delicious brownies.", image: "https://placehold.co/100x100.png", category: "Brownies", aiHint: "brownie box" },
     { id: 26, name: "Box of 9", description: "A box of 9 delicious brownies.", image: "https://placehold.co/100x100.png", category: "Brownies", aiHint: "brownie box" },
     { id: 27, name: "Brownie Bites", description: "A tub of delicious brownie bites.", image: "https://placehold.co/100x100.png", category: "Brownies", aiHint: "brownie bites" },

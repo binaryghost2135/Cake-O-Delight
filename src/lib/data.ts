@@ -13,7 +13,7 @@ const bentoCakeReferenceImages: Option[] = [
 export const bakeryItems: BakeryItem[] = [
     // Cakes
     { id: 1, name: "Bento Cake", description: "A cute, personal-sized bento cake.", originalPrice: 300, discountedPrice: 250, discount: 17, image: "https://i.postimg.cc/1zXr0pGQ/Whats-App-Image-2025-06-22-at-8.jpg", category: "Cakes", aiHint: "bento cake", referenceImages: bentoCakeReferenceImages },
-    { id: 2, name: "1/2 Kg Cake", description: "Half a kilogram of delicious cake.", originalPrice: 600, discountedPrice: 500, discount: 17, image: "https://placehold.co/100x100.png", category: "Cakes", aiHint: "half kg cake" },
+    { id: 2, name: "1/2 Kg Cake", description: "Half a kilogram of delicious cake.", originalPrice: 600, discountedPrice: 500, discount: 17, image: "https://i.postimg.cc/KzJNtJVx/Whats-App-Image-2025-06-22-at-8.jpg", category: "Cakes", aiHint: "half kg cake" },
     { id: 17, name: "1 Kg Cake", description: "A full kilogram of cake for your celebration.", originalPrice: 1200, discountedPrice: 1000, discount: 17, image: "https://placehold.co/100x100.png", category: "Cakes", aiHint: "one kg cake" },
     { id: 18, name: "Dry Cake", description: "A classic dry cake, perfect with tea.", originalPrice: 400, discountedPrice: 350, discount: 13, image: "https://placehold.co/100x100.png", category: "Cakes", aiHint: "dry cake" },
 

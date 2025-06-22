@@ -110,6 +110,13 @@ const boxOf9BrownieReferenceImages: Option[] = [
     { name: '', image: 'https://i.postimg.cc/QCTxJfbv/Whats-App-Image-2025-06-23-at-1.jpg' },
 ];
 
+const brownieBitesReferenceImages: Option[] = [
+    { name: '', image: 'https://i.postimg.cc/wjKw62GM/Whats-App-Image-2025-06-23-at-1.jpg' },
+    { name: '', image: 'https://i.postimg.cc/q7wwxTM6/Whats-App-Image-2025-06-23-at-1.jpg' },
+    { name: '', image: 'https://i.postimg.cc/Cxjmd83N/Whats-App-Image-2025-06-23-at-1.jpg' },
+    { name: '', image: 'https://i.postimg.cc/mrBV9DRG/Whats-App-Image-2025-06-23-at-1.jpg' },
+];
+
 
 export const bakeryItems: BakeryItem[] = [
     // Cakes
@@ -129,7 +136,7 @@ export const bakeryItems: BakeryItem[] = [
     { id: 6, name: "Box of 4", description: "A box of 4 fudgy brownies.", image: "https://i.postimg.cc/0QCzJWVn/Whats-App-Image-2025-06-23-at-1.jpg", category: "Brownies", aiHint: "brownie box", referenceImages: boxOf4BrownieReferenceImages },
     { id: 25, name: "Box of 6", description: "A box of 6 delicious brownies.", image: "https://i.postimg.cc/JtVSVxLw/Whats-App-Image-2025-06-23-at-1.jpg", category: "Brownies", aiHint: "brownie box", referenceImages: boxOf6BrownieReferenceImages },
     { id: 26, name: "Box of 9", description: "A box of 9 delicious brownies.", image: "https://i.postimg.cc/y6kjc2qW/Whats-App-Image-2025-06-23-at-1.jpg", category: "Brownies", aiHint: "brownie box", referenceImages: boxOf9BrownieReferenceImages },
-    { id: 27, name: "Brownie Bites", description: "A tub of delicious brownie bites.", image: "https://i.postimg.cc/q7wwxTM6/Whats-App-Image-2025-06-23-at-1.jpg", category: "Brownies", aiHint: "brownie bites" },
+    { id: 27, name: "Brownie Bites", description: "A tub of delicious brownie bites.", image: "https://i.postimg.cc/q7wwxTM6/Whats-App-Image-2025-06-23-at-1.jpg", category: "Brownies", aiHint: "brownie bites", referenceImages: brownieBitesReferenceImages },
     { id: 28, name: "Brownie Tub", description: "A tub full of brownie goodness.", image: "https://placehold.co/100x100.png", category: "Brownies", aiHint: "brownie tub" },
     
     // Cheesecakes

@@ -224,7 +224,7 @@ export const bakeryItems: BakeryItem[] = [
     { id: 22, name: "Chocolate Bar", description: "A rich and decadent chocolate bar.", image: "https://placehold.co/100x100.png", category: "Chocolates", aiHint: "chocolate bar" },
 
     // Cookies
-    { id: 23, name: "Cookies", description: "Classic cookies with chocolate chips.", image: "https://placehold.co/100x100.png", category: "Cookies", aiHint: "chocolate chip cookies" },
+    { id: 23, name: "Cookies", description: "Classic cookies with chocolate chips.", image: "https://i.postimg.cc/T2V0JRZt/Whats-App-Image-2025-06-23-at-8.jpg", category: "Cookies", aiHint: "cookies" },
 
     // HAMPERS
     { id: 13, name: "Festive Hamper", description: "A beautiful hamper with assorted goodies.", image: "https://placehold.co/100x100.png", category: "HAMPERS", aiHint: "festive hamper" },

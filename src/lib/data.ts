@@ -159,6 +159,17 @@ const miniCheesecakeReferenceImages: Option[] = [
     { name: '', image: 'https://i.postimg.cc/BnyXK36p/Whats-App-Image-2025-06-23-at-7.jpg' },
 ];
 
+const jarCheesecakeReferenceImages: Option[] = [
+    { name: '', image: 'https://i.postimg.cc/bw8s0gHD/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/MG3HSSkV/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/wxCtMg1k/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/3Nmxm0kF/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/bwTdmn36/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/gJwJcTd5/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/m27PFJMW/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/tTLgsN4g/Whats-App-Image-2025-06-23-at-7.jpg' },
+];
+
 export const bakeryItems: BakeryItem[] = [
     // Cakes
     { id: 1, name: "Bento Cake", description: "A cute, personal-sized bento cake.", image: "https://i.postimg.cc/1zXr0pGQ/Whats-App-Image-2025-06-22-at-8.jpg", category: "Cakes", aiHint: "bento cake", referenceImages: bentoCakeReferenceImages },
@@ -185,7 +196,7 @@ export const bakeryItems: BakeryItem[] = [
     { id: 8, name: "Mini cheesecake", description: "A personal-sized mini cheesecake.", image: "https://i.postimg.cc/28S69yLT/Whats-App-Image-2025-06-23-at-7.jpg", category: "Cheesecakes", aiHint: "mini cheesecake", referenceImages: miniCheesecakeReferenceImages },
 
     // Jar cakes
-    { id: 9, name: "Jar Cheese Cake", description: "Creamy cheesecake layered in a convenient jar.", image: "https://i.postimg.cc/J0yFtjdP/Whats-App-Image-2025-06-23-at-7.jpg", category: "Jar cakes", aiHint: "jar cheesecake" },
+    { id: 9, name: "Jar Cheese Cake", description: "Creamy cheesecake layered in a convenient jar.", image: "https://i.postimg.cc/J0yFtjdP/Whats-App-Image-2025-06-23-at-7.jpg", category: "Jar cakes", aiHint: "jar cheesecake", referenceImages: jarCheesecakeReferenceImages },
     { id: 10, name: "Tiramisu Jar Cake", description: "Classic Italian dessert with coffee-soaked ladyfingers and mascarpone cheese in a jar.", image: "https://placehold.co/100x100.png", category: "Jar cakes", aiHint: "tiramisu jar cake" },
 
     // Bombolonis

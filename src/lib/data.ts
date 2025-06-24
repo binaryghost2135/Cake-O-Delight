@@ -148,8 +148,8 @@ export const bakeryItems: BakeryItem[] = [
     { id: 28, name: "Brownie Tub", description: "A tub full of brownie goodness.", image: "https://i.postimg.cc/MG375cTk/Whats-App-Image-2025-06-23-at-11.jpg", category: "Brownies", aiHint: "brownie tub", referenceImages: brownieTubReferenceImages },
     
     // Cheesecakes
-    { id: 7, name: "New York Cheesecake", description: "A slice of classic New York style cheesecake.", image: "https://placehold.co/100x100.png", category: "Cheesecakes", aiHint: "new york cheesecake" },
-    { id: 8, name: "Blueberry Cheesecake", description: "Creamy cheesecake with a blueberry topping.", image: "https://placehold.co/100x100.png", category: "Cheesecakes", aiHint: "blueberry cheesecake" },
+    { id: 7, name: "1/2 Kg Cheesecake", description: "Half a kilogram of creamy cheesecake.", image: "https://placehold.co/100x100.png", category: "Cheesecakes", aiHint: "cheesecake" },
+    { id: 8, name: "Mini cheesecake", description: "A personal-sized mini cheesecake.", image: "https://placehold.co/100x100.png", category: "Cheesecakes", aiHint: "mini cheesecake" },
 
     // Jar cakes
     { id: 9, name: "Red Velvet Jar Cake", description: "Layers of red velvet cake and cream cheese in a jar.", image: "https://placehold.co/100x100.png", category: "Jar cakes", aiHint: "red velvet jar cake" },

@@ -265,7 +265,7 @@ export const bakeryItems: BakeryItem[] = [
     { id: 16, name: "Cupcake Combo Box", description: "A box of 4 assorted cupcakes.", image: "https://placehold.co/100x100.png", category: "Combos", aiHint: "cupcake box" },
 
     // Other Items
-    { id: 29, name: "Cake Sickles", description: "Delicious and fun cake sickles.", image: "https://placehold.co/100x100.png", category: "Other Items", aiHint: "cake sickles", referenceImages: cakeSicklesReferenceImages, hasCustomization: true },
+    { id: 29, name: "Cake Sickles", description: "Delicious and fun cake sickles.", image: "https://i.postimg.cc/GhgPh9WS/Whats-App-Image-2025-06-23-at-11.jpg", category: "Other Items", aiHint: "cake sickles", referenceImages: cakeSicklesReferenceImages, hasCustomization: true },
     { id: 30, name: "Cakes pops", description: "Bite-sized cake pops, perfect for parties.", image: "https://i.postimg.cc/XYhWncN1/Whats-App-Image-2025-06-23-at-11.jpg", category: "Other Items", aiHint: "cake pops", referenceImages: cakePopsReferenceImages, hasCustomization: true },
 ];
 

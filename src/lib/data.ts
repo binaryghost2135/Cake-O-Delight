@@ -200,6 +200,16 @@ const cookiesReferenceImages: Option[] = [
     { name: '', image: 'https://i.postimg.cc/J4RqTf8M/Whats-App-Image-2025-06-23-at-8.jpg' },
 ];
 
+const chocolatesReferenceImages: Option[] = [
+    { name: '', image: 'https://i.postimg.cc/xChdkDPH/Whats-App-Image-2025-06-23-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/dtM1wF3c/Whats-App-Image-2025-06-23-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/3wLNTD4t/Whats-App-Image-2025-06-23-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/WzZ1gW9y/Whats-App-Image-2025-06-23-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/15pzzdVn/Whats-App-Image-2025-06-23-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/zBVBXXT8/Whats-App-Image-2025-06-23-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/1RVtkX9K/Whats-App-Image-2025-06-23-at-8.jpg' },
+];
+
 export const bakeryItems: BakeryItem[] = [
     // Cakes
     { id: 1, name: "Bento Cake", description: "A cute, personal-sized bento cake.", image: "https://i.postimg.cc/1zXr0pGQ/Whats-App-Image-2025-06-22-at-8.jpg", category: "Cakes", aiHint: "bento cake", referenceImages: bentoCakeReferenceImages },
@@ -233,7 +243,7 @@ export const bakeryItems: BakeryItem[] = [
     { id: 11, name: "Bomboloni", description: "Italian doughnut filled with delicious cream.", image: "https://i.postimg.cc/g0sRL5C2/Whats-App-Image-2025-06-23-at-7.jpg", category: "Bombolonis", aiHint: "bomboloni doughnut", referenceImages: bomboloniReferenceImages, hasCustomization: true },
 
     // Chocolates
-    { id: 21, name: "Chocolates", description: "A box of fine assorted chocolates.", image: "https://i.postimg.cc/WzZ1gW9y/Whats-App-Image-2025-06-23-at-8.jpg", category: "Chocolates", aiHint: "assorted chocolates" },
+    { id: 21, name: "Chocolates", description: "A box of fine assorted chocolates.", image: "https://i.postimg.cc/WzZ1gW9y/Whats-App-Image-2025-06-23-at-8.jpg", category: "Chocolates", aiHint: "assorted chocolates", referenceImages: chocolatesReferenceImages, hasCustomization: true },
 
     // Cookies
     { id: 23, name: "Cookies", description: "Classic cookies with chocolate chips.", image: "https://i.postimg.cc/3xcFxWvx/Whats-App-Image-2025-06-23-at-8.jpg", category: "Cookies", aiHint: "cookies", referenceImages: cookiesReferenceImages, hasCustomization: true },

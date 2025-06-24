@@ -170,6 +170,14 @@ const jarCheesecakeReferenceImages: Option[] = [
     { name: '', image: 'https://i.postimg.cc/tTLgsN4g/Whats-App-Image-2025-06-23-at-7.jpg' },
 ];
 
+const tiramisuJarCakeReferenceImages: Option[] = [
+    { name: '', image: 'https://i.postimg.cc/h4zzKftj/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/wMVnC9Zd/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/NMR3x6xF/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/PfQGpMxF/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/hvgHZXCr/Whats-App-Image-2025-06-23-at-7.jpg' },
+];
+
 export const bakeryItems: BakeryItem[] = [
     // Cakes
     { id: 1, name: "Bento Cake", description: "A cute, personal-sized bento cake.", image: "https://i.postimg.cc/1zXr0pGQ/Whats-App-Image-2025-06-22-at-8.jpg", category: "Cakes", aiHint: "bento cake", referenceImages: bentoCakeReferenceImages },
@@ -197,7 +205,7 @@ export const bakeryItems: BakeryItem[] = [
 
     // Jar cakes
     { id: 9, name: "Jar Cheese Cake", description: "Creamy cheesecake layered in a convenient jar.", image: "https://i.postimg.cc/J0yFtjdP/Whats-App-Image-2025-06-23-at-7.jpg", category: "Jar cakes", aiHint: "jar cheesecake", referenceImages: jarCheesecakeReferenceImages },
-    { id: 10, name: "Tiramisu Jar Cake", description: "Classic Italian dessert with coffee-soaked ladyfingers and mascarpone cheese in a jar.", image: "https://i.postimg.cc/h4zzKftj/Whats-App-Image-2025-06-23-at-7.jpg", category: "Jar cakes", aiHint: "tiramisu jar cake" },
+    { id: 10, name: "Tiramisu Jar Cake", description: "Classic Italian dessert with coffee-soaked ladyfingers and mascarpone cheese in a jar.", image: "https://i.postimg.cc/h4zzKftj/Whats-App-Image-2025-06-23-at-7.jpg", category: "Jar cakes", aiHint: "tiramisu jar cake", referenceImages: tiramisuJarCakeReferenceImages },
 
     // Bombolonis
     { id: 11, name: "Custard Bomboloni", description: "Italian doughnut filled with creamy custard.", image: "https://placehold.co/100x100.png", category: "Bombolonis", aiHint: "custard bomboloni" },

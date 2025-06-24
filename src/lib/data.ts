@@ -187,6 +187,19 @@ const bomboloniReferenceImages: Option[] = [
     { name: '', image: 'https://i.postimg.cc/d1Sy4CtM/Whats-App-Image-2025-06-23-at-7.jpg' },
 ];
 
+const cookiesReferenceImages: Option[] = [
+    { name: '', image: 'https://i.postimg.cc/3wz1nW8c/Whats-App-Image-2025-06-23-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/Xqkgj8wR/Whats-App-Image-2025-06-23-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/8zKtftqD/Whats-App-Image-2025-06-23-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/Yq8xTd2g/Whats-App-Image-2025-06-23-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/NMT4VYLf/Whats-App-Image-2025-06-23-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/T2V0JRZt/Whats-App-Image-2025-06-23-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/VNJ4qX8t/Whats-App-Image-2025-06-23-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/DwZch1mN/Whats-App-Image-2025-06-23-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/GtCQnNsP/Whats-App-Image-2025-06-23-at-8.jpg' },
+    { name: '', image: 'https://i.postimg.cc/J4RqTf8M/Whats-App-Image-2025-06-23-at-8.jpg' },
+];
+
 export const bakeryItems: BakeryItem[] = [
     // Cakes
     { id: 1, name: "Bento Cake", description: "A cute, personal-sized bento cake.", image: "https://i.postimg.cc/1zXr0pGQ/Whats-App-Image-2025-06-22-at-8.jpg", category: "Cakes", aiHint: "bento cake", referenceImages: bentoCakeReferenceImages },
@@ -224,7 +237,7 @@ export const bakeryItems: BakeryItem[] = [
     { id: 22, name: "Chocolate Bar", description: "A rich and decadent chocolate bar.", image: "https://placehold.co/100x100.png", category: "Chocolates", aiHint: "chocolate bar" },
 
     // Cookies
-    { id: 23, name: "Cookies", description: "Classic cookies with chocolate chips.", image: "https://i.postimg.cc/T2V0JRZt/Whats-App-Image-2025-06-23-at-8.jpg", category: "Cookies", aiHint: "cookies" },
+    { id: 23, name: "Cookies", description: "Classic cookies with chocolate chips.", image: "https://i.postimg.cc/T2V0JRZt/Whats-App-Image-2025-06-23-at-8.jpg", category: "Cookies", aiHint: "cookies", referenceImages: cookiesReferenceImages, hasCustomization: true },
 
     // HAMPERS
     { id: 13, name: "Festive Hamper", description: "A beautiful hamper with assorted goodies.", image: "https://placehold.co/100x100.png", category: "HAMPERS", aiHint: "festive hamper" },

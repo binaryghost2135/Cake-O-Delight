@@ -217,7 +217,7 @@ export const bakeryItems: BakeryItem[] = [
     { id: 10, name: "Tiramisu Jar Cake", description: "Classic Italian dessert with coffee-soaked ladyfingers and mascarpone cheese in a jar.", image: "https://i.postimg.cc/h4zzKftj/Whats-App-Image-2025-06-23-at-7.jpg", category: "Jar cakes", aiHint: "tiramisu jar cake", referenceImages: tiramisuJarCakeReferenceImages },
 
     // Bombolonis
-    { id: 11, name: "Bomboloni", description: "Italian doughnut filled with delicious cream.", image: "https://i.postimg.cc/g0sRL5C2/Whats-App-Image-2025-06-23-at-7.jpg", category: "Bombolonis", aiHint: "bomboloni doughnut", hasCustomization: false, referenceImages: bomboloniReferenceImages },
+    { id: 11, name: "Bomboloni", description: "Italian doughnut filled with delicious cream.", image: "https://i.postimg.cc/g0sRL5C2/Whats-App-Image-2025-06-23-at-7.jpg", category: "Bombolonis", aiHint: "bomboloni doughnut", referenceImages: bomboloniReferenceImages },
 
     // Chocolates
     { id: 21, name: "Assorted Chocolates Box", description: "A box of fine assorted chocolates.", image: "https://placehold.co/100x100.png", category: "Chocolates", aiHint: "assorted chocolates" },

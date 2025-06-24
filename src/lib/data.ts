@@ -210,6 +210,9 @@ const chocolatesReferenceImages: Option[] = [
     { name: '', image: 'https://i.postimg.cc/1RVtkX9K/Whats-App-Image-2025-06-23-at-8.jpg' },
 ];
 
+const cakeSicklesReferenceImages: Option[] = [];
+const cakePopsReferenceImages: Option[] = [];
+
 export const bakeryItems: BakeryItem[] = [
     // Cakes
     { id: 1, name: "Bento Cake", description: "A cute, personal-sized bento cake.", image: "https://i.postimg.cc/1zXr0pGQ/Whats-App-Image-2025-06-22-at-8.jpg", category: "Cakes", aiHint: "bento cake", referenceImages: bentoCakeReferenceImages },
@@ -255,6 +258,10 @@ export const bakeryItems: BakeryItem[] = [
     // Combos
     { id: 15, name: "Cake & Coffee Combo", description: "A slice of cake with your choice of coffee.", image: "https://placehold.co/100x100.png", category: "Combos", aiHint: "cake coffee" },
     { id: 16, name: "Cupcake Combo Box", description: "A box of 4 assorted cupcakes.", image: "https://placehold.co/100x100.png", category: "Combos", aiHint: "cupcake box" },
+
+    // Other Items
+    { id: 29, name: "Cake Sickles", description: "Delicious and fun cake sickles.", image: "https://placehold.co/100x100.png", category: "Other Items", aiHint: "cake sickles", referenceImages: cakeSicklesReferenceImages, hasCustomization: true },
+    { id: 30, name: "Cakes pops", description: "Bite-sized cake pops, perfect for parties.", image: "https://placehold.co/100x100.png", category: "Other Items", aiHint: "cake pops", referenceImages: cakePopsReferenceImages, hasCustomization: true },
 ];
 
 export const categories: Category[] = [

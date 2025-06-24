@@ -268,4 +268,5 @@ export const categories: Category[] = [
     { name: 'Cookies' },
     { name: 'HAMPERS' },
     { name: 'Combos' },
+    { name: 'Other Items' },
 ];

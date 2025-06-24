@@ -1,4 +1,4 @@
-export type BakeryCategory = 'Cakes' | 'Cupcakes' | 'Brownies' | 'Cheesecakes' | 'Jar cakes' | 'Bombolonis' | 'Chocolates' | 'Cookies' | 'HAMPERS' | 'Combos';
+export type BakeryCategory = 'Cakes' | 'Cupcakes' | 'Brownies' | 'Cheesecakes' | 'Jar cakes' | 'Bombolonis' | 'Chocolates' | 'Cookies' | 'HAMPERS' | 'Combos' | 'Other Items';
 
 export type Category = {
   name: string;

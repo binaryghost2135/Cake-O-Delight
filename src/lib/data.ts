@@ -148,7 +148,7 @@ export const bakeryItems: BakeryItem[] = [
     { id: 28, name: "Brownie Tub", description: "A tub full of brownie goodness.", image: "https://i.postimg.cc/MG375cTk/Whats-App-Image-2025-06-23-at-11.jpg", category: "Brownies", aiHint: "brownie tub", referenceImages: brownieTubReferenceImages },
     
     // Cheesecakes
-    { id: 7, name: "1/2 Kg Cheesecake", description: "Half a kilogram of creamy cheesecake.", image: "https://placehold.co/100x100.png", category: "Cheesecakes", aiHint: "cheesecake" },
+    { id: 7, name: "1/2 Kg Cheesecake", description: "Half a kilogram of creamy cheesecake.", image: "https://i.postimg.cc/nzSKs5yt/Whats-App-Image-2025-06-23-at-7.jpg", category: "Cheesecakes", aiHint: "cheesecake" },
     { id: 8, name: "Mini cheesecake", description: "A personal-sized mini cheesecake.", image: "https://placehold.co/100x100.png", category: "Cheesecakes", aiHint: "mini cheesecake" },
 
     // Jar cakes

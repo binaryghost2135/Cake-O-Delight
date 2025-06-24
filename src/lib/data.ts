@@ -210,7 +210,15 @@ const chocolatesReferenceImages: Option[] = [
     { name: '', image: 'https://i.postimg.cc/1RVtkX9K/Whats-App-Image-2025-06-23-at-8.jpg' },
 ];
 
-const cakeSicklesReferenceImages: Option[] = [];
+const cakeSicklesReferenceImages: Option[] = [
+    { name: '', image: 'https://i.postimg.cc/gjkRGPNW/Whats-App-Image-2025-06-23-at-11.jpg' },
+    { name: '', image: 'https://i.postimg.cc/2SqQqrmj/Whats-App-Image-2025-06-23-at-11.jpg' },
+    { name: '', image: 'https://i.postimg.cc/mD4C699h/Whats-App-Image-2025-06-23-at-11.jpg' },
+    { name: '', image: 'https://i.postimg.cc/8zqhM9PR/Whats-App-Image-2025-06-23-at-11.jpg' },
+    { name: '', image: 'https://i.postimg.cc/9MBZ3fPb/Whats-App-Image-2025-06-23-at-11.jpg' },
+    { name: '', image: 'https://i.postimg.cc/GhgPh9WS/Whats-App-Image-2025-06-23-at-11.jpg' },
+    { name: '', image: 'https://i.postimg.cc/T29qFtCx/Whats-App-Image-2025-06-23-at-11.jpg' },
+];
 const cakePopsReferenceImages: Option[] = [
     { name: '', image: 'https://i.postimg.cc/tTGHxqxh/Whats-App-Image-2025-06-23-at-11.jpg' },
     { name: '', image: 'https://i.postimg.cc/XYhWncN1/Whats-App-Image-2025-06-23-at-11.jpg' },

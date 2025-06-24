@@ -217,15 +217,14 @@ export const bakeryItems: BakeryItem[] = [
     { id: 10, name: "Tiramisu Jar Cake", description: "Classic Italian dessert with coffee-soaked ladyfingers and mascarpone cheese in a jar.", image: "https://i.postimg.cc/h4zzKftj/Whats-App-Image-2025-06-23-at-7.jpg", category: "Jar cakes", aiHint: "tiramisu jar cake", referenceImages: tiramisuJarCakeReferenceImages },
 
     // Bombolonis
-    { id: 11, name: "Bomboloni", description: "Italian doughnut filled with delicious cream.", image: "https://i.postimg.cc/g0sRL5C2/Whats-App-Image-2025-06-23-at-7.jpg", category: "Bombolonis", aiHint: "bomboloni doughnut", referenceImages: bomboloniReferenceImages },
+    { id: 11, name: "Bomboloni", description: "Italian doughnut filled with delicious cream.", image: "https://i.postimg.cc/g0sRL5C2/Whats-App-Image-2025-06-23-at-7.jpg", category: "Bombolonis", aiHint: "bomboloni doughnut", referenceImages: bomboloniReferenceImages, hasCustomization: true },
 
     // Chocolates
     { id: 21, name: "Assorted Chocolates Box", description: "A box of fine assorted chocolates.", image: "https://placehold.co/100x100.png", category: "Chocolates", aiHint: "assorted chocolates" },
     { id: 22, name: "Chocolate Bar", description: "A rich and decadent chocolate bar.", image: "https://placehold.co/100x100.png", category: "Chocolates", aiHint: "chocolate bar" },
 
     // Cookies
-    { id: 23, name: "Chocolate Chip Cookies", description: "Classic cookies with chocolate chips.", image: "https://placehold.co/100x100.png", category: "Cookies", aiHint: "chocolate chip cookies" },
-    { id: 24, name: "Oatmeal Cookies", description: "Healthy and delicious oatmeal cookies.", image: "https://placehold.co/100x100.png", category: "Cookies", aiHint: "oatmeal cookies" },
+    { id: 23, name: "Cookies", description: "Classic cookies with chocolate chips.", image: "https://placehold.co/100x100.png", category: "Cookies", aiHint: "chocolate chip cookies" },
 
     // HAMPERS
     { id: 13, name: "Festive Hamper", description: "A beautiful hamper with assorted goodies.", image: "https://placehold.co/100x100.png", category: "HAMPERS", aiHint: "festive hamper" },

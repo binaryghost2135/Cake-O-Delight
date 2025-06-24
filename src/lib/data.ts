@@ -125,6 +125,27 @@ const brownieTubReferenceImages: Option[] = [
     { name: '', image: 'https://i.postimg.cc/jjS6y6RQ/Whats-App-Image-2025-06-23-at-11.jpg' },
 ];
 
+const halfKgCheesecakeReferenceImages: Option[] = [
+    { name: '', image: 'https://i.postimg.cc/XqZf9LWB/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/4xp18W9z/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/D0mgBFrZ/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/yYZhdLnw/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/Qt8SKcVc/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/YSpQdMkH/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/Fz2jpSFW/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/k59vLWQL/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/yx5TG5jT/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/rw21t5Pz/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/nzSKs5yt/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/02TfdTbk/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/Kz0fP4gw/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/jjZP9mdJ/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/h4wbck8L/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/c15T6gW8/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/GpJqpX3c/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/8zdhds24/Whats-App-Image-2025-06-23-at-7.jpg' },
+];
+
 
 export const bakeryItems: BakeryItem[] = [
     // Cakes
@@ -148,7 +169,7 @@ export const bakeryItems: BakeryItem[] = [
     { id: 28, name: "Brownie Tub", description: "A tub full of brownie goodness.", image: "https://i.postimg.cc/MG375cTk/Whats-App-Image-2025-06-23-at-11.jpg", category: "Brownies", aiHint: "brownie tub", referenceImages: brownieTubReferenceImages },
     
     // Cheesecakes
-    { id: 7, name: "1/2 Kg Cheesecake", description: "Half a kilogram of creamy cheesecake.", image: "https://i.postimg.cc/nzSKs5yt/Whats-App-Image-2025-06-23-at-7.jpg", category: "Cheesecakes", aiHint: "cheesecake" },
+    { id: 7, name: "1/2 Kg Cheesecake", description: "Half a kilogram of creamy cheesecake.", image: "https://i.postimg.cc/nzSKs5yt/Whats-App-Image-2025-06-23-at-7.jpg", category: "Cheesecakes", aiHint: "cheesecake", referenceImages: halfKgCheesecakeReferenceImages },
     { id: 8, name: "Mini cheesecake", description: "A personal-sized mini cheesecake.", image: "https://placehold.co/100x100.png", category: "Cheesecakes", aiHint: "mini cheesecake" },
 
     // Jar cakes

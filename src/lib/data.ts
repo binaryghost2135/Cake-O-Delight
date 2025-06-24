@@ -146,6 +146,18 @@ const halfKgCheesecakeReferenceImages: Option[] = [
     { name: '', image: 'https://i.postimg.cc/8zdhds24/Whats-App-Image-2025-06-23-at-7.jpg' },
 ];
 
+const miniCheesecakeReferenceImages: Option[] = [
+    { name: '', image: 'https://i.postimg.cc/dtN0bF8F/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/9MPMKqBg/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/c1mCcwCr/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/wBm35rRp/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/fR3bZPK9/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/VvY68LGf/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/28S69yLT/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/RFxhgTwn/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/sxw2Ddqp/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/BnyXK36p/Whats-App-Image-2025-06-23-at-7.jpg' },
+];
 
 export const bakeryItems: BakeryItem[] = [
     // Cakes
@@ -170,7 +182,7 @@ export const bakeryItems: BakeryItem[] = [
     
     // Cheesecakes
     { id: 7, name: "1/2 Kg Cheesecake", description: "Half a kilogram of creamy cheesecake.", image: "https://i.postimg.cc/nzSKs5yt/Whats-App-Image-2025-06-23-at-7.jpg", category: "Cheesecakes", aiHint: "cheesecake", referenceImages: halfKgCheesecakeReferenceImages },
-    { id: 8, name: "Mini cheesecake", description: "A personal-sized mini cheesecake.", image: "https://i.postimg.cc/28S69yLT/Whats-App-Image-2025-06-23-at-7.jpg", category: "Cheesecakes", aiHint: "mini cheesecake" },
+    { id: 8, name: "Mini cheesecake", description: "A personal-sized mini cheesecake.", image: "https://i.postimg.cc/28S69yLT/Whats-App-Image-2025-06-23-at-7.jpg", category: "Cheesecakes", aiHint: "mini cheesecake", referenceImages: miniCheesecakeReferenceImages },
 
     // Jar cakes
     { id: 9, name: "Red Velvet Jar Cake", description: "Layers of red velvet cake and cream cheese in a jar.", image: "https://placehold.co/100x100.png", category: "Jar cakes", aiHint: "red velvet jar cake" },

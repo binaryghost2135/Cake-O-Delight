@@ -211,7 +211,12 @@ const chocolatesReferenceImages: Option[] = [
 ];
 
 const cakeSicklesReferenceImages: Option[] = [];
-const cakePopsReferenceImages: Option[] = [];
+const cakePopsReferenceImages: Option[] = [
+    { name: '', image: 'https://i.postimg.cc/tTGHxqxh/Whats-App-Image-2025-06-23-at-11.jpg' },
+    { name: '', image: 'https://i.postimg.cc/XYhWncN1/Whats-App-Image-2025-06-23-at-11.jpg' },
+    { name: '', image: 'https://i.postimg.cc/RF1x1k72/Whats-App-Image-2025-06-23-at-11.jpg' },
+    { name: '', image: 'https://i.postimg.cc/SKMhR2JS/Whats-App-Image-2025-06-23-at-11.jpg' },
+];
 
 export const bakeryItems: BakeryItem[] = [
     // Cakes

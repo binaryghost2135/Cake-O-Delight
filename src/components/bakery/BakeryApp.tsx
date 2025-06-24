@@ -17,7 +17,28 @@ const BakeryApp = () => {
     });
     const cartIdCounter = useRef(0);
 
+    const handleDirectAddToCart = (item: MenuItem) => {
+        const existingCartItem = cart.find(cartItem => cartItem.item.id === item.id && cartItem.item.hasCustomization === false);
+
+        if (existingCartItem) {
+            updateCartQuantity(existingCartItem.cartId, existingCartItem.customization.quantity + 1);
+        } else {
+            cartIdCounter.current += 1;
+            const newCartItem: CartItem = {
+                item: item,
+                customization: { quantity: 1 },
+                cartId: cartIdCounter.current,
+            };
+            setCart(currentCart => [...currentCart, newCartItem]);
+        }
+    };
+
     const handleSelectItem = (item: MenuItem) => {
+        if (item.hasCustomization === false) {
+            handleDirectAddToCart(item);
+            return;
+        }
+
         setSelectedItem(item);
         const initialCustomization: Customization = { quantity: 1 };
         if (item.referenceImages && item.referenceImages.length > 0) {

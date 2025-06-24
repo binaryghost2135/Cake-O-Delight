@@ -178,6 +178,15 @@ const tiramisuJarCakeReferenceImages: Option[] = [
     { name: '', image: 'https://i.postimg.cc/hvgHZXCr/Whats-App-Image-2025-06-23-at-7.jpg' },
 ];
 
+const bomboloniReferenceImages: Option[] = [
+    { name: '', image: 'https://i.postimg.cc/g0sRL5C2/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/mkzFqrtP/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/XJv5fLWc/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/WzBJPPkX/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/Bv4H6swz/Whats-App-Image-2025-06-23-at-7.jpg' },
+    { name: '', image: 'https://i.postimg.cc/d1Sy4CtM/Whats-App-Image-2025-06-23-at-7.jpg' },
+];
+
 export const bakeryItems: BakeryItem[] = [
     // Cakes
     { id: 1, name: "Bento Cake", description: "A cute, personal-sized bento cake.", image: "https://i.postimg.cc/1zXr0pGQ/Whats-App-Image-2025-06-22-at-8.jpg", category: "Cakes", aiHint: "bento cake", referenceImages: bentoCakeReferenceImages },
@@ -208,8 +217,7 @@ export const bakeryItems: BakeryItem[] = [
     { id: 10, name: "Tiramisu Jar Cake", description: "Classic Italian dessert with coffee-soaked ladyfingers and mascarpone cheese in a jar.", image: "https://i.postimg.cc/h4zzKftj/Whats-App-Image-2025-06-23-at-7.jpg", category: "Jar cakes", aiHint: "tiramisu jar cake", referenceImages: tiramisuJarCakeReferenceImages },
 
     // Bombolonis
-    { id: 11, name: "Custard Bomboloni", description: "Italian doughnut filled with creamy custard.", image: "https://placehold.co/100x100.png", category: "Bombolonis", aiHint: "custard bomboloni" },
-    { id: 12, name: "Chocolate Bomboloni", description: "Soft doughnut filled with rich chocolate.", image: "https://placehold.co/100x100.png", category: "Bombolonis", aiHint: "chocolate bomboloni" },
+    { id: 11, name: "Bomboloni", description: "Italian doughnut filled with delicious cream.", image: "https://i.postimg.cc/g0sRL5C2/Whats-App-Image-2025-06-23-at-7.jpg", category: "Bombolonis", aiHint: "bomboloni doughnut", hasCustomization: false, referenceImages: bomboloniReferenceImages },
 
     // Chocolates
     { id: 21, name: "Assorted Chocolates Box", description: "A box of fine assorted chocolates.", image: "https://placehold.co/100x100.png", category: "Chocolates", aiHint: "assorted chocolates" },

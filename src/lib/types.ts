@@ -12,6 +12,7 @@ export type BakeryItem = {
   category: BakeryCategory;
   aiHint: string;
   referenceImages?: Option[];
+  hasCustomization?: boolean;
 };
 
 export type MenuItem = BakeryItem;

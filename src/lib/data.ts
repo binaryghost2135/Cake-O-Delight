@@ -261,7 +261,7 @@ export const bakeryItems: BakeryItem[] = [
 
     // Other Items
     { id: 29, name: "Cake Sickles", description: "Delicious and fun cake sickles.", image: "https://placehold.co/100x100.png", category: "Other Items", aiHint: "cake sickles", referenceImages: cakeSicklesReferenceImages, hasCustomization: true },
-    { id: 30, name: "Cakes pops", description: "Bite-sized cake pops, perfect for parties.", image: "https://placehold.co/100x100.png", category: "Other Items", aiHint: "cake pops", referenceImages: cakePopsReferenceImages, hasCustomization: true },
+    { id: 30, name: "Cakes pops", description: "Bite-sized cake pops, perfect for parties.", image: "https://i.postimg.cc/7PVhBwB3/Whats-App-Image-2025-06-23-at-12.jpg", category: "Other Items", aiHint: "cake pops", referenceImages: cakePopsReferenceImages, hasCustomization: true },
 ];
 
 export const categories: Category[] = [

@@ -185,8 +185,8 @@ export const bakeryItems: BakeryItem[] = [
     { id: 8, name: "Mini cheesecake", description: "A personal-sized mini cheesecake.", image: "https://i.postimg.cc/28S69yLT/Whats-App-Image-2025-06-23-at-7.jpg", category: "Cheesecakes", aiHint: "mini cheesecake", referenceImages: miniCheesecakeReferenceImages },
 
     // Jar cakes
-    { id: 9, name: "Red Velvet Jar Cake", description: "Layers of red velvet cake and cream cheese in a jar.", image: "https://placehold.co/100x100.png", category: "Jar cakes", aiHint: "red velvet jar cake" },
-    { id: 10, name: "Chocolate Jar Cake", description: "Delicious chocolate cake in a convenient jar.", image: "https://placehold.co/100x100.png", category: "Jar cakes", aiHint: "chocolate jar cake" },
+    { id: 9, name: "Jar Cheese Cake", description: "Creamy cheesecake layered in a convenient jar.", image: "https://i.postimg.cc/J0yFtjdP/Whats-App-Image-2025-06-23-at-7.jpg", category: "Jar cakes", aiHint: "jar cheesecake" },
+    { id: 10, name: "Tiramisu Jar Cake", description: "Classic Italian dessert with coffee-soaked ladyfingers and mascarpone cheese in a jar.", image: "https://placehold.co/100x100.png", category: "Jar cakes", aiHint: "tiramisu jar cake" },
 
     // Bombolonis
     { id: 11, name: "Custard Bomboloni", description: "Italian doughnut filled with creamy custard.", image: "https://placehold.co/100x100.png", category: "Bombolonis", aiHint: "custard bomboloni" },

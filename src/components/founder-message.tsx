@@ -6,7 +6,7 @@ export function FounderMessage() {
       <div className="max-w-2xl mx-auto flex flex-col items-center gap-4 text-center">
           <Image
             src="https://placehold.co/120x120.png"
-            alt="Founder of Cake-O-Deliht"
+            alt="Founder of Cake-O-Delight"
             width={120}
             height={120}
             data-ai-hint="founder portrait"

@@ -8,7 +8,7 @@ export function Header() {
       <div className="container flex h-16 max-w-7xl items-center justify-between">
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <h1 className="text-3xl font-bold text-foreground font-cute">
-            Cake-O-Deliht
+            Cake-O-Delight
           </h1>
         </Link>
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">

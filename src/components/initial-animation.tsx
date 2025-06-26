@@ -7,7 +7,7 @@ import { FloatingIcons } from "./floating-icons";
 
 const customerReviewsWithStars = [
   { text: `"Absolutely divine! The chocolate cake was a dream come true."`, stars: 5 },
-  { text: `"Cake-O-Deliht never disappoints. Their pastries are fresh and flavorful."`, stars: 5 },
+  { text: `"Cake-O-Delight never disappoints. Their pastries are fresh and flavorful."`, stars: 5 },
   { text: `"The custom cake for my birthday was stunning and delicious! Highly recommend."`, stars: 5 },
   { text: `"A must-visit bakery! Every item is a work of art and tastes even better."`, stars: 5 },
   { text: `"My go-to place for all things sweet. The staff are lovely too!"`, stars: 5 },

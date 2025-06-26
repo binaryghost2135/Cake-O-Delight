@@ -13,10 +13,7 @@ export function FounderMessage() {
             className="rounded-full object-cover shadow-lg border-4 border-primary"
           />
         <blockquote className="text-center">
-          <p className="text-2xl font-cute text-foreground/90 italic leading-relaxed">
-            "Baking is love made edible. Here, every creation is a piece of our heart, shared with you."
-          </p>
-          <footer className="mt-2 font-semibold text-accent">- Jane Dough, Founder</footer>
+          <footer className="mt-2 font-semibold text-accent">- Riddhi Founder</footer>
         </blockquote>
       </div>
     </section>

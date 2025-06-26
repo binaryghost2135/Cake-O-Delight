@@ -10,9 +10,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        headline: ['Inter', 'sans-serif'],
-        code: ['monospace'],
+        body: ['"PT Sans"', 'sans-serif'],
+        headline: ['"Playfair Display"', 'serif'],
+        cute: ['"Dancing Script"', 'cursive'],
       },
       colors: {
         background: 'hsl(var(--background))',
@@ -88,10 +88,16 @@ export default {
             height: '0',
           },
         },
+        floatAndRotate: {
+          '0%': { transform: 'translateY(0) rotate(0deg) scale(0.8)', opacity: '0.3' },
+          '50%': { transform: 'translateY(-30px) rotate(180deg) scale(1.1)', opacity: '0.6' },
+          '100%': { transform: 'translateY(0) rotate(360deg) scale(0.8)', opacity: '0.3' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'float-and-rotate': 'floatAndRotate linear infinite',
       },
     },
   },

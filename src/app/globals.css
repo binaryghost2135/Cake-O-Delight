@@ -54,7 +54,6 @@
   }
   body {
     @apply bg-background text-foreground;
-    overflow-x: hidden;
   }
   h1,h2,h3,h4,h5,h6 {
     @apply font-headline;
@@ -177,7 +176,6 @@
     align-items: start;
     margin-top: 4rem;
     padding: 0 1rem 4rem 1rem;
-    overflow-x: clip;
   }
 
   .overlapping-photo-item {

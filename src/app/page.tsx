@@ -7,6 +7,7 @@ import { FloatingIcons } from '@/components/floating-icons';
 import { FounderMessage } from '@/components/founder-message';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { Sparkles } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -39,8 +40,11 @@ export default function Home() {
           </section>
 
           <div className="py-12 text-center">
-            <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg py-6 px-8 rounded-full shadow-md transition-transform hover:scale-105 animate-shake">
-              <Link href="#">Check our Menu</Link>
+            <Button asChild size="lg" className="font-bold text-lg py-6 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-shake">
+              <Link href="#">
+                <Sparkles className="mr-3 h-6 w-6" />
+                Check our Menu
+              </Link>
             </Button>
           </div>
 

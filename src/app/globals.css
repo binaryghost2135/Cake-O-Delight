@@ -81,23 +81,39 @@
   .review-item.fade-out-up { opacity: 0; transform: translate(-50%, -150%) scale(0.8); }
 
   .photo-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      padding-bottom: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding-bottom: 4rem;
   }
   .photo-item {
-      width: calc(50% - 1rem);
-      max-width: 320px;
-      @apply rounded-2xl overflow-hidden shadow-2xl bg-white p-5 border-2 border-primary transition-transform duration-300;
+    width: calc(50% - 1rem);
+    max-width: 320px;
+    @apply rounded-2xl overflow-hidden shadow-2xl bg-white p-5 border-2 border-primary transition-all duration-700 ease-out;
+    opacity: 0;
+    will-change: transform, opacity;
   }
-  .photo-item:hover {
-      transform: translateY(-8px) scale(1.03);
-      @apply shadow-2xl;
+  .photo-item.from-left {
+    transform: translateX(-100%);
   }
-  .photo-item:nth-child(odd) { margin-top: 0; }
-  .photo-item:nth-child(even) { margin-top: 4rem; }
+  .photo-item.from-right {
+    transform: translateX(100%);
+  }
+  .photo-item.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .photo-item.is-visible:hover {
+    transform: translateY(-8px) scale(1.03);
+    @apply shadow-2xl;
+  }
+  .photo-item:nth-child(odd) {
+    margin-top: 0;
+  }
+  .photo-item:nth-child(even) {
+    margin-top: 4rem;
+  }
 
   @media (min-width: 768px) {
       .photo-item {

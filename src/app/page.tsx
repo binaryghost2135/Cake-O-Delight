@@ -20,7 +20,7 @@ export default function Home() {
               Baked with Love, Crafted with Joy!
             </h2>
             <p className="text-2xl md:text-3xl text-foreground/80 max-w-3xl mx-auto mb-16 font-cute leading-relaxed">
-              Step into SweetSlice, where every sprinkle tells a story and every
+              Step into Cake-O-Deliht, where every sprinkle tells a story and every
               bite is a little piece of happiness. We pour our hearts into
               crafting delightful cakes, pastries, and treats, just for you!
             </p>

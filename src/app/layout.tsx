@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'SweetSlice',
+  title: 'Cake-O-Deliht',
   description: 'Baked with Love, Crafted with Joy!',
 };
 

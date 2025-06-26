@@ -90,7 +90,7 @@ export function InitialAnimation({ children }: { children: ReactNode }) {
           )}
         >
           <Image
-            src="https://placehold.co/200x200.png"
+            src="https://i.postimg.cc/sXwtZM0B/Whats-App-Image-2025-06-26-at-6.jpg"
             data-ai-hint="bakery logo"
             alt="Bakery Logo"
             width={180}

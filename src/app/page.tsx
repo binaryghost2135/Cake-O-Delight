@@ -4,6 +4,7 @@ import { InitialAnimation } from '@/components/initial-animation';
 import { PhotoGrid } from '@/components/photo-grid';
 import { ScrollAnimatedGrid } from '@/components/scroll-animated-grid';
 import { FloatingIcons } from '@/components/floating-icons';
+import { FounderMessage } from '@/components/founder-message';
 
 export default function Home() {
   return (
@@ -25,6 +26,8 @@ export default function Home() {
               crafting delightful cakes, pastries, and treats, just for you!
             </p>
           </div>
+
+          <FounderMessage />
 
           <section id="cake-photos-section" className="pt-16 pb-8">
             <h3 className="text-5xl font-bold mb-12 font-cute">

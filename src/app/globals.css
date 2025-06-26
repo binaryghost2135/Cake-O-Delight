@@ -216,7 +216,7 @@
   .overlapping-photo-item:nth-child(even) {
     /* Right column */
     margin-top: 5rem; /* Zigzag */
-    margin-left: -40%; /* Overlap */
+    margin-left: -25%; /* Overlap */
     position: relative;
     z-index: 2;
   }

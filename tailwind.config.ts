@@ -93,11 +93,18 @@ export default {
           '50%': { transform: 'translateY(-30px) rotate(180deg) scale(1.1)', opacity: '0.6' },
           '100%': { transform: 'translateY(0) rotate(360deg) scale(0.8)', opacity: '0.3' },
         },
+        shake: {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '25%': { transform: 'translateX(3px)' },
+          '50%': { transform: 'translateX(-3px)' },
+          '75%': { transform: 'translateX(3px)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'float-and-rotate': 'floatAndRotate linear infinite',
+        'shake': 'shake 1s ease-in-out 3s infinite',
       },
     },
   },

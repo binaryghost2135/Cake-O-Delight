@@ -5,6 +5,8 @@ import { PhotoGrid } from '@/components/photo-grid';
 import { ScrollAnimatedGrid } from '@/components/scroll-animated-grid';
 import { FloatingIcons } from '@/components/floating-icons';
 import { FounderMessage } from '@/components/founder-message';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -35,6 +37,12 @@ export default function Home() {
             </h3>
             <PhotoGrid />
           </section>
+
+          <div className="py-12 text-center">
+            <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg py-6 px-8 rounded-full shadow-md transition-transform hover:scale-105 animate-shake">
+              <Link href="#">Check our Menu</Link>
+            </Button>
+          </div>
 
           <section
             id="more-sweet-delights-section"

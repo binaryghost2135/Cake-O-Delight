@@ -5,7 +5,7 @@ export function FounderMessage() {
     <section className="mb-12 mt-[-4rem]">
       <div className="max-w-2xl mx-auto flex flex-col items-center gap-4 text-center">
           <Image
-            src="https://placehold.co/120x120.png"
+            src="https://i.postimg.cc/QMVNtrMJ/Screenshot-2025-06-26-175856.png"
             alt="Founder of Cake-O-Delight"
             width={120}
             height={120}

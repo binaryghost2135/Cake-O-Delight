@@ -32,7 +32,7 @@ export function PhotoGrid() {
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.1 }
     );
 
     const elements = currentGrid.querySelectorAll(".photo-item");

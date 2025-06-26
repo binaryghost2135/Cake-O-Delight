@@ -89,21 +89,21 @@
   }
   
   .review-card.left-card {
-    transform: translateX(-110%) rotateY(30deg) scale(0.9);
+    transform: translateX(-110%) rotate(-10deg) scale(0.9);
   }
   .review-card.right-card {
-    transform: translateX(110%) rotateY(-30deg) scale(0.9);
+    transform: translateX(110%) rotate(10deg) scale(0.9);
   }
   
   .review-card.visible.left-card {
     opacity: 1;
-    transform: translateX(-20%) rotateY(-5deg) rotateZ(-4deg);
+    transform: translate(-10%, -10%) rotate(-5deg);
     z-index: 2;
   }
   
   .review-card.visible.right-card {
     opacity: 1;
-    transform: translateX(20%) rotateY(5deg) rotateZ(4deg);
+    transform: translate(10%, 10%) rotate(5deg);
   }
 
   .review-card.exit {

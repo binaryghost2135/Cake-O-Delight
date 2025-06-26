@@ -5,26 +5,31 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { FloatingIcons } from "./floating-icons";
 
-const customerReviewsWithStars = [
-  { text: `"Absolutely divine! The chocolate cake was a dream come true."`, stars: 5 },
-  { text: `"Cake-O-Delight never disappoints. Their pastries are fresh and flavorful."`, stars: 5 },
-  { text: `"The custom cake for my birthday was stunning and delicious! Highly recommend."`, stars: 5 },
-  { text: `"A must-visit bakery! Every item is a work of art and tastes even better."`, stars: 5 },
-  { text: `"My go-to place for all things sweet. The staff are lovely too!"`, stars: 5 },
+const customerReviews = [
+  { 
+    name: "Priya S.",
+    text: `"The custom cake for my birthday was stunning and delicious! Highly recommend."`,
+    imageSrc: "https://placehold.co/80x80.png",
+    imageHint: "woman portrait" 
+  },
+  { 
+    name: "Rohan K.",
+    text: `"Cake-O-Delight never disappoints. Their pastries are fresh and flavorful."`, 
+    imageSrc: "https://placehold.co/80x80.png",
+    imageHint: "man portrait" 
+  },
 ];
 
 const LOGO_DISPLAY_TIME = 2500;
 const LOGO_FADE_DURATION = 800;
-const REVIEW_ITEM_DISPLAY_DURATION = 1500;
-const REVIEW_ANIMATION_CSS_DURATION = 1000;
-const REVIEW_BETWEEN_DELAY = 600;
+const REVIEWS_DISPLAY_DURATION = 4000;
+const REVIEWS_FADE_DURATION = 1000;
 
 type AnimationStage = "start" | "logo" | "reviews" | "done";
 
 export function InitialAnimation({ children }: { children: ReactNode }) {
   const [stage, setStage] = useState<AnimationStage>("start");
-  const [currentReviewIndex, setCurrentReviewIndex] = useState(-1);
-  const [reviewItemClass, setReviewItemClass] = useState("");
+  const [animationClass, setAnimationClass] = useState("");
   const [showOverlay, setShowOverlay] = useState(true);
   const [showContent, setShowContent] = useState(false);
 
@@ -34,7 +39,7 @@ export function InitialAnimation({ children }: { children: ReactNode }) {
 
     const logoTimer = setTimeout(() => {
       setStage("reviews");
-    }, LOGO_DISPLAY_TIME + LOGO_FADE_DURATION + 100);
+    }, LOGO_DISPLAY_TIME + LOGO_FADE_DURATION);
 
     return () => {
       clearTimeout(startTimer);
@@ -43,23 +48,23 @@ export function InitialAnimation({ children }: { children: ReactNode }) {
   }, []);
 
   useEffect(() => {
-    if (stage !== "reviews") return;
+    if (stage === "reviews") {
+      const showReviewsTimer = setTimeout(() => setAnimationClass("visible"), 100);
 
-    const animateReviews = async () => {
-      for (let i = 0; i < customerReviewsWithStars.length; i++) {
-        await new Promise(resolve => setTimeout(resolve, REVIEW_BETWEEN_DELAY));
-        setCurrentReviewIndex(i);
-        setReviewItemClass(i % 2 === 0 ? "slide-from-left active-slide" : "slide-from-right active-slide");
+      const hideReviewsTimer = setTimeout(() => {
+        setAnimationClass("exit");
+      }, REVIEWS_DISPLAY_DURATION);
 
-        await new Promise(resolve => setTimeout(resolve, REVIEW_ITEM_DISPLAY_DURATION));
-        setReviewItemClass(prev => prev.replace("active-slide", "fade-out-up"));
+      const doneTimer = setTimeout(() => {
+        setStage("done");
+      }, REVIEWS_DISPLAY_DURATION + REVIEWS_FADE_DURATION);
 
-        await new Promise(resolve => setTimeout(resolve, REVIEW_ANIMATION_CSS_DURATION));
-      }
-      setStage("done");
-    };
-
-    animateReviews();
+      return () => {
+        clearTimeout(showReviewsTimer);
+        clearTimeout(hideReviewsTimer);
+        clearTimeout(doneTimer);
+      };
+    }
   }, [stage]);
 
   useEffect(() => {
@@ -73,9 +78,6 @@ export function InitialAnimation({ children }: { children: ReactNode }) {
       return () => clearTimeout(fadeOutTimer);
     }
   }, [stage]);
-
-  const currentReview = customerReviewsWithStars[currentReviewIndex];
-  const createStarsHtml = (count: number) => '⭐'.repeat(count);
 
   return (
     <>
@@ -102,16 +104,35 @@ export function InitialAnimation({ children }: { children: ReactNode }) {
           <FloatingIcons numIcons={8} animationClass="initial-animation" />
           <div
             className={cn(
-              "review-container absolute z-15 flex flex-col items-center w-[90%] max-w-2xl text-center text-foreground transition-opacity duration-500",
+              "review-cards-container transition-opacity duration-500",
               stage === "reviews" ? "opacity-100" : "opacity-0"
             )}
           >
-            {currentReview && (
-              <div className={cn("review-item absolute left-1/2 top-1/2 w-full p-4 transition-all ease-out", `duration-${REVIEW_ANIMATION_CSS_DURATION}ms`, reviewItemClass)}>
-                <p className="text-3xl leading-snug italic font-cute">{currentReview.text}</p>
-                <div className="text-2xl mt-2 tracking-[0.2em]">{createStarsHtml(currentReview.stars)}</div>
+            {customerReviews.slice(0, 2).map((review, index) => (
+              <div
+                key={review.name}
+                className={cn(
+                  "review-card flex flex-col items-center text-center",
+                  index === 0 ? "left-card" : "right-card",
+                  animationClass
+                )}
+              >
+                <Image
+                  src={review.imageSrc}
+                  alt={review.name}
+                  width={80}
+                  height={80}
+                  data-ai-hint={review.imageHint}
+                  className="rounded-full w-20 h-20 object-cover mb-4 border-4 border-primary/50 shadow-md"
+                />
+                <p className="text-lg italic font-cute text-foreground/90 mb-4 leading-snug">
+                  {review.text}
+                </p>
+                <footer className="font-semibold text-accent/80">
+                  ~ {review.name}
+                </footer>
               </div>
-            )}
+            ))}
           </div>
         </div>
       )}

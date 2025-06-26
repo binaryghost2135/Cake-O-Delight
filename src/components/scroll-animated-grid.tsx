@@ -4,15 +4,11 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-const scrollAnimatedCakePhotos = [
+const collagePhotos = [
   { src: "https://placehold.co/600x400.png", hint: "chocolate velvet cake" },
   { src: "https://placehold.co/600x400.png", hint: "strawberry shortcake" },
   { src: "https://placehold.co/600x400.png", hint: "lemon meringue pie" },
   { src: "https://placehold.co/600x400.png", hint: "golden honeycomb cake" },
-  { src: "https://placehold.co/600x400.png", hint: "caramel swirl cheesecake" },
-  { src: "https://placehold.co/600x400.png", hint: "cherry pie" },
-  { src: "https://placehold.co/600x400.png", hint: "lavender macarons" },
-  { src: "https://placehold.co/600x400.png", hint: "pumpkin spice loaf" },
 ];
 
 export function ScrollAnimatedGrid() {
@@ -32,7 +28,7 @@ export function ScrollAnimatedGrid() {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.1, rootMargin: "0px 0px -100px 0px" }
     );
 
     const elements = currentGrid.querySelectorAll(".scroll-image-item");
@@ -49,12 +45,12 @@ export function ScrollAnimatedGrid() {
 
   return (
     <div ref={gridRef} className="scroll-animated-grid">
-      {scrollAnimatedCakePhotos.map((photo, index) => (
+      {collagePhotos.map((photo, index) => (
         <div
           key={index}
           className={cn(
             "scroll-image-item",
-            index % 2 === 0 ? "from-left" : "from-right"
+            `item-${index + 1}`
           )}
         >
           <Image
@@ -63,7 +59,7 @@ export function ScrollAnimatedGrid() {
             width={600}
             height={400}
             data-ai-hint={photo.hint}
-            className="w-full h-auto object-cover rounded-2xl"
+            className="w-full h-auto object-cover rounded-xl"
           />
         </div>
       ))}

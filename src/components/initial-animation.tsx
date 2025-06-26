@@ -4,6 +4,7 @@ import { useState, useEffect, type ReactNode } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { FloatingIcons } from "./floating-icons";
+import { Star } from "lucide-react";
 
 const customerReviews = [
   { 
@@ -125,6 +126,11 @@ export function InitialAnimation({ children }: { children: ReactNode }) {
                   data-ai-hint={review.imageHint}
                   className="rounded-full w-20 h-20 object-cover mb-4 border-4 border-primary/50 shadow-md"
                 />
+                <div className="flex mb-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+                  ))}
+                </div>
                 <p className="text-lg italic font-cute text-foreground/90 mb-4 leading-snug">
                   {review.text}
                 </p>

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function FounderMessage() {
   return (
-    <section className="mb-24 mt-[-4rem]">
+    <section className="mb-12 mt-[-4rem]">
       <div className="max-w-2xl mx-auto flex flex-col items-center gap-4 text-center">
           <Image
             src="https://placehold.co/120x120.png"

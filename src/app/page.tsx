@@ -29,7 +29,7 @@ export default function Home() {
 
           <FounderMessage />
 
-          <section id="cake-photos-section" className="pt-16 pb-8">
+          <section id="cake-photos-section" className="pt-8 pb-8">
             <h3 className="text-5xl font-bold mb-12 font-cute">
               Our Masterpieces
             </h3>

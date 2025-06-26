@@ -9,6 +9,8 @@ const collagePhotos = [
   { src: "https://placehold.co/600x400.png", hint: "strawberry shortcake" },
   { src: "https://placehold.co/600x400.png", hint: "lemon meringue pie" },
   { src: "https://placehold.co/600x400.png", hint: "golden honeycomb cake" },
+  { src: "https://placehold.co/600x400.png", hint: "blueberry cheesecake" },
+  { src: "https://placehold.co/600x400.png", hint: "red velvet cupcake" },
 ];
 
 export function ScrollAnimatedGrid() {
@@ -23,15 +25,13 @@ export function ScrollAnimatedGrid() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("is-visible");
-          } else {
-            entry.target.classList.remove("is-visible");
           }
         });
       },
-      { threshold: 0.1, rootMargin: "0px 0px -100px 0px" }
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
     );
 
-    const elements = currentGrid.querySelectorAll(".scroll-image-item");
+    const elements = currentGrid.querySelectorAll(".overlapping-photo-item");
     if (elements) {
       elements.forEach((el) => observer.observe(el));
     }
@@ -44,13 +44,13 @@ export function ScrollAnimatedGrid() {
   }, []);
 
   return (
-    <div ref={gridRef} className="scroll-animated-grid">
+    <div ref={gridRef} className="overlapping-photo-grid">
       {collagePhotos.map((photo, index) => (
         <div
           key={index}
           className={cn(
-            "scroll-image-item",
-            `item-${index + 1}`
+            "overlapping-photo-item",
+            index % 2 === 0 ? "from-left" : "from-right"
           )}
         >
           <Image

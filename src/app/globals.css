@@ -97,13 +97,13 @@
   
   .review-card.visible.left-card {
     opacity: 1;
-    transform: translate(-10%, -40%) rotate(-5deg);
+    transform: translate(-10%, -50%) rotate(-5deg);
     z-index: 2;
   }
   
   .review-card.visible.right-card {
     opacity: 1;
-    transform: translate(10%, 40%) rotate(5deg);
+    transform: translate(10%, 50%) rotate(5deg);
   }
 
   .review-card.exit {
@@ -171,81 +171,59 @@
       }
   }
 
-  .scroll-animated-grid {
+  .overlapping-photo-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
     margin-top: 4rem;
-    padding: 0 1rem;
+    padding: 0 1rem 4rem 1rem;
+    overflow-x: clip;
   }
 
-  .scroll-image-item {
+  .overlapping-photo-item {
+    @apply rounded-2xl overflow-hidden shadow-2xl p-3 bg-card border-2 border-primary;
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
     will-change: opacity, transform;
-    @apply rounded-[1.75rem] overflow-hidden shadow-2xl p-4 bg-card border-2 border-primary;
+  }
+  
+  .overlapping-photo-item.from-left {
+    transform: translateX(-100%) rotate(-5deg);
   }
 
-  .scroll-image-item.is-visible {
+  .overlapping-photo-item.from-right {
+    transform: translateX(100%) rotate(5deg);
+  }
+  
+  .overlapping-photo-item.is-visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
+  }
+  
+  .overlapping-photo-item:hover {
+      transform: scale(1.05) translateY(-5px);
+      z-index: 10;
+      position: relative;
+  }
+
+  /* Zigzag and overlap positioning */
+  .overlapping-photo-item:nth-child(odd) {
+    /* Left column */
+    position: relative;
+    z-index: 1;
+  }
+
+  .overlapping-photo-item:nth-child(even) {
+    /* Right column */
+    margin-top: 5rem; /* Zigzag */
+    margin-left: -40%; /* Overlap */
+    position: relative;
+    z-index: 2;
   }
 
   @media (min-width: 768px) {
-    .scroll-animated-grid {
-      position: relative;
-      height: 70vw;
-      max-height: 750px;
-      width: 100%;
-      max-width: 900px;
-      margin: 4rem auto;
-      display: block; /* override grid display */
-    }
-
-    .scroll-image-item {
-      position: absolute;
-      width: 45%;
-      transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .scroll-image-item.item-1 {
-      top: 0;
-      left: 5%;
-      transform: translateX(-105%) rotate(-15deg);
-    }
-    
-    .scroll-image-item.item-2 {
-      top: 15%;
-      right: 5%;
-      transform: translateX(105%) rotate(15deg);
-      z-index: 1;
-    }
-    
-    .scroll-image-item.item-3 {
-      top: 45%;
-      left: 15%;
-      transform: translateX(-105%) rotate(15deg);
-      z-index: 2;
-    }
-    
-    .scroll-image-item.item-4 {
-      top: 55%;
-      right: 15%;
-      transform: translateX(105%) rotate(-15deg);
-    }
-    
-    .scroll-image-item.is-visible.item-1 {
-      transform: translateX(0) rotate(-6deg);
-    }
-    .scroll-image-item.is-visible.item-2 {
-      transform: translateX(0) rotate(5deg);
-    }
-    .scroll-image-item.is-visible.item-3 {
-      transform: translateX(0) rotate(8deg);
-    }
-    .scroll-image-item.is-visible.item-4 {
-      transform: translateX(0) rotate(-7deg);
+    .overlapping-photo-grid {
+      padding: 0 4rem 4rem 4rem;
     }
   }
 }

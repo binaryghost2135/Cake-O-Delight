@@ -238,12 +238,9 @@ const menuCategories = [
         src: "https://i.postimg.cc/vBMM6VX1/Whats-App-Image-2025-07-01-at-1.jpg",
         hint: "cupcakes box",
         referenceImages: [
-          "https://i.postimg.cc/hv2HF0ZW/Whats-App-Image-2025-06-22-at-8.jpg",
-          "https://i.postimg.cc/9X13qWm8/Whats-App-Image-2025-06-22-at-8.jpg",
-          "https://i.postimg.cc/fLN4YySF/Whats-App-Image-2025-06-22-at-8.jpg",
-          "https://i.postimg.cc/YS6dnnBS/Whats-App-Image-2025-06-22-at-8.jpg",
-          "https://i.postimg.cc/Pxd2BWdQ/Whats-App-Image-2025-06-22-at-8.jpg",
-          "https://i.postimg.cc/CKTv4ytt/Whats-App-Image-2025-06-22-at-8.jpg"
+          "https://i.postimg.cc/Yq7fthCy/Whats-App-Image-2025-06-23-at-12.jpg",
+          "https://i.postimg.cc/Yq8gkRVh/Whats-App-Image-2025-06-23-at-12.jpg",
+          "https://i.postimg.cc/bY9SHLq3/Whats-App-Image-2025-06-23-at-12.jpg"
         ],
       },
     ],

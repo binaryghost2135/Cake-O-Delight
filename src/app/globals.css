@@ -96,13 +96,13 @@
   
   .review-card.visible.left-card {
     opacity: 1;
-    transform: translate(-10%, -50%) rotate(-5deg);
+    transform: translate(-5%, -40%) rotate(-5deg);
     z-index: 2;
   }
   
   .review-card.visible.right-card {
     opacity: 1;
-    transform: translate(10%, 50%) rotate(5deg);
+    transform: translate(5%, 40%) rotate(5deg);
   }
 
   .review-card.exit {
@@ -148,6 +148,12 @@
   }
 
   @media (min-width: 768px) {
+      .review-card.visible.left-card {
+        transform: translate(-10%, -50%) rotate(-5deg);
+      }
+      .review-card.visible.right-card {
+        transform: translate(10%, 50%) rotate(5deg);
+      }
       .photo-grid {
           flex-direction: row;
       }

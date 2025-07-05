@@ -24,6 +24,7 @@ import { ShoppingCart, Circle, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { useCart, type CartItem } from "@/context/cart-context";
+import { useToast } from "@/hooks/use-toast";
 
 const menuCategories = [
   {
@@ -257,6 +258,10 @@ const menuCategories = [
         price: "Rs.800/-",
         src: "https://i.postimg.cc/8C94pByg/Whats-App-Image-2025-07-05-at-9.jpg",
         hint: "bomboloni box",
+        referenceImages: [
+          "https://i.postimg.cc/gJm87xS8/Whats-App-Image-2025-06-23-at-7.jpg",
+          "https://i.postimg.cc/2yfxvjRH/Whats-App-Image-2025-07-05-at-9.jpg"
+        ],
       },
       {
         name: "BOX of 8",
@@ -293,6 +298,7 @@ export default function MenuPage() {
   const [selectedDesigns, setSelectedDesigns] = useState<{[key: string]: number | null}>({});
   const { addToCart } = useCart();
   const [openDialogs, setOpenDialogs] = useState<Record<string, boolean>>({});
+  const { toast } = useToast();
 
   const handleSelectDesign = (itemName: string, designIndex: number) => {
     setSelectedDesigns(prev => ({
@@ -344,7 +350,7 @@ export default function MenuPage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Header />
-      <main className="flex-grow container mx-auto px-4 md:px-8 py-16">
+      <main className="flex-grow container mx-auto px-4 md:px-8 py-12 md:py-16">
         <div className="text-center mb-12">
           <h1 className="text-4xl sm:text-5xl font-bold font-headline text-foreground">Our Menu</h1>
           <p className="text-lg sm:text-xl text-foreground/70 mt-4">Baked with love, crafted with joy!</p>
@@ -353,7 +359,7 @@ export default function MenuPage() {
         {menuCategories.map((category) => (
           <section key={category.category} className="mb-16">
             <h2 className="text-3xl sm:text-4xl font-headline font-bold text-center mb-10 text-foreground/90">{category.category}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
               {category.items.map((item) => (
                 'referenceImages' in item && Array.isArray(item.referenceImages) && item.referenceImages.length > 0 ? (
                   <Dialog key={item.name} open={openDialogs[item.name] || false} onOpenChange={(open) => handleOpenChange(item.name, open)}>
@@ -369,25 +375,26 @@ export default function MenuPage() {
                           />
                         </CardHeader>
                         <CardContent className="p-5 text-center bg-background/20 backdrop-blur-sm">
-                          <CardTitle className="text-xl sm:text-2xl font-headline mb-2 text-foreground">{item.name}</CardTitle>
+                          <CardTitle className="text-xl font-headline mb-2 text-foreground">{item.name}</CardTitle>
                           <p className="text-lg font-semibold text-accent mb-4">{item.price}</p>
                           <DialogTrigger asChild>
                             <Button>View Designs</Button>
                           </DialogTrigger>
                         </CardContent>
                       </Card>
-                    <DialogContent className="w-[95vw] sm:max-w-3xl">
+                    <DialogContent className="w-[95vw] max-w-md sm:max-w-3xl rounded-2xl">
                       <DialogHeader>
-                        <DialogTitle>{item.name} - Select a Reference Design</DialogTitle>
+                        <DialogTitle className="text-center text-2xl font-headline">{item.name}</DialogTitle>
+                         <p className="text-center text-muted-foreground">Select a Reference Design</p>
                       </DialogHeader>
                       <Carousel className="w-full" opts={{ loop: false, align: "start" }}>
-                        <CarouselContent className="-ml-2">
+                        <CarouselContent className="-ml-2 py-4">
                           {(item.referenceImages as string[]).map((refSrc, index) => {
                             const isSelected = selectedDesigns[item.name] === index;
                             return (
-                              <CarouselItem key={index} className="basis-full md:basis-1/2 lg:basis-1/3 pl-2">
+                              <CarouselItem key={index} className="basis-full sm:basis-1/2 lg:basis-1/3 pl-2">
                                 <div className="p-1 cursor-pointer" onClick={() => handleSelectDesign(item.name, index)}>
-                                  <Card className={cn("overflow-hidden relative transition-all", isSelected ? "border-primary border-2 shadow-lg" : "border-transparent")}>
+                                  <Card className={cn("overflow-hidden relative transition-all rounded-2xl", isSelected ? "border-primary ring-2 ring-primary ring-offset-2" : "border-muted-foreground/20")}>
                                     <CardContent className="flex aspect-square items-center justify-center p-0">
                                       <Image
                                         src={refSrc}
@@ -397,8 +404,8 @@ export default function MenuPage() {
                                         data-ai-hint="cake design"
                                         className="rounded-lg object-cover w-full h-full"
                                       />
-                                       <div className="absolute top-2 right-2 bg-background/80 backdrop-blur-sm rounded-full p-0.5">
-                                        {isSelected ? <CheckCircle2 className="w-6 h-6 text-primary" /> : <Circle className="w-6 h-6 text-muted-foreground/50" />}
+                                       <div className="absolute top-2 right-2 bg-background/80 backdrop-blur-sm rounded-full p-1">
+                                        {isSelected ? <CheckCircle2 className="w-5 h-5 text-primary" /> : <Circle className="w-5 h-5 text-muted-foreground/50" />}
                                     </div>
                                     <div className="absolute bottom-0 w-full bg-black/50 text-white text-center p-1 text-xs font-semibold">
                                         Reference {index + 1}
@@ -410,11 +417,11 @@ export default function MenuPage() {
                             )
                           })}
                         </CarouselContent>
-                        <CarouselPrevious className="hidden md:flex" />
-                        <CarouselNext className="hidden md:flex" />
+                        <CarouselPrevious className="hidden sm:flex" />
+                        <CarouselNext className="hidden sm:flex" />
                       </Carousel>
                       <DialogFooter>
-                        <Button disabled={selectedDesigns[item.name] === null || selectedDesigns[item.name] === undefined} onClick={() => handleAddToCart(item as any)}>
+                        <Button className="w-full" disabled={selectedDesigns[item.name] === null || selectedDesigns[item.name] === undefined} onClick={() => handleAddToCart(item as any)}>
                           <ShoppingCart className="mr-2 h-4 w-4" />
                           Add to Cart
                         </Button>
@@ -434,7 +441,7 @@ export default function MenuPage() {
                     />
                   </CardHeader>
                   <CardContent className="p-5 text-center bg-background/20 backdrop-blur-sm">
-                    <CardTitle className="text-xl sm:text-2xl font-headline mb-2 text-foreground">{item.name}</CardTitle>
+                    <CardTitle className="text-xl font-headline mb-2 text-foreground">{item.name}</CardTitle>
                     <p className="text-lg font-semibold text-accent mb-4">{item.price}</p>
                     <Button onClick={() => handleSimpleAddToCart(item)}>
                       <ShoppingCart className="mr-2 h-4 w-4" />

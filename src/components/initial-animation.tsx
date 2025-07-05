@@ -31,7 +31,7 @@ const customerReviews = [
 
 const LOGO_DISPLAY_TIME = 2500;
 const LOGO_FADE_DURATION = 800;
-const REVIEWS_DISPLAY_DURATION = 4000;
+const REVIEWS_DISPLAY_DURATION = 5000; // Increased duration for two sets of reviews
 const REVIEWS_FADE_DURATION = 1000;
 
 type AnimationStage = "start" | "logo" | "reviews" | "done";
@@ -41,6 +41,7 @@ export function InitialAnimation({ children }: { children: ReactNode }) {
   const [animationClass, setAnimationClass] = useState("");
   const [showOverlay, setShowOverlay] = useState(true);
   const [showContent, setShowContent] = useState(false);
+  const [reviewSet, setReviewSet] = useState(0);
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -60,6 +61,14 @@ export function InitialAnimation({ children }: { children: ReactNode }) {
     if (stage === "reviews") {
       const showReviewsTimer = setTimeout(() => setAnimationClass("visible"), 100);
 
+      const switchReviewsTimer = setTimeout(() => {
+        setAnimationClass("exit");
+        setTimeout(() => {
+          setReviewSet(1);
+          setAnimationClass("visible");
+        }, REVIEWS_FADE_DURATION);
+      }, REVIEWS_DISPLAY_DURATION / 2);
+
       const hideReviewsTimer = setTimeout(() => {
         setAnimationClass("exit");
       }, REVIEWS_DISPLAY_DURATION);
@@ -70,6 +79,7 @@ export function InitialAnimation({ children }: { children: ReactNode }) {
 
       return () => {
         clearTimeout(showReviewsTimer);
+        clearTimeout(switchReviewsTimer);
         clearTimeout(hideReviewsTimer);
         clearTimeout(doneTimer);
       };
@@ -87,6 +97,8 @@ export function InitialAnimation({ children }: { children: ReactNode }) {
       return () => clearTimeout(fadeOutTimer);
     }
   }, [stage]);
+
+  const reviewsToShow = customerReviews.slice(reviewSet * 2, reviewSet * 2 + 2);
 
   return (
     <>
@@ -117,7 +129,7 @@ export function InitialAnimation({ children }: { children: ReactNode }) {
               stage === "reviews" ? "opacity-100" : "opacity-0"
             )}
           >
-            {customerReviews.slice(0, 2).map((review, index) => (
+            {reviewsToShow.map((review, index) => (
               <div
                 key={review.text}
                 className={cn(

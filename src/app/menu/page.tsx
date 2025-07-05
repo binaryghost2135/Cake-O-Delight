@@ -4,92 +4,118 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-const menuItems = [
+const menuCategories = [
   {
-    name: "A cake for 2",
-    price: "₹500/- onwards",
-    src: "https://i.postimg.cc/k4jZX6HP/Whats-App-Image-2025-07-01-at-12.jpg",
-    hint: "bento cake"
+    category: "Signature Cakes",
+    items: [
+      {
+        name: "A cake for 2",
+        price: "₹500/- onwards",
+        src: "https://i.postimg.cc/k4jZX6HP/Whats-App-Image-2025-07-01-at-12.jpg",
+        hint: "bento cake"
+      },
+      {
+        name: "Cake for small celebrations (500g)",
+        price: "₹700/- onwards",
+        src: "https://i.postimg.cc/nLJNdtmg/Whats-App-Image-2025-07-01-at-12.jpg",
+        hint: "small cake"
+      },
+      {
+        name: "The Family Size (1kg)",
+        price: "₹1300/- onwards",
+        src: "https://i.postimg.cc/Z531FqW6/Whats-App-Image-2025-07-01-at-12.jpg",
+        hint: "large cake"
+      },
+    ],
   },
   {
-    name: "Cake for small celebrations (500g)",
-    price: "₹700/- onwards",
-    src: "https://i.postimg.cc/nLJNdtmg/Whats-App-Image-2025-07-01-at-12.jpg",
-    hint: "small cake"
+    category: "Decadent Brownies",
+    items: [
+      {
+        name: "BOX of 2 Brownies",
+        price: "₹130/- onwards",
+        src: "https://i.postimg.cc/sDbkhWgV/Whats-App-Image-2025-07-01-at-12.jpg",
+        hint: "brownies box"
+      },
+      {
+        name: "BOX of 4 Brownies",
+        price: "₹350/- onwards",
+        src: "https://i.postimg.cc/hv5HMz81/Whats-App-Image-2025-07-01-at-12.jpg",
+        hint: "brownies box"
+      },
+      {
+        name: "BOX of 6 Brownies",
+        price: "₹600/- onwards",
+        src: "https://i.postimg.cc/Bb6rxcFv/Whats-App-Image-2025-07-01-at-12.jpg",
+        hint: "brownies box"
+      },
+      {
+        name: "Box of 9 brownies",
+        price: "₹1000/- onwards",
+        src: "https://i.postimg.cc/0Q8RNq2D/Whats-App-Image-2025-07-01-at-12.jpg",
+        hint: "brownies box"
+      },
+      {
+        name: "Brownie bites",
+        price: "₹300/- onwards",
+        src: "https://i.postimg.cc/3JWhp7jZ/Whats-App-Image-2025-07-01-at-1.jpg",
+        hint: "brownie bites"
+      },
+    ],
   },
   {
-    name: "The Family Size (1kg)",
-    price: "₹1300/- onwards",
-    src: "https://i.postimg.cc/Z531FqW6/Whats-App-Image-2025-07-01-at-12.jpg",
-    hint: "large cake"
+    category: "Creamy Cheesecakes",
+    items: [
+      {
+        name: "Mini cheesecake",
+        price: "₹700/- onwards",
+        src: "https://i.postimg.cc/wBYYSmCW/Whats-App-Image-2025-07-01-at-1.jpg",
+        hint: "mini cheesecake"
+      },
+      {
+        name: "½ kg Cheesecake",
+        price: "₹1200/- onwards",
+        src: "https://i.postimg.cc/T3DX794L/Whats-App-Image-2025-07-01-at-1.jpg",
+        hint: "cheesecake"
+      },
+    ],
   },
   {
-    name: "BOX of 2 Brownies",
-    price: "₹130/- onwards",
-    src: "https://i.postimg.cc/sDbkhWgV/Whats-App-Image-2025-07-01-at-12.jpg",
-    hint: "brownies box"
+    category: "Delightful Cupcakes",
+    items: [
+      {
+        name: "BOX of 4 Cupcakes",
+        price: "₹300/- onwards",
+        src: "https://i.postimg.cc/Bb7Gyw3D/Whats-App-Image-2025-07-01-at-1.jpg",
+        hint: "cupcakes box"
+      },
+      {
+        name: "Box of 6 cupcakes",
+        price: "₹450/- onwards",
+        src: "https://i.postimg.cc/sXczPg0T/Whats-App-Image-2025-07-01-at-1.jpg",
+        hint: "cupcakes box"
+      },
+      {
+        name: "Box of 12 Cupcakes",
+        price: "₹1100/- onwards",
+        src: "https://i.postimg.cc/vBMM6VX1/Whats-App-Image-2025-07-01-at-1.jpg",
+        hint: "cupcakes box"
+      },
+    ],
   },
   {
-    name: "BOX of 4 Brownies",
-    price: "₹350/- onwards",
-    src: "https://i.postimg.cc/hv5HMz81/Whats-App-Image-2025-07-01-at-12.jpg",
-    hint: "brownies box"
-  },
-  {
-    name: "BOX of 6 Brownies",
-    price: "₹600/- onwards",
-    src: "https://i.postimg.cc/Bb6rxcFv/Whats-App-Image-2025-07-01-at-12.jpg",
-    hint: "brownies box"
-  },
-  {
-    name: "Box of 9 brownies",
-    price: "₹1000/- onwards",
-    src: "https://i.postimg.cc/0Q8RNq2D/Whats-App-Image-2025-07-01-at-12.jpg",
-    hint: "brownies box"
-  },
-  {
-    name: "Mini cheesecake",
-    price: "₹700/- onwards",
-    src: "https://i.postimg.cc/wBYYSmCW/Whats-App-Image-2025-07-01-at-1.jpg",
-    hint: "mini cheesecake"
-  },
-  {
-    name: "½ kg Cheesecake",
-    price: "₹1200/- onwards",
-    src: "https://i.postimg.cc/T3DX794L/Whats-App-Image-2025-07-01-at-1.jpg",
-    hint: "cheesecake"
-  },
-  {
-    name: "Modak chocolates",
-    price: "Box of 11: ₹251/- | Box of 21: ₹501/-",
-    src: "https://i.postimg.cc/YqVHzVbB/Whats-App-Image-2025-07-01-at-1.jpg",
-    hint: "modak chocolates"
-  },
-  {
-    name: "Brownie bites",
-    price: "₹300/- onwards",
-    src: "https://i.postimg.cc/3JWhp7jZ/Whats-App-Image-2025-07-01-at-1.jpg",
-    hint: "brownie bites"
-  },
-  {
-    name: "BOX of 4 Cupcakes",
-    price: "₹300/- onwards",
-    src: "https://i.postimg.cc/Bb7Gyw3D/Whats-App-Image-2025-07-01-at-1.jpg",
-    hint: "cupcakes box"
-  },
-  {
-    name: "Box of 6 cupcakes",
-    price: "₹450/- onwards",
-    src: "https://i.postimg.cc/sXczPg0T/Whats-App-Image-2025-07-01-at-1.jpg",
-    hint: "cupcakes box"
-  },
-  {
-    name: "Box of 12 Cupcakes",
-    price: "₹1100/- onwards",
-    src: "https://i.postimg.cc/vBMM6VX1/Whats-App-Image-2025-07-01-at-1.jpg",
-    hint: "cupcakes box"
-  },
+    category: "Special Treats",
+    items: [
+      {
+        name: "Modak chocolates",
+        price: "Box of 11: ₹251/- | Box of 21: ₹501/-",
+        src: "https://i.postimg.cc/YqVHzVbB/Whats-App-Image-2025-07-01-at-1.jpg",
+        hint: "modak chocolates"
+      },
+    ],
+  }
 ];
+
 
 export default function MenuPage() {
   return (
@@ -101,26 +127,31 @@ export default function MenuPage() {
           <p className="text-xl text-foreground/70 mt-4">Baked with love, crafted with joy!</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {menuItems.map((item) => (
-            <Card key={item.name} className="overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 rounded-2xl border-primary/50">
-              <CardHeader className="p-0">
-                <Image
-                  src={item.src}
-                  alt={item.name}
-                  width={400}
-                  height={300}
-                  data-ai-hint={item.hint}
-                  className="w-full h-60 object-cover"
-                />
-              </CardHeader>
-              <CardContent className="p-4 text-center">
-                <CardTitle className="text-2xl font-headline mb-2">{item.name}</CardTitle>
-                <p className="text-lg font-cute text-accent">{item.price}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        {menuCategories.map((category) => (
+          <section key={category.category} className="mb-16">
+            <h2 className="text-4xl font-headline font-bold text-center mb-10 text-foreground/90">{category.category}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+              {category.items.map((item) => (
+                <Card key={item.name} className="group overflow-hidden rounded-3xl border-2 border-primary/30 bg-card/50 shadow-xl transition-all duration-300 ease-in-out hover:border-primary hover:shadow-2xl hover:scale-[1.03]">
+                  <CardHeader className="p-0 overflow-hidden">
+                    <Image
+                      src={item.src}
+                      alt={item.name}
+                      width={400}
+                      height={300}
+                      data-ai-hint={item.hint}
+                      className="w-full h-64 object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                    />
+                  </CardHeader>
+                  <CardContent className="p-5 text-center bg-background/20 backdrop-blur-sm">
+                    <CardTitle className="text-2xl font-headline mb-2 text-foreground">{item.name}</CardTitle>
+                    <p className="text-lg font-cute text-accent">{item.price}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </section>
+        ))}
       </main>
       <Footer />
     </div>

@@ -277,6 +277,23 @@ const menuCategories = [
     ],
   },
   {
+    category: "Cookies",
+    items: [
+      {
+        name: "BOX of 4",
+        price: "Rs.259/- onwards",
+        src: "https://placehold.co/400x300.png",
+        hint: "cookies box",
+      },
+      {
+        name: "BOX of 6",
+        price: "Rs.389/- onwards",
+        src: "https://placehold.co/400x300.png",
+        hint: "cookies box",
+      },
+    ],
+  },
+  {
     category: "Special Treats",
     items: [
       {

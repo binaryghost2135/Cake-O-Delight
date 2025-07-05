@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const menuCategories = [
   {
@@ -145,7 +146,8 @@ export default function MenuPage() {
                   </CardHeader>
                   <CardContent className="p-5 text-center bg-background/20 backdrop-blur-sm">
                     <CardTitle className="text-2xl font-headline mb-2 text-foreground">{item.name}</CardTitle>
-                    <p className="text-lg font-cute text-accent">{item.price}</p>
+                    <p className="text-lg font-cute text-accent mb-4">{item.price}</p>
+                    <Button>Select</Button>
                   </CardContent>
                 </Card>
               ))}

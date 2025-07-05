@@ -20,7 +20,7 @@ const menuItems = [
   {
     name: "The Family Size (1kg)",
     price: "₹1300/- onwards",
-    src: "https://i.postimg.cc/fyz6gPKf/Whats-App-Image-2025-06-22-at-8.jpg",
+    src: "https://i.postimg.cc/Z531FqW6/Whats-App-Image-2025-07-01-at-12.jpg",
     hint: "large cake"
   },
   {

@@ -9,23 +9,15 @@ import { Star } from "lucide-react";
 const customerReviews = [
   { 
     text: `"Dear you aren't serving us...we are serving our own selves and you are helping us do that in a true sense 🤗❣️"`,
-    imageSrc: "https://placehold.co/80x80.png",
-    imageHint: "woman portrait" 
   },
   { 
     text: `"hey the cake was really tasty, special thank you for making it ready at the very last minute, it’s literally the same as what we imagined"`, 
-    imageSrc: "https://placehold.co/80x80.png",
-    imageHint: "man portrait" 
   },
   { 
     text: `"It was as we imagined"`, 
-    imageSrc: "https://placehold.co/80x80.png",
-    imageHint: "woman portrait" 
   },
   { 
     text: `"Out of Pinterest"`, 
-    imageSrc: "https://placehold.co/80x80.png",
-    imageHint: "woman portrait" 
   },
 ];
 
@@ -138,14 +130,6 @@ export function InitialAnimation({ children }: { children: ReactNode }) {
                   animationClass
                 )}
               >
-                <Image
-                  src={review.imageSrc}
-                  alt="Customer review"
-                  width={80}
-                  height={80}
-                  data-ai-hint={review.imageHint}
-                  className="rounded-full w-20 h-20 object-cover mb-4 border-4 border-primary/50 shadow-md"
-                />
                 <div className="flex mb-2">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />

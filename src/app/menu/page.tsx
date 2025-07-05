@@ -44,7 +44,7 @@ const menuItems = [
   {
     name: "Box of 9 brownies",
     price: "₹1000/- onwards",
-    src: "https://placehold.co/400x300.png",
+    src: "https://i.postimg.cc/0Q8RNq2D/Whats-App-Image-2025-07-01-at-12.jpg",
     hint: "brownies box"
   },
   {

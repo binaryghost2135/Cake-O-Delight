@@ -185,7 +185,7 @@ export default function MenuPage() {
                       <Carousel className="w-full" opts={{ loop: true }}>
                         <CarouselContent>
                           {(item.referenceImages as string[]).map((refSrc, index) => (
-                            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                            <CarouselItem key={index} className="basis-full md:basis-1/2 lg:basis-1/3">
                               <div className="p-1">
                                 <Card className="overflow-hidden">
                                   <CardContent className="flex aspect-square items-center justify-center p-0">
@@ -203,8 +203,8 @@ export default function MenuPage() {
                             </CarouselItem>
                           ))}
                         </CarouselContent>
-                        <CarouselPrevious />
-                        <CarouselNext />
+                        <CarouselPrevious className="hidden md:flex" />
+                        <CarouselNext className="hidden md:flex" />
                       </Carousel>
                       <DialogFooter>
                         <Button>

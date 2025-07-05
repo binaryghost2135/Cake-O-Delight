@@ -250,7 +250,7 @@ const menuCategories = [
     ],
   },
   {
-    category: "BOMBOLONIS",
+    category: "Bombolonis",
     items: [
       {
         name: "BOX of 4",

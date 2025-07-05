@@ -284,12 +284,20 @@ const menuCategories = [
         price: "Rs.259/- onwards",
         src: "https://i.postimg.cc/FHSrJDrs/Whats-App-Image-2025-06-23-at-8.jpg",
         hint: "cookies box",
+        referenceImages: [
+          "https://i.postimg.cc/FHSrJDrs/Whats-App-Image-2025-06-23-at-8.jpg",
+          "https://i.postimg.cc/vZKJxKX4/Whats-App-Image-2025-07-05-at-9.jpg"
+        ]
       },
       {
         name: "BOX of 6",
         price: "Rs.389/- onwards",
         src: "https://i.postimg.cc/90qVrhHF/Whats-App-Image-2025-07-05-at-9.jpg",
         hint: "cookies box",
+        referenceImages: [
+          "https://i.postimg.cc/90qVrhHF/Whats-App-Image-2025-07-05-at-9.jpg",
+          "https://i.postimg.cc/xdTPYjLH/Whats-App-Image-2025-07-05-at-9.jpg"
+        ]
       },
     ],
   },

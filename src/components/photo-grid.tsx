@@ -5,8 +5,7 @@ import { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 
 const cakePhotos = [
-  { src: "https://i.postimg.cc/0QCzJWVn/Whats-App-Image-2025-06-23-at-1.jpg", hint: "decorated cake" },
-  { src: "https://i.postimg.cc/V6Qx8vYg/Whats-App-Image-2025-06-30-at-10.jpg", hint: "bento cake" },
+  { src: "https://i.postimg.cc/V6Qx8vYg/Whats-App-Image-2025-06-30-at-10.jpg", hint: "decorated cake" },
   { src: "https://i.postimg.cc/h423gSKy/Whats-App-Image-2025-06-22-at-8.jpg", hint: "chocolate pastry" },
   { src: "https://i.postimg.cc/FF03gpBj/Whats-App-Image-2025-06-22-at-8.jpg", hint: "cookies" },
   { src: "https://i.postimg.cc/fTZXHdG1/Whats-App-Image-2025-06-22-at-8.jpg", hint: "fruit tarts" },

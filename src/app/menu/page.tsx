@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
+  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -18,6 +19,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { ShoppingCart } from "lucide-react";
 
 const menuCategories = [
   {
@@ -204,6 +206,12 @@ export default function MenuPage() {
                         <CarouselPrevious />
                         <CarouselNext />
                       </Carousel>
+                      <DialogFooter>
+                        <Button>
+                          <ShoppingCart className="mr-2 h-4 w-4" />
+                          Add to Cart
+                        </Button>
+                      </DialogFooter>
                     </DialogContent>
                   </Dialog>
                 ) : (
@@ -221,7 +229,10 @@ export default function MenuPage() {
                   <CardContent className="p-5 text-center bg-background/20 backdrop-blur-sm">
                     <CardTitle className="text-2xl font-headline mb-2 text-foreground">{item.name}</CardTitle>
                     <p className="text-lg font-cute text-accent mb-4">{item.price}</p>
-                    <Button>Select</Button>
+                    <Button>
+                      <ShoppingCart className="mr-2 h-4 w-4" />
+                      Add to Cart
+                    </Button>
                   </CardContent>
                 </Card>
               )))}

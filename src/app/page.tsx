@@ -39,7 +39,7 @@ export default function Home() {
 
           <div className="py-12 text-center">
             <Button asChild size="lg" className="font-bold text-lg py-6 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-shake">
-              <Link href="#">
+              <Link href="/menu">
                 <Sparkles className="mr-3 h-6 w-6" />
                 Check our Menu
               </Link>

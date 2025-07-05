@@ -12,10 +12,13 @@ export function Header() {
           </h1>
         </Link>
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-          <Link href="#cake-photos-section" className="transition-colors hover:text-foreground/80 text-foreground/60">
+          <Link href="/#cake-photos-section" className="transition-colors hover:text-foreground/80 text-foreground/60">
             Our Cakes
           </Link>
-          <Link href="#more-sweet-delights-section" className="transition-colors hover:text-foreground/80 text-foreground/60">
+          <Link href="/menu" className="transition-colors hover:text-foreground/80 text-foreground/60">
+            Menu
+          </Link>
+          <Link href="/#more-sweet-delights-section" className="transition-colors hover:text-foreground/80 text-foreground/60">
             Delights
           </Link>
           <Link href="#" className="transition-colors hover:text-foreground/80 text-foreground/60">

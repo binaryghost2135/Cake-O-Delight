@@ -9,7 +9,6 @@ const cakePhotos = [
   { src: "https://i.postimg.cc/h423gSKy/Whats-App-Image-2025-06-22-at-8.jpg", hint: "chocolate pastry" },
   { src: "https://i.postimg.cc/FF03gpBj/Whats-App-Image-2025-06-22-at-8.jpg", hint: "cookies" },
   { src: "https://i.postimg.cc/fTZXHdG1/Whats-App-Image-2025-06-22-at-8.jpg", hint: "fruit tarts" },
-  { src: "https://i.postimg.cc/xdWgqCXY/Whats-App-Image-2025-06-23-at-12.jpg", hint: "small cakes" },
 ];
 
 export function PhotoGrid() {

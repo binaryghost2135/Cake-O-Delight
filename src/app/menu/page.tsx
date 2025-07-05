@@ -24,7 +24,6 @@ import { ShoppingCart, Circle, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { useCart, type CartItem } from "@/context/cart-context";
-import { useToast } from "@/hooks/use-toast";
 
 const menuCategories = [
   {
@@ -276,7 +275,6 @@ const menuCategories = [
 export default function MenuPage() {
   const [selectedDesigns, setSelectedDesigns] = useState<{[key: string]: number | null}>({});
   const { addToCart } = useCart();
-  const { toast } = useToast();
   const [openDialogs, setOpenDialogs] = useState<Record<string, boolean>>({});
 
   const handleSelectDesign = (itemName: string, designIndex: number) => {
@@ -313,10 +311,6 @@ export default function MenuPage() {
     };
 
     addToCart(cartItem);
-    toast({
-        title: "Added to Cart!",
-        description: `"${item.name}" has been added to your cart.`,
-    });
     handleOpenChange(item.name, false);
   };
   
@@ -328,10 +322,6 @@ export default function MenuPage() {
         referenceImage: item.src,
       };
       addToCart(cartItem);
-      toast({
-        title: "Added to Cart!",
-        description: `"${item.name}" has been added to your cart.`,
-      });
   };
 
   return (

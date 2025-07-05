@@ -250,6 +250,23 @@ const menuCategories = [
     ],
   },
   {
+    category: "BOMBOLONIS",
+    items: [
+      {
+        name: "BOX of 4",
+        price: "Rs.800/-",
+        src: "https://placehold.co/400x300.png",
+        hint: "bomboloni box",
+      },
+      {
+        name: "BOX of 8",
+        price: "Rs.1600/-",
+        src: "https://placehold.co/400x300.png",
+        hint: "bomboloni box",
+      },
+    ],
+  },
+  {
     category: "Special Treats",
     items: [
       {

@@ -329,6 +329,11 @@ const menuCategories = [
         price: "Contact for pricing",
         src: "https://i.postimg.cc/L6N1Fc3g/Whats-App-Image-2025-07-05-at-9.jpg",
         hint: "cake combo",
+        referenceImages: [
+          "https://i.postimg.cc/Wb2kKNgP/Whats-App-Image-2025-07-05-at-9.jpg",
+          "https://i.postimg.cc/nhW9Cq5H/Whats-App-Image-2025-07-05-at-9.jpg",
+          "https://i.postimg.cc/L6N1Fc3g/Whats-App-Image-2025-07-05-at-9.jpg"
+        ],
       },
     ],
   }

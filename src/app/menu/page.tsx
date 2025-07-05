@@ -329,7 +329,7 @@ export default function MenuPage() {
       <Header />
       <main className="flex-grow container mx-auto px-4 md:px-8 py-16">
         <div className="text-center mb-12">
-          <h1 className="text-4xl sm:text-6xl font-bold font-cute text-foreground">Our Menu</h1>
+          <h1 className="text-4xl sm:text-5xl font-bold font-headline text-foreground">Our Menu</h1>
           <p className="text-lg sm:text-xl text-foreground/70 mt-4">Baked with love, crafted with joy!</p>
         </div>
 
@@ -352,8 +352,8 @@ export default function MenuPage() {
                           />
                         </CardHeader>
                         <CardContent className="p-5 text-center bg-background/20 backdrop-blur-sm">
-                          <CardTitle className="text-2xl font-headline mb-2 text-foreground">{item.name}</CardTitle>
-                          <p className="text-lg font-cute text-accent mb-4">{item.price}</p>
+                          <CardTitle className="text-xl sm:text-2xl font-headline mb-2 text-foreground">{item.name}</CardTitle>
+                          <p className="text-lg font-semibold text-accent mb-4">{item.price}</p>
                           <DialogTrigger asChild>
                             <Button>View Designs</Button>
                           </DialogTrigger>
@@ -417,8 +417,8 @@ export default function MenuPage() {
                     />
                   </CardHeader>
                   <CardContent className="p-5 text-center bg-background/20 backdrop-blur-sm">
-                    <CardTitle className="text-2xl font-headline mb-2 text-foreground">{item.name}</CardTitle>
-                    <p className="text-lg font-cute text-accent mb-4">{item.price}</p>
+                    <CardTitle className="text-xl sm:text-2xl font-headline mb-2 text-foreground">{item.name}</CardTitle>
+                    <p className="text-lg font-semibold text-accent mb-4">{item.price}</p>
                     <Button onClick={() => handleSimpleAddToCart(item)}>
                       <ShoppingCart className="mr-2 h-4 w-4" />
                       Add to Cart

@@ -43,7 +43,7 @@ export function MessageGenerator() {
     <section className="mb-24 mt-8">
       <Card className="max-w-2xl mx-auto bg-background/70 border-primary/50 shadow-lg backdrop-blur-sm">
         <CardHeader>
-          <CardTitle className="font-cute text-4xl text-foreground">A Special Welcome</CardTitle>
+          <CardTitle className="font-headline text-3xl text-foreground">A Special Welcome</CardTitle>
           <CardDescription className="text-foreground/70 pt-2">
             Let our AI craft a warm greeting for our customers based on their lovely reviews!
           </CardDescription>
@@ -55,7 +55,7 @@ export function MessageGenerator() {
           </Button>
           {isLoading && <Skeleton className="h-12 w-full rounded-md bg-muted" />}
           {greeting && !isLoading && (
-            <blockquote className="text-2xl font-cute text-center text-foreground p-4 bg-primary/20 rounded-lg border-l-4 border-primary">
+            <blockquote className="text-xl sm:text-2xl font-cute text-center text-foreground p-4 bg-primary/20 rounded-lg border-l-4 border-primary">
              <p>"{greeting}"</p>
             </blockquote>
           )}

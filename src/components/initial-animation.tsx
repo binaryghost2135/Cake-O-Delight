@@ -131,7 +131,7 @@ export function InitialAnimation({ children }: { children: ReactNode }) {
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
                   ))}
                 </div>
-                <p className="text-base sm:text-lg italic font-cute text-foreground/90 mb-4 leading-snug">
+                <p className="text-base sm:text-lg italic text-foreground/90 mb-4 leading-snug">
                   {review.text}
                 </p>
                 <footer className="font-semibold text-accent/80">

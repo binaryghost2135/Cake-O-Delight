@@ -1,6 +1,14 @@
+'use client';
+
 import Link from 'next/link';
 import { Button } from './ui/button';
 import { Menu } from 'lucide-react';
+import {
+  Sheet,
+  SheetContent,
+  SheetClose,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 export function Header() {
   return (
@@ -26,10 +34,30 @@ export function Header() {
           </Link>
         </nav>
         <div className="flex items-center md:hidden">
-          <Button variant="ghost" size="icon">
-            <Menu className="h-6 w-6" />
-            <span className="sr-only">Menu</span>
-          </Button>
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon">
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">Menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[240px]">
+                <nav className="flex flex-col gap-8 text-lg font-medium mt-16 text-center">
+                    <SheetClose asChild>
+                        <Link href="/#cake-photos-section" className="transition-colors hover:text-primary text-foreground font-semibold">Our Cakes</Link>
+                    </SheetClose>
+                    <SheetClose asChild>
+                        <Link href="/menu" className="transition-colors hover:text-primary text-foreground font-semibold">Menu</Link>
+                    </SheetClose>
+                    <SheetClose asChild>
+                        <Link href="/#more-sweet-delights-section" className="transition-colors hover:text-primary text-foreground font-semibold">Delights</Link>
+                    </SheetClose>
+                    <SheetClose asChild>
+                        <Link href="#" className="transition-colors hover:text-primary text-foreground font-semibold">Contact</Link>
+                    </SheetClose>
+                </nav>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </header>

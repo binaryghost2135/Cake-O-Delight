@@ -329,13 +329,13 @@ export default function MenuPage() {
       <Header />
       <main className="flex-grow container mx-auto px-4 md:px-8 py-16">
         <div className="text-center mb-12">
-          <h1 className="text-6xl font-bold font-cute text-foreground">Our Menu</h1>
-          <p className="text-xl text-foreground/70 mt-4">Baked with love, crafted with joy!</p>
+          <h1 className="text-4xl sm:text-6xl font-bold font-cute text-foreground">Our Menu</h1>
+          <p className="text-lg sm:text-xl text-foreground/70 mt-4">Baked with love, crafted with joy!</p>
         </div>
 
         {menuCategories.map((category) => (
           <section key={category.category} className="mb-16">
-            <h2 className="text-4xl font-headline font-bold text-center mb-10 text-foreground/90">{category.category}</h2>
+            <h2 className="text-3xl sm:text-4xl font-headline font-bold text-center mb-10 text-foreground/90">{category.category}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
               {category.items.map((item) => (
                 'referenceImages' in item && Array.isArray(item.referenceImages) && item.referenceImages.length > 0 ? (
@@ -359,7 +359,7 @@ export default function MenuPage() {
                           </DialogTrigger>
                         </CardContent>
                       </Card>
-                    <DialogContent className="max-w-3xl">
+                    <DialogContent className="w-[95vw] sm:max-w-3xl">
                       <DialogHeader>
                         <DialogTitle>{item.name} - Select a Reference Design</DialogTitle>
                       </DialogHeader>

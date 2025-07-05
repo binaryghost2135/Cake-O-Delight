@@ -74,7 +74,7 @@ const menuItems = [
   {
     name: "BOX of 4 Cupcakes",
     price: "₹300/- onwards",
-    src: "https://i.postimg.cc/d1swpF8L/Whats-App-Image-2025-06-22-at-8.jpg",
+    src: "https://i.postimg.cc/Bb7Gyw3D/Whats-App-Image-2025-07-01-at-1.jpg",
     hint: "cupcakes box"
   },
   {

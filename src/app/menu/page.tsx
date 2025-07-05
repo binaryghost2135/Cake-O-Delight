@@ -292,7 +292,7 @@ const menuCategories = [
         ]
       },
       {
-        name: "BOX of 6",
+        name: "BOX of 6 cookies",
         price: "Rs.389/- onwards",
         src: "https://i.postimg.cc/90qVrhHF/Whats-App-Image-2025-07-05-at-9.jpg",
         hint: "cookies box",
@@ -506,5 +506,3 @@ export default function MenuPage() {
     </div>
   );
 }
-
-    

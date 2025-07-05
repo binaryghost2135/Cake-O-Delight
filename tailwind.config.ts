@@ -109,7 +109,7 @@ export default {
         'accordion-up': 'accordion-up 0.2s ease-out',
         'float-and-rotate': 'floatAndRotate linear infinite',
         'shake': 'shake 1s ease-in-out 3s infinite',
-        'marquee': 'marquee 40s linear infinite',
+        'marquee': 'marquee 20s linear infinite',
       },
     },
   },

@@ -14,7 +14,7 @@ const menuItems = [
   {
     name: "Cake for small celebrations (500g)",
     price: "₹700/- onwards",
-    src: "https://i.postimg.cc/FHSrJDrs/Whats-App-Image-2025-06-23-at-8.jpg",
+    src: "https://i.postimg.cc/nLJNdtmg/Whats-App-Image-2025-07-01-at-12.jpg",
     hint: "small cake"
   },
   {

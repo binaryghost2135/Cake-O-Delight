@@ -136,12 +136,10 @@ const menuCategories = [
         src: "https://i.postimg.cc/3JWhp7jZ/Whats-App-Image-2025-07-01-at-1.jpg",
         hint: "brownie bites",
         referenceImages: [
-            "https://i.postimg.cc/hv2HF0ZW/Whats-App-Image-2025-06-22-at-8.jpg",
-            "https://i.postimg.cc/9X13qWm8/Whats-App-Image-2025-06-22-at-8.jpg",
-            "https://i.postimg.cc/fLN4YySF/Whats-App-Image-2025-06-22-at-8.jpg",
-            "https://i.postimg.cc/YS6dnnBS/Whats-App-Image-2025-06-22-at-8.jpg",
-            "https://i.postimg.cc/Pxd2BWdQ/Whats-App-Image-2025-06-22-at-8.jpg",
-            "https://i.postimg.cc/CKTv4ytt/Whats-App-Image-2025-06-22-at-8.jpg"
+          "https://i.postimg.cc/Pr9Zj3Vt/Whats-App-Image-2025-06-23-at-1.jpg",
+          "https://i.postimg.cc/MZ57d9d9/Whats-App-Image-2025-06-23-at-1.jpg",
+          "https://i.postimg.cc/mkLQT923/Whats-App-Image-2025-06-23-at-1.jpg",
+          "https://i.postimg.cc/nr3qrLCy/Whats-App-Image-2025-06-23-at-1.jpg"
         ]
       },
     ],

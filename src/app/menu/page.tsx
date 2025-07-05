@@ -64,12 +64,16 @@ const menuCategories = [
         src: "https://i.postimg.cc/Z531FqW6/Whats-App-Image-2025-07-01-at-12.jpg",
         hint: "large cake",
         referenceImages: [
-          "https://i.postimg.cc/hv2HF0ZW/Whats-App-Image-2025-06-22-at-8.jpg",
-          "https://i.postimg.cc/9X13qWm8/Whats-App-Image-2025-06-22-at-8.jpg",
-          "https://i.postimg.cc/fLN4YySF/Whats-App-Image-2025-06-22-at-8.jpg",
-          "https://i.postimg.cc/YS6dnnBS/Whats-App-Image-2025-06-22-at-8.jpg",
-          "https://i.postimg.cc/Pxd2BWdQ/Whats-App-Image-2025-06-22-at-8.jpg",
-          "https://i.postimg.cc/CKTv4ytt/Whats-App-Image-2025-06-22-at-8.jpg"
+          "https://i.postimg.cc/3wHKjmNj/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/63X4zKd8/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/RVVfjv2f/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/GtzDHfTH/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/hj1z5Yrp/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/jdgNTGr1/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/NGb28WL0/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/yN9SFxSq/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/mZSCXPpB/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/QdF7d08d/Whats-App-Image-2025-06-22-at-8.jpg"
         ],
       },
     ],

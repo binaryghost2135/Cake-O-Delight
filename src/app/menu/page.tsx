@@ -4,6 +4,20 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const menuCategories = [
   {
@@ -13,7 +27,15 @@ const menuCategories = [
         name: "A cake for 2",
         price: "₹500/- onwards",
         src: "https://i.postimg.cc/k4jZX6HP/Whats-App-Image-2025-07-01-at-12.jpg",
-        hint: "bento cake"
+        hint: "bento cake",
+        referenceImages: [
+          "https://i.postimg.cc/hv2HF0ZW/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/9X13qWm8/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/fLN4YySF/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/YS6dnnBS/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/Pxd2BWdQ/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/CKTv4ytt/Whats-App-Image-2025-06-22-at-8.jpg"
+        ],
       },
       {
         name: "Cake for small celebrations (500g)",
@@ -133,6 +155,58 @@ export default function MenuPage() {
             <h2 className="text-4xl font-headline font-bold text-center mb-10 text-foreground/90">{category.category}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
               {category.items.map((item) => (
+                'referenceImages' in item && Array.isArray(item.referenceImages) && item.referenceImages.length > 0 ? (
+                  <Dialog key={item.name}>
+                    <Card className="group overflow-hidden rounded-3xl border-2 border-primary/30 bg-card/50 shadow-xl transition-all duration-300 ease-in-out hover:border-primary hover:shadow-2xl hover:scale-[1.03]">
+                      <CardHeader className="p-0 overflow-hidden">
+                        <Image
+                          src={item.src}
+                          alt={item.name}
+                          width={400}
+                          height={300}
+                          data-ai-hint={item.hint}
+                          className="w-full h-64 object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                        />
+                      </CardHeader>
+                      <CardContent className="p-5 text-center bg-background/20 backdrop-blur-sm">
+                        <CardTitle className="text-2xl font-headline mb-2 text-foreground">{item.name}</CardTitle>
+                        <p className="text-lg font-cute text-accent mb-4">{item.price}</p>
+                        <DialogTrigger asChild>
+                          <Button>View Designs</Button>
+                        </DialogTrigger>
+                      </CardContent>
+                    </Card>
+                    <DialogContent className="max-w-3xl">
+                      <DialogHeader>
+                        <DialogTitle>{item.name} - Reference Designs</DialogTitle>
+                      </DialogHeader>
+                      <Carousel className="w-full" opts={{ loop: true }}>
+                        <CarouselContent>
+                          {(item.referenceImages as string[]).map((refSrc, index) => (
+                            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                              <div className="p-1">
+                                <Card className="overflow-hidden">
+                                  <CardContent className="flex aspect-square items-center justify-center p-0">
+                                    <Image
+                                      src={refSrc}
+                                      alt={`${item.name} reference design ${index + 1}`}
+                                      width={500}
+                                      height={500}
+                                      data-ai-hint="cake design"
+                                      className="rounded-lg object-cover w-full h-full"
+                                    />
+                                  </CardContent>
+                                </Card>
+                              </div>
+                            </CarouselItem>
+                          ))}
+                        </CarouselContent>
+                        <CarouselPrevious />
+                        <CarouselNext />
+                      </Carousel>
+                    </DialogContent>
+                  </Dialog>
+                ) : (
                 <Card key={item.name} className="group overflow-hidden rounded-3xl border-2 border-primary/30 bg-card/50 shadow-xl transition-all duration-300 ease-in-out hover:border-primary hover:shadow-2xl hover:scale-[1.03]">
                   <CardHeader className="p-0 overflow-hidden">
                     <Image
@@ -150,7 +224,7 @@ export default function MenuPage() {
                     <Button>Select</Button>
                   </CardContent>
                 </Card>
-              ))}
+              )))}
             </div>
           </section>
         ))}

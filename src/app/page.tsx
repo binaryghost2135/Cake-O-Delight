@@ -12,7 +12,7 @@ import { Sparkles } from 'lucide-react';
 export default function Home() {
   return (
     <InitialAnimation>
-      <div className="flex flex-col min-h-screen bg-background relative">
+      <div className="flex flex-col min-h-screen bg-background relative overflow-x-hidden">
         <FloatingIcons
           numIcons={15}
           animationClass="continuous-animation"

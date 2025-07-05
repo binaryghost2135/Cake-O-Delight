@@ -147,38 +147,10 @@
     margin-top: 0; /* No zigzag on mobile */
   }
 
-  @media (min-width: 768px) {
-      .review-card.visible.left-card {
-        transform: translate(-10%, -50%) rotate(-5deg);
-      }
-      .review-card.visible.right-card {
-        transform: translate(10%, 50%) rotate(5deg);
-      }
-      .photo-grid {
-          flex-direction: row;
-      }
-      .photo-item {
-          width: calc(50% - 1rem);
-      }
-      .photo-item:nth-child(even) {
-          margin-top: 4rem;
-      }
-  }
-  @media (min-width: 1024px) {
-      .photo-item {
-          width: calc(33.33% - 1.33rem);
-      }
-      .photo-item:nth-child(even) {
-          margin-top: 0;
-      }
-      .photo-item:nth-child(3n-1) {
-          margin-top: 4rem;
-      }
-  }
-
   .overlapping-photo-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr; /* Mobile-first: single column */
+    gap: 2rem; /* Add some gap for mobile view */
     align-items: start;
     margin-top: 4rem;
     padding: 0 1rem 4rem 1rem;
@@ -210,24 +182,54 @@
       position: relative;
   }
 
-  /* Zigzag and overlap positioning */
   .overlapping-photo-item:nth-child(odd) {
-    /* Left column */
     position: relative;
     z-index: 1;
   }
 
   .overlapping-photo-item:nth-child(even) {
-    /* Right column */
-    margin-top: 5rem; /* Zigzag */
-    margin-left: -25%; /* Overlap */
+    /* Reset styles for mobile */
+    margin-top: 0;
+    margin-left: 0;
     position: relative;
     z-index: 2;
   }
 
   @media (min-width: 768px) {
-    .overlapping-photo-grid {
-      padding: 0 4rem 4rem 4rem;
-    }
+      .review-card.visible.left-card {
+        transform: translate(-10%, -50%) rotate(-5deg);
+      }
+      .review-card.visible.right-card {
+        transform: translate(10%, 50%) rotate(5deg);
+      }
+      .photo-grid {
+          flex-direction: row;
+      }
+      .photo-item {
+          width: calc(50% - 1rem);
+      }
+      .photo-item:nth-child(even) {
+          margin-top: 4rem;
+      }
+      .overlapping-photo-grid {
+        grid-template-columns: 1fr 1fr;
+        padding: 0 4rem 4rem 4rem;
+        gap: 0; /* Reset gap */
+      }
+      .overlapping-photo-item:nth-child(even) {
+        margin-top: 5rem; /* Zigzag */
+        margin-left: -25%; /* Overlap */
+      }
+  }
+  @media (min-width: 1024px) {
+      .photo-item {
+          width: calc(33.33% - 1.33rem);
+      }
+      .photo-item:nth-child(even) {
+          margin-top: 0;
+      }
+      .photo-item:nth-child(3n-1) {
+          margin-top: 4rem;
+      }
   }
 }

@@ -30,7 +30,7 @@ export function FounderMessage() {
       </div>
       <div className="max-w-2xl mx-auto flex flex-col items-center gap-4 text-center mt-12">
         <blockquote className="text-center">
-          <footer className="mt-2 font-semibold text-accent">- Riddhi Founder</footer>
+          <footer className="mt-2 font-semibold text-accent">Founder - Riddhi Oswal</footer>
         </blockquote>
       </div>
     </section>

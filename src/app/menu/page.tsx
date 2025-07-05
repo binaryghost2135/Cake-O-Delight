@@ -43,13 +43,29 @@ const menuCategories = [
         name: "Cake for small celebrations (500g)",
         price: "₹700/- onwards",
         src: "https://i.postimg.cc/nLJNdtmg/Whats-App-Image-2025-07-01-at-12.jpg",
-        hint: "small cake"
+        hint: "small cake",
+        referenceImages: [
+          "https://i.postimg.cc/hv2HF0ZW/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/9X13qWm8/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/fLN4YySF/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/YS6dnnBS/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/Pxd2BWdQ/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/CKTv4ytt/Whats-App-Image-2025-06-22-at-8.jpg"
+        ],
       },
       {
         name: "The Family Size (1kg)",
         price: "₹1300/- onwards",
         src: "https://i.postimg.cc/Z531FqW6/Whats-App-Image-2025-07-01-at-12.jpg",
-        hint: "large cake"
+        hint: "large cake",
+        referenceImages: [
+          "https://i.postimg.cc/hv2HF0ZW/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/9X13qWm8/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/fLN4YySF/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/YS6dnnBS/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/Pxd2BWdQ/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/CKTv4ytt/Whats-App-Image-2025-06-22-at-8.jpg"
+        ],
       },
     ],
   },
@@ -95,13 +111,29 @@ const menuCategories = [
         name: "Mini cheesecake",
         price: "₹700/- onwards",
         src: "https://i.postimg.cc/wBYYSmCW/Whats-App-Image-2025-07-01-at-1.jpg",
-        hint: "mini cheesecake"
+        hint: "mini cheesecake",
+        referenceImages: [
+          "https://i.postimg.cc/hv2HF0ZW/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/9X13qWm8/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/fLN4YySF/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/YS6dnnBS/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/Pxd2BWdQ/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/CKTv4ytt/Whats-App-Image-2025-06-22-at-8.jpg"
+        ],
       },
       {
         name: "½ kg Cheesecake",
         price: "₹1200/- onwards",
         src: "https://i.postimg.cc/T3DX794L/Whats-App-Image-2025-07-01-at-1.jpg",
-        hint: "cheesecake"
+        hint: "cheesecake",
+        referenceImages: [
+          "https://i.postimg.cc/hv2HF0ZW/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/9X13qWm8/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/fLN4YySF/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/YS6dnnBS/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/Pxd2BWdQ/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/CKTv4ytt/Whats-App-Image-2025-06-22-at-8.jpg"
+        ],
       },
     ],
   },
@@ -112,19 +144,43 @@ const menuCategories = [
         name: "BOX of 4 Cupcakes",
         price: "₹300/- onwards",
         src: "https://i.postimg.cc/Bb7Gyw3D/Whats-App-Image-2025-07-01-at-1.jpg",
-        hint: "cupcakes box"
+        hint: "cupcakes box",
+        referenceImages: [
+          "https://i.postimg.cc/hv2HF0ZW/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/9X13qWm8/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/fLN4YySF/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/YS6dnnBS/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/Pxd2BWdQ/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/CKTv4ytt/Whats-App-Image-2025-06-22-at-8.jpg"
+        ],
       },
       {
         name: "Box of 6 cupcakes",
         price: "₹450/- onwards",
         src: "https://i.postimg.cc/sXczPg0T/Whats-App-Image-2025-07-01-at-1.jpg",
-        hint: "cupcakes box"
+        hint: "cupcakes box",
+        referenceImages: [
+          "https://i.postimg.cc/hv2HF0ZW/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/9X13qWm8/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/fLN4YySF/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/YS6dnnBS/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/Pxd2BWdQ/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/CKTv4ytt/Whats-App-Image-2025-06-22-at-8.jpg"
+        ],
       },
       {
         name: "Box of 12 Cupcakes",
         price: "₹1100/- onwards",
         src: "https://i.postimg.cc/vBMM6VX1/Whats-App-Image-2025-07-01-at-1.jpg",
-        hint: "cupcakes box"
+        hint: "cupcakes box",
+        referenceImages: [
+          "https://i.postimg.cc/hv2HF0ZW/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/9X13qWm8/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/fLN4YySF/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/YS6dnnBS/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/Pxd2BWdQ/Whats-App-Image-2025-06-22-at-8.jpg",
+          "https://i.postimg.cc/CKTv4ytt/Whats-App-Image-2025-06-22-at-8.jpg"
+        ],
       },
     ],
   },

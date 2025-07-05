@@ -8,7 +8,7 @@ const menuItems = [
   {
     name: "A cake for 2",
     price: "₹500/- onwards",
-    src: "https://i.postimg.cc/V6Qx8vYg/Whats-App-Image-2025-06-30-at-10.jpg",
+    src: "https://i.postimg.cc/k4jZX6HP/Whats-App-Image-2025-07-01-at-12.jpg",
     hint: "bento cake"
   },
   {

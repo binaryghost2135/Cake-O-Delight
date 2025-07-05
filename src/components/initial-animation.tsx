@@ -8,25 +8,21 @@ import { Star } from "lucide-react";
 
 const customerReviews = [
   { 
-    name: "Muskan",
     text: `"Dear you aren't serving us...we are serving our own selves and you are helping us do that in a true sense 🤗❣️"`,
     imageSrc: "https://placehold.co/80x80.png",
     imageHint: "woman portrait" 
   },
   { 
-    name: "A Customer",
     text: `"hey the cake was really tasty, special thank you for making it ready at the very last minute, it’s literally the same as what we imagined"`, 
     imageSrc: "https://placehold.co/80x80.png",
     imageHint: "man portrait" 
   },
   { 
-    name: "Sneha",
     text: `"It was as we imagined"`, 
     imageSrc: "https://placehold.co/80x80.png",
     imageHint: "woman portrait" 
   },
   { 
-    name: "Pooja",
     text: `"Out of Pinterest"`, 
     imageSrc: "https://placehold.co/80x80.png",
     imageHint: "woman portrait" 
@@ -123,7 +119,7 @@ export function InitialAnimation({ children }: { children: ReactNode }) {
           >
             {customerReviews.slice(0, 2).map((review, index) => (
               <div
-                key={review.name}
+                key={review.text}
                 className={cn(
                   "review-card flex flex-col items-center text-center",
                   index === 0 ? "left-card" : "right-card",
@@ -132,7 +128,7 @@ export function InitialAnimation({ children }: { children: ReactNode }) {
               >
                 <Image
                   src={review.imageSrc}
-                  alt={review.name}
+                  alt="Customer review"
                   width={80}
                   height={80}
                   data-ai-hint={review.imageHint}
@@ -146,9 +142,6 @@ export function InitialAnimation({ children }: { children: ReactNode }) {
                 <p className="text-base sm:text-lg italic text-foreground/90 mb-4 leading-snug">
                   {review.text}
                 </p>
-                <footer className="font-semibold text-accent/80">
-                  ~ {review.name}
-                </footer>
               </div>
             ))}
           </div>

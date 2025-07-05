@@ -26,7 +26,7 @@ const menuItems = [
   {
     name: "BOX of 2 Brownies",
     price: "₹130/- onwards",
-    src: "https://placehold.co/400x300.png",
+    src: "https://i.postimg.cc/sDbkhWgV/Whats-App-Image-2025-07-01-at-12.jpg",
     hint: "brownies box"
   },
   {

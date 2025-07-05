@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
@@ -6,85 +7,85 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const menuItems = [
   {
     name: "A cake for 2",
-    price: "500/- onwards",
+    price: "₹500/- onwards",
     src: "https://i.postimg.cc/V6Qx8vYg/Whats-App-Image-2025-06-30-at-10.jpg",
     hint: "bento cake"
   },
   {
     name: "Cake for small celebrations (500g)",
-    price: "700/- onwards",
+    price: "₹700/- onwards",
     src: "https://i.postimg.cc/FHSrJDrs/Whats-App-Image-2025-06-23-at-8.jpg",
     hint: "small cake"
   },
   {
     name: "The Family Size (1kg)",
-    price: "1300/- onwards",
+    price: "₹1300/- onwards",
     src: "https://i.postimg.cc/fyz6gPKf/Whats-App-Image-2025-06-22-at-8.jpg",
     hint: "large cake"
   },
   {
     name: "BOX of 2 Brownies",
-    price: "130/- onwards",
+    price: "₹130/- onwards",
     src: "https://placehold.co/400x300.png",
     hint: "brownies box"
   },
   {
     name: "BOX of 4 Brownies",
-    price: "350/- onwards",
+    price: "₹350/- onwards",
     src: "https://placehold.co/400x300.png",
     hint: "brownies box"
   },
   {
     name: "BOX of 6 Brownies",
-    price: "600/- onwards",
+    price: "₹600/- onwards",
     src: "https://placehold.co/400x300.png",
     hint: "brownies box"
   },
   {
     name: "Box of 9 brownies",
-    price: "1000/- onwards",
+    price: "₹1000/- onwards",
     src: "https://placehold.co/400x300.png",
     hint: "brownies box"
   },
   {
     name: "Mini cheesecake",
-    price: "700/- onwards",
+    price: "₹700/- onwards",
     src: "https://i.postimg.cc/Pr9Zj3Vt/Whats-App-Image-2025-06-23-at-1.jpg",
     hint: "mini cheesecake"
   },
   {
     name: "½ kg Cheesecake",
-    price: "1200/- onwards",
+    price: "₹1200/- onwards",
     src: "https://i.postimg.cc/Pr9Zj3Vt/Whats-App-Image-2025-06-23-at-1.jpg",
     hint: "cheesecake"
   },
   {
     name: "Modak chocolates",
-    price: "Box of 11: 251/- | Box of 21: 501/-",
+    price: "Box of 11: ₹251/- | Box of 21: ₹501/-",
     src: "https://placehold.co/400x300.png",
     hint: "modak chocolates"
   },
   {
     name: "Brownie bites",
-    price: "300/- onwards",
+    price: "₹300/- onwards",
     src: "https://placehold.co/400x300.png",
     hint: "brownie bites"
   },
   {
     name: "BOX of 4 Cupcakes",
-    price: "300/- onwards",
+    price: "₹300/- onwards",
     src: "https://i.postimg.cc/d1swpF8L/Whats-App-Image-2025-06-22-at-8.jpg",
     hint: "cupcakes box"
   },
   {
     name: "Box of 6 cupcakes",
-    price: "450/- onwards",
+    price: "₹450/- onwards",
     src: "https://i.postimg.cc/d1swpF8L/Whats-App-Image-2025-06-22-at-8.jpg",
     hint: "cupcakes box"
   },
   {
     name: "Box of 12 Cupcakes",
-    price: "1100/- onwards",
+    price: "₹1100/- onwards",
     src: "https://i.postimg.cc/d1swpF8L/Whats-App-Image-2025-06-22-at-8.jpg",
     hint: "cupcakes box"
   },

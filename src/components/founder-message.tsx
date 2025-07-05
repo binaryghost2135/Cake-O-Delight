@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 const founderImages = [
-  { src: "https://i.postimg.cc/hv2HF0ZW/Whats-App-Image-2025-06-22-at-8.jpg", alt: "A delicious-looking cake", hint: "cake chocolate", className: "row-start-1 col-start-1 -rotate-6" },
-  { src: "https://i.postimg.cc/9X13qWm8/Whats-App-Image-2025-06-22-at-8.jpg", alt: "A beautifully decorated pastry", hint: "pastry decoration", className: "row-start-1 col-start-2 rotate-6 z-10 translate-y-4" },
-  { src: "https://i.postimg.cc/fyz6gPKf/Whats-App-Image-2025-06-22-at-8.jpg", alt: "Close-up of a pastry", hint: "pastry closeup", className: "row-start-2 col-start-1 rotate-3 z-10 -translate-y-4" },
-  { src: "https://i.postimg.cc/fLN4YySF/Whats-App-Image-2025-06-22-at-8.jpg", alt: "Another view of a cake", hint: "cake sideview", className: "row-start-2 col-start-2 -rotate-3 translate-y-2" },
+  { src: "https://i.postimg.cc/HLGWPp70/Whats-App-Image-2025-07-05-at-3.jpg", alt: "Custom bento cakes for dad", hint: "bento cake", className: "row-start-1 col-start-1 -rotate-6" },
+  { src: "https://i.postimg.cc/DyMwLQvM/Whats-App-Image-2025-07-05-at-3.jpg", alt: "Valentine's themed bento cake", hint: "valentines cake", className: "row-start-1 col-start-2 rotate-6 z-10 translate-y-4" },
+  { src: "https://i.postimg.cc/xjgCTDWY/Whats-App-Image-2025-07-05-at-3.jpg", alt: "Birthday bento cake", hint: "birthday cake", className: "row-start-2 col-start-1 rotate-3 z-10 -translate-y-4" },
+  { src: "https://i.postimg.cc/QCNdk0KR/Whats-App-Image-2025-07-05-at-3.jpg", alt: "Cartoon themed bento cake", hint: "cartoon cake", className: "row-start-2 col-start-2 -rotate-3 translate-y-2" },
 ];
 
 export function FounderMessage() {

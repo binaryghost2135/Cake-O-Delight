@@ -281,7 +281,7 @@ const menuCategories = [
     category: "Cookies",
     items: [
       {
-        name: "BOX of 4",
+        name: "BOX of 4 Cookies",
         price: "Rs.259/- onwards",
         src: "https://i.postimg.cc/FHSrJDrs/Whats-App-Image-2025-06-23-at-8.jpg",
         hint: "cookies box",

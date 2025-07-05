@@ -31,7 +31,7 @@ const menuCategories = [
     items: [
       {
         name: "A cake for 2",
-        price: "₹500/- onwards",
+        price: "Rs.500/- onwards",
         src: "https://i.postimg.cc/k4jZX6HP/Whats-App-Image-2025-07-01-at-12.jpg",
         hint: "bento cake",
         referenceImages: [
@@ -45,7 +45,7 @@ const menuCategories = [
       },
       {
         name: "Cake for small celebrations (500g)",
-        price: "₹700/- onwards",
+        price: "Rs.700/- onwards",
         src: "https://i.postimg.cc/nLJNdtmg/Whats-App-Image-2025-07-01-at-12.jpg",
         hint: "small cake",
         referenceImages: [
@@ -64,7 +64,7 @@ const menuCategories = [
       },
       {
         name: "The Family Size (1kg)",
-        price: "₹1300/- onwards",
+        price: "Rs.1300/- onwards",
         src: "https://i.postimg.cc/Z531FqW6/Whats-App-Image-2025-07-01-at-12.jpg",
         hint: "large cake",
         referenceImages: [
@@ -87,7 +87,7 @@ const menuCategories = [
     items: [
       {
         name: "BOX of 2 Brownies",
-        price: "₹130/- onwards",
+        price: "Rs.130/- onwards",
         src: "https://i.postimg.cc/sDbkhWgV/Whats-App-Image-2025-07-01-at-12.jpg",
         hint: "brownies box",
         referenceImages: [
@@ -97,7 +97,7 @@ const menuCategories = [
       },
       {
         name: "BOX of 4 Brownies",
-        price: "₹350/- onwards",
+        price: "Rs.350/- onwards",
         src: "https://i.postimg.cc/hv5HMz81/Whats-App-Image-2025-07-01-at-12.jpg",
         hint: "brownies box",
         referenceImages: [
@@ -113,7 +113,7 @@ const menuCategories = [
       },
       {
         name: "BOX of 6 Brownies",
-        price: "₹600/- onwards",
+        price: "Rs.600/- onwards",
         src: "https://i.postimg.cc/Bb6rxcFv/Whats-App-Image-2025-07-01-at-12.jpg",
         hint: "brownies box",
         referenceImages: [
@@ -125,7 +125,7 @@ const menuCategories = [
       },
       {
         name: "Box of 9 brownies",
-        price: "₹1000/- onwards",
+        price: "Rs.1000/- onwards",
         src: "https://i.postimg.cc/0Q8RNq2D/Whats-App-Image-2025-07-01-at-12.jpg",
         hint: "brownies box",
         referenceImages: [
@@ -136,7 +136,7 @@ const menuCategories = [
       },
       {
         name: "Brownie bites",
-        price: "₹300/- onwards",
+        price: "Rs.300/- onwards",
         src: "https://i.postimg.cc/3JWhp7jZ/Whats-App-Image-2025-07-01-at-1.jpg",
         hint: "brownie bites",
         referenceImages: [
@@ -153,7 +153,7 @@ const menuCategories = [
     items: [
       {
         name: "Mini cheesecake",
-        price: "₹700/- onwards",
+        price: "Rs.700/- onwards",
         src: "https://i.postimg.cc/wBYYSmCW/Whats-App-Image-2025-07-01-at-1.jpg",
         hint: "mini cheesecake",
         referenceImages: [
@@ -171,7 +171,7 @@ const menuCategories = [
       },
       {
         name: "½ kg Cheesecake",
-        price: "₹1200/- onwards",
+        price: "Rs.1200/- onwards",
         src: "https://i.postimg.cc/T3DX794L/Whats-App-Image-2025-07-01-at-1.jpg",
         hint: "cheesecake",
         referenceImages: [
@@ -202,7 +202,7 @@ const menuCategories = [
     items: [
       {
         name: "BOX of 4 Cupcakes",
-        price: "₹300/- onwards",
+        price: "Rs.300/- onwards",
         src: "https://i.postimg.cc/Bb7Gyw3D/Whats-App-Image-2025-07-01-at-1.jpg",
         hint: "cupcakes box",
         referenceImages: [
@@ -215,7 +215,7 @@ const menuCategories = [
       },
       {
         name: "Box of 6 cupcakes",
-        price: "₹450/- onwards",
+        price: "Rs.450/- onwards",
         src: "https://i.postimg.cc/sXczPg0T/Whats-App-Image-2025-07-01-at-1.jpg",
         hint: "cupcakes box",
         referenceImages: [
@@ -238,7 +238,7 @@ const menuCategories = [
       },
       {
         name: "Box of 12 Cupcakes",
-        price: "₹1100/- onwards",
+        price: "Rs.1100/- onwards",
         src: "https://i.postimg.cc/vBMM6VX1/Whats-App-Image-2025-07-01-at-1.jpg",
         hint: "cupcakes box",
         referenceImages: [
@@ -254,7 +254,7 @@ const menuCategories = [
     items: [
       {
         name: "Modak chocolates",
-        price: "Box of 11: ₹251/- | Box of 21: ₹501/-",
+        price: "Box of 11: Rs.251/- | Box of 21: Rs.501/-",
         src: "https://i.postimg.cc/YqVHzVbB/Whats-App-Image-2025-07-01-at-1.jpg",
         hint: "modak chocolates",
         referenceImages: [

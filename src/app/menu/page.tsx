@@ -1,3 +1,4 @@
+'use client'
 
 import Image from "next/image";
 import { Header } from "@/components/header";
@@ -19,7 +20,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { ShoppingCart } from "lucide-react";
+import { ShoppingCart, Circle, CheckCircle2 } from "lucide-react";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
 
 const menuCategories = [
   {
@@ -269,6 +272,22 @@ const menuCategories = [
 
 
 export default function MenuPage() {
+  const [selectedDesigns, setSelectedDesigns] = useState<{[key: string]: number | null}>({});
+
+  const handleSelectDesign = (itemName: string, designIndex: number) => {
+    setSelectedDesigns(prev => ({
+      ...prev,
+      [itemName]: prev[itemName] === designIndex ? null : designIndex,
+    }));
+  };
+
+  const resetSelection = (itemName: string) => {
+    setSelectedDesigns(prev => ({
+      ...prev,
+      [itemName]: null
+    }));
+  }
+
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Header />
@@ -284,7 +303,7 @@ export default function MenuPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
               {category.items.map((item) => (
                 'referenceImages' in item && Array.isArray(item.referenceImages) && item.referenceImages.length > 0 ? (
-                  <Dialog key={item.name}>
+                  <Dialog key={item.name} onOpenChange={(open) => { if (!open) resetSelection(item.name)}}>
                     <Card className="group overflow-hidden rounded-3xl border-2 border-primary/30 bg-card/50 shadow-xl transition-all duration-300 ease-in-out hover:border-primary hover:shadow-2xl hover:scale-[1.03]">
                       <CardHeader className="p-0 overflow-hidden">
                         <Image
@@ -306,34 +325,43 @@ export default function MenuPage() {
                     </Card>
                     <DialogContent className="max-w-3xl">
                       <DialogHeader>
-                        <DialogTitle>{item.name} - Reference Designs</DialogTitle>
+                        <DialogTitle>{item.name} - Select a Reference Design</DialogTitle>
                       </DialogHeader>
-                      <Carousel className="w-full" opts={{ loop: true }}>
-                        <CarouselContent>
-                          {(item.referenceImages as string[]).map((refSrc, index) => (
-                            <CarouselItem key={index} className="basis-full md:basis-1/2 lg:basis-1/3">
-                              <div className="p-1">
-                                <Card className="overflow-hidden">
-                                  <CardContent className="flex aspect-square items-center justify-center p-0">
-                                    <Image
-                                      src={refSrc}
-                                      alt={`${item.name} reference design ${index + 1}`}
-                                      width={500}
-                                      height={500}
-                                      data-ai-hint="cake design"
-                                      className="rounded-lg object-cover w-full h-full"
-                                    />
-                                  </CardContent>
-                                </Card>
-                              </div>
-                            </CarouselItem>
-                          ))}
+                      <Carousel className="w-full" opts={{ loop: false, align: "start" }}>
+                        <CarouselContent className="-ml-2">
+                          {(item.referenceImages as string[]).map((refSrc, index) => {
+                            const isSelected = selectedDesigns[item.name] === index;
+                            return (
+                              <CarouselItem key={index} className="basis-full md:basis-1/2 lg:basis-1/3 pl-2">
+                                <div className="p-1 cursor-pointer" onClick={() => handleSelectDesign(item.name, index)}>
+                                  <Card className={cn("overflow-hidden relative transition-all", isSelected ? "border-primary border-2 shadow-lg" : "border-transparent")}>
+                                    <CardContent className="flex aspect-square items-center justify-center p-0">
+                                      <Image
+                                        src={refSrc}
+                                        alt={`${item.name} reference design ${index + 1}`}
+                                        width={500}
+                                        height={500}
+                                        data-ai-hint="cake design"
+                                        className="rounded-lg object-cover w-full h-full"
+                                      />
+                                       <div className="absolute top-2 right-2 bg-background/80 backdrop-blur-sm rounded-full p-0.5">
+                                        {isSelected ? <CheckCircle2 className="w-6 h-6 text-primary" /> : <Circle className="w-6 h-6 text-muted-foreground/50" />}
+                                    </div>
+                                    <div className="absolute bottom-0 w-full bg-black/50 text-white text-center p-1 text-xs font-semibold">
+                                        Reference {index + 1}
+                                    </div>
+                                    </CardContent>
+                                  </Card>
+                                </div>
+                              </CarouselItem>
+                            )
+                          })}
                         </CarouselContent>
                         <CarouselPrevious className="hidden md:flex" />
                         <CarouselNext className="hidden md:flex" />
                       </Carousel>
                       <DialogFooter>
-                        <Button>
+                        <Button disabled={selectedDesigns[item.name] === null || selectedDesigns[item.name] === undefined}>
                           <ShoppingCart className="mr-2 h-4 w-4" />
                           Add to Cart
                         </Button>

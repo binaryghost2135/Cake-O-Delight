@@ -304,11 +304,12 @@ export default function MenuPage() {
     const selectedDesignIndex = selectedDesigns[item.name];
     if (selectedDesignIndex === null || selectedDesignIndex === undefined) return;
 
-    const cartItem: CartItem = {
+    const cartItem = {
       name: item.name,
       price: item.price,
       src: item.src,
       referenceImage: item.referenceImages[selectedDesignIndex],
+      referenceIndex: selectedDesignIndex + 1,
     };
 
     addToCart(cartItem);
@@ -320,7 +321,7 @@ export default function MenuPage() {
   };
   
   const handleSimpleAddToCart = (item: (typeof menuCategories)[0]['items'][0]) => {
-      const cartItem: CartItem = {
+      const cartItem = {
         name: item.name,
         price: item.price,
         src: item.src,

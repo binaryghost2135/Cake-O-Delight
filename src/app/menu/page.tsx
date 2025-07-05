@@ -97,12 +97,14 @@ const menuCategories = [
         src: "https://i.postimg.cc/hv5HMz81/Whats-App-Image-2025-07-01-at-12.jpg",
         hint: "brownies box",
         referenceImages: [
-            "https://i.postimg.cc/hv2HF0ZW/Whats-App-Image-2025-06-22-at-8.jpg",
-            "https://i.postimg.cc/9X13qWm8/Whats-App-Image-2025-06-22-at-8.jpg",
-            "https://i.postimg.cc/fLN4YySF/Whats-App-Image-2025-06-22-at-8.jpg",
-            "https://i.postimg.cc/YS6dnnBS/Whats-App-Image-2025-06-22-at-8.jpg",
-            "https://i.postimg.cc/Pxd2BWdQ/Whats-App-Image-2025-06-22-at-8.jpg",
-            "https://i.postimg.cc/CKTv4ytt/Whats-App-Image-2025-06-22-at-8.jpg"
+            "https://i.postimg.cc/Vkncc0SH/Whats-App-Image-2025-06-23-at-1.jpg",
+            "https://i.postimg.cc/KYTjwYFZ/Whats-App-Image-2025-06-23-at-1.jpg",
+            "https://i.postimg.cc/k4Xr8jTk/Whats-App-Image-2025-06-23-at-1.jpg",
+            "https://i.postimg.cc/Z5CCPcMv/Whats-App-Image-2025-06-23-at-1.jpg",
+            "https://i.postimg.cc/hGnR44T4/Whats-App-Image-2025-06-23-at-1.jpg",
+            "https://i.postimg.cc/c4VNjBJn/Whats-App-Image-2025-06-23-at-1.jpg",
+            "https://i.postimg.cc/BnktmKrY/Whats-App-Image-2025-06-23-at-1.jpg",
+            "https://i.postimg.cc/XvgSrMkf/Whats-App-Image-2025-06-23-at-1.jpg"
         ]
       },
       {

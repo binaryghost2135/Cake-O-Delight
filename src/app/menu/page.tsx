@@ -23,6 +23,8 @@ import {
 import { ShoppingCart, Circle, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { useCart, type CartItem } from "@/context/cart-context";
+import { useToast } from "@/hooks/use-toast";
 
 const menuCategories = [
   {
@@ -273,6 +275,9 @@ const menuCategories = [
 
 export default function MenuPage() {
   const [selectedDesigns, setSelectedDesigns] = useState<{[key: string]: number | null}>({});
+  const { addToCart } = useCart();
+  const { toast } = useToast();
+  const [openDialogs, setOpenDialogs] = useState<Record<string, boolean>>({});
 
   const handleSelectDesign = (itemName: string, designIndex: number) => {
     setSelectedDesigns(prev => ({
@@ -287,6 +292,46 @@ export default function MenuPage() {
       [itemName]: null
     }));
   }
+
+  const handleOpenChange = (itemName: string, open: boolean) => {
+    setOpenDialogs(prev => ({ ...prev, [itemName]: open }));
+    if (!open) {
+      resetSelection(itemName);
+    }
+  };
+
+  const handleAddToCart = (item: (typeof menuCategories)[0]['items'][0] & { referenceImages: string[] }) => {
+    const selectedDesignIndex = selectedDesigns[item.name];
+    if (selectedDesignIndex === null || selectedDesignIndex === undefined) return;
+
+    const cartItem: CartItem = {
+      name: item.name,
+      price: item.price,
+      src: item.src,
+      referenceImage: item.referenceImages[selectedDesignIndex],
+    };
+
+    addToCart(cartItem);
+    toast({
+        title: "Added to Cart!",
+        description: `"${item.name}" has been added to your cart.`,
+    });
+    handleOpenChange(item.name, false);
+  };
+  
+  const handleSimpleAddToCart = (item: (typeof menuCategories)[0]['items'][0]) => {
+      const cartItem: CartItem = {
+        name: item.name,
+        price: item.price,
+        src: item.src,
+        referenceImage: item.src,
+      };
+      addToCart(cartItem);
+      toast({
+        title: "Added to Cart!",
+        description: `"${item.name}" has been added to your cart.`,
+      });
+  };
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -303,26 +348,26 @@ export default function MenuPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
               {category.items.map((item) => (
                 'referenceImages' in item && Array.isArray(item.referenceImages) && item.referenceImages.length > 0 ? (
-                  <Dialog key={item.name} onOpenChange={(open) => { if (!open) resetSelection(item.name)}}>
-                    <Card className="group overflow-hidden rounded-3xl border-2 border-primary/30 bg-card/50 shadow-xl transition-all duration-300 ease-in-out hover:border-primary hover:shadow-2xl hover:scale-[1.03]">
-                      <CardHeader className="p-0 overflow-hidden">
-                        <Image
-                          src={item.src}
-                          alt={item.name}
-                          width={400}
-                          height={300}
-                          data-ai-hint={item.hint}
-                          className="w-full h-64 object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-                        />
-                      </CardHeader>
-                      <CardContent className="p-5 text-center bg-background/20 backdrop-blur-sm">
-                        <CardTitle className="text-2xl font-headline mb-2 text-foreground">{item.name}</CardTitle>
-                        <p className="text-lg font-cute text-accent mb-4">{item.price}</p>
-                        <DialogTrigger asChild>
-                          <Button>View Designs</Button>
-                        </DialogTrigger>
-                      </CardContent>
-                    </Card>
+                  <Dialog key={item.name} open={openDialogs[item.name] || false} onOpenChange={(open) => handleOpenChange(item.name, open)}>
+                      <Card className="group overflow-hidden rounded-3xl border-2 border-primary/30 bg-card/50 shadow-xl transition-all duration-300 ease-in-out hover:border-primary hover:shadow-2xl hover:scale-[1.03]">
+                        <CardHeader className="p-0 overflow-hidden">
+                          <Image
+                            src={item.src}
+                            alt={item.name}
+                            width={400}
+                            height={300}
+                            data-ai-hint={item.hint}
+                            className="w-full h-64 object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                          />
+                        </CardHeader>
+                        <CardContent className="p-5 text-center bg-background/20 backdrop-blur-sm">
+                          <CardTitle className="text-2xl font-headline mb-2 text-foreground">{item.name}</CardTitle>
+                          <p className="text-lg font-cute text-accent mb-4">{item.price}</p>
+                          <DialogTrigger asChild>
+                            <Button>View Designs</Button>
+                          </DialogTrigger>
+                        </CardContent>
+                      </Card>
                     <DialogContent className="max-w-3xl">
                       <DialogHeader>
                         <DialogTitle>{item.name} - Select a Reference Design</DialogTitle>
@@ -361,7 +406,7 @@ export default function MenuPage() {
                         <CarouselNext className="hidden md:flex" />
                       </Carousel>
                       <DialogFooter>
-                        <Button disabled={selectedDesigns[item.name] === null || selectedDesigns[item.name] === undefined}>
+                        <Button disabled={selectedDesigns[item.name] === null || selectedDesigns[item.name] === undefined} onClick={() => handleAddToCart(item as any)}>
                           <ShoppingCart className="mr-2 h-4 w-4" />
                           Add to Cart
                         </Button>
@@ -383,7 +428,7 @@ export default function MenuPage() {
                   <CardContent className="p-5 text-center bg-background/20 backdrop-blur-sm">
                     <CardTitle className="text-2xl font-headline mb-2 text-foreground">{item.name}</CardTitle>
                     <p className="text-lg font-cute text-accent mb-4">{item.price}</p>
-                    <Button>
+                    <Button onClick={() => handleSimpleAddToCart(item)}>
                       <ShoppingCart className="mr-2 h-4 w-4" />
                       Add to Cart
                     </Button>

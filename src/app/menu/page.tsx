@@ -56,7 +56,7 @@ const menuItems = [
   {
     name: "½ kg Cheesecake",
     price: "₹1200/- onwards",
-    src: "https://i.postimg.cc/Pr9Zj3Vt/Whats-App-Image-2025-06-23-at-1.jpg",
+    src: "https://i.postimg.cc/T3DX794L/Whats-App-Image-2025-07-01-at-1.jpg",
     hint: "cheesecake"
   },
   {

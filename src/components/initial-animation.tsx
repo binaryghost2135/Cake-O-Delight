@@ -8,16 +8,28 @@ import { Star } from "lucide-react";
 
 const customerReviews = [
   { 
-    name: "Priya S.",
-    text: `"The custom cake for my birthday was stunning and delicious! Highly recommend."`,
+    name: "Muskan",
+    text: `"Dear you aren't serving us...we are serving our own selves and you are helping us do that in a true sense 🤗❣️"`,
     imageSrc: "https://placehold.co/80x80.png",
     imageHint: "woman portrait" 
   },
   { 
-    name: "Rohan K.",
-    text: `"Cake-O-Delight never disappoints. Their pastries are fresh and flavorful."`, 
+    name: "A Customer",
+    text: `"hey the cake was really tasty, special thank you for making it ready at the very last minute, it’s literally the same as what we imagined"`, 
     imageSrc: "https://placehold.co/80x80.png",
     imageHint: "man portrait" 
+  },
+  { 
+    name: "Sneha",
+    text: `"It was as we imagined"`, 
+    imageSrc: "https://placehold.co/80x80.png",
+    imageHint: "woman portrait" 
+  },
+  { 
+    name: "Pooja",
+    text: `"Out of Pinterest"`, 
+    imageSrc: "https://placehold.co/80x80.png",
+    imageHint: "woman portrait" 
   },
 ];
 

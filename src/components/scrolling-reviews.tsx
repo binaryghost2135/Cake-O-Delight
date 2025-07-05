@@ -10,9 +10,6 @@ const reviews = [
   "hey the cake was really tasty, special thank you for making it ready at the very last minute, it’s literally the same as what we imagined"
 ];
 
-// We duplicate the reviews to create a seamless looping effect for the marquee
-const duplicatedReviews = [...reviews, ...reviews];
-
 export function ScrollingReviews() {
   return (
     <section className="py-16">
@@ -23,7 +20,7 @@ export function ScrollingReviews() {
         </div>
         <div className="relative w-full overflow-hidden group">
             <div className="flex animate-marquee group-hover:[animation-play-state:paused] motion-reduce:animate-none">
-                {duplicatedReviews.map((review, index) => (
+                {[...reviews, ...reviews].map((review, index) => (
                     <div key={index} className="flex-shrink-0 w-80 sm:w-96 mx-4">
                         <div className="bg-card/80 backdrop-blur-sm p-6 rounded-3xl shadow-lg border-2 border-primary h-full flex flex-col text-left">
                             <div className="flex mb-3 text-yellow-400">

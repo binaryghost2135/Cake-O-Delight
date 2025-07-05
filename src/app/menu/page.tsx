@@ -255,7 +255,7 @@ const menuCategories = [
     items: [
       {
         name: "BOX of 4",
-        price: "Rs.800/-",
+        price: "Rs.800/- onwards",
         src: "https://i.postimg.cc/8C94pByg/Whats-App-Image-2025-07-05-at-9.jpg",
         hint: "bomboloni box",
         referenceImages: [
@@ -266,7 +266,7 @@ const menuCategories = [
       },
       {
         name: "BOX of 8",
-        price: "Rs.1600/-",
+        price: "Rs.1600/- onwards",
         src: "https://i.postimg.cc/4x4BB3Kq/Whats-App-Image-2025-07-05-at-9.jpg",
         hint: "bomboloni box",
         referenceImages: [

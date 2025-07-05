@@ -50,7 +50,7 @@ const menuItems = [
   {
     name: "Mini cheesecake",
     price: "₹700/- onwards",
-    src: "https://i.postimg.cc/Pr9Zj3Vt/Whats-App-Image-2025-06-23-at-1.jpg",
+    src: "https://i.postimg.cc/wBYYSmCW/Whats-App-Image-2025-07-01-at-1.jpg",
     hint: "mini cheesecake"
   },
   {

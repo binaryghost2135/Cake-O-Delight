@@ -21,7 +21,7 @@ export default function Home() {
         <main className="flex-grow container mx-auto px-4 md:px-8 text-center relative z-10">
           <div className="py-12 md:py-24">
             <h2 className="text-5xl md:text-7xl font-bold mb-6 leading-tight font-cute [text-shadow:1px_1px_2px_rgba(0,0,0,0.05)]">
-              Baked with Love, Crafted with Joy!
+              Founder - Riddhi Oswal
             </h2>
             <p className="text-2xl md:text-3xl text-foreground/80 max-w-3xl mx-auto mb-16 font-cute leading-relaxed">
               Hello buddy! I'm Riddhi Oswal, the 19-year-old founder of CAKE-O-DELIGHT, your go-to destination for scrumptious treats that make every occasion unforgettable! 🎉 We specialize in crafting delicious delicacies that are perfect for birthdays, celebrations, or just because. Our baked goodies are made with love, and we can't wait to share that love with you!

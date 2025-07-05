@@ -5,41 +5,89 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const menuItems = [
   {
-    name: "Classic Chocolate Cake",
-    price: "Rs. 800 onwards",
-    src: "https://i.postimg.cc/FHSrJDrs/Whats-App-Image-2025-06-23-at-8.jpg",
-    hint: "chocolate cake",
-  },
-  {
-    name: "Custom Bento Cake",
+    name: "A cake for 2",
     price: "Rs. 500 onwards",
     src: "https://i.postimg.cc/V6Qx8vYg/Whats-App-Image-2025-06-30-at-10.jpg",
-    hint: "bento cake",
+    hint: "bento cake"
   },
   {
-    name: "Elegant Decorated Cake",
-    price: "Rs. 1200 onwards",
+    name: "Cake for small celebrations (500g)",
+    price: "Rs. 700 onwards",
+    src: "https://i.postimg.cc/FHSrJDrs/Whats-App-Image-2025-06-23-at-8.jpg",
+    hint: "small cake"
+  },
+  {
+    name: "The Family Size (1kg)",
+    price: "Rs. 1300 onwards",
     src: "https://i.postimg.cc/fyz6gPKf/Whats-App-Image-2025-06-22-at-8.jpg",
-    hint: "decorated cake",
+    hint: "large cake"
   },
   {
-    name: "Vanilla Dream Cupcakes",
+    name: "BOX of 2 Brownies",
+    price: "Rs. 130 onwards",
+    src: "https://placehold.co/400x300.png",
+    hint: "brownies box"
+  },
+  {
+    name: "BOX of 4 Brownies",
+    price: "Rs. 350 onwards",
+    src: "https://placehold.co/400x300.png",
+    hint: "brownies box"
+  },
+  {
+    name: "BOX of 6 Brownies",
+    price: "Rs. 600 onwards",
+    src: "https://placehold.co/400x300.png",
+    hint: "brownies box"
+  },
+  {
+    name: "Box of 9 brownies",
+    price: "Rs. 1000 onwards",
+    src: "https://placehold.co/400x300.png",
+    hint: "brownies box"
+  },
+  {
+    name: "Mini cheesecake",
+    price: "Rs. 700 onwards",
+    src: "https://i.postimg.cc/Pr9Zj3Vt/Whats-App-Image-2025-06-23-at-1.jpg",
+    hint: "mini cheesecake"
+  },
+  {
+    name: "½ kg Cheesecake",
+    price: "Rs. 1200 onwards",
+    src: "https://i.postimg.cc/Pr9Zj3Vt/Whats-App-Image-2025-06-23-at-1.jpg",
+    hint: "cheesecake"
+  },
+  {
+    name: "Modak chocolates",
+    price: "Box of 11: Rs. 251 | Box of 21: Rs. 501",
+    src: "https://placehold.co/400x300.png",
+    hint: "modak chocolates"
+  },
+  {
+    name: "Brownie bites",
+    price: "Rs. 300 onwards",
+    src: "https://placehold.co/400x300.png",
+    hint: "brownie bites"
+  },
+  {
+    name: "BOX of 4 Cupcakes",
+    price: "Rs. 300 onwards",
+    src: "https://i.postimg.cc/d1swpF8L/Whats-App-Image-2025-06-22-at-8.jpg",
+    hint: "cupcakes box"
+  },
+  {
+    name: "Box of 6 cupcakes",
     price: "Rs. 450 onwards",
     src: "https://i.postimg.cc/d1swpF8L/Whats-App-Image-2025-06-22-at-8.jpg",
-    hint: "cupcakes",
-  },
-   {
-    name: "Sweet Delight Pastry",
-    price: "Rs. 150 onwards",
-    src: "https://i.postimg.cc/Pr9Zj3Vt/Whats-App-Image-2025-06-23-at-1.jpg",
-    hint: "sweet delight"
+    hint: "cupcakes box"
   },
   {
-    name: "Pink Berry Pastry",
-    price: "Rs. 180 onwards",
-    src: "https://i.postimg.cc/gJm87xS8/Whats-App-Image-2025-06-23-at-7.jpg",
-    hint: "pink pastry"
-  }
+    name: "Box of 12 Cupcakes",
+    price: "Rs. 1100 onwards",
+    src: "https://i.postimg.cc/d1swpF8L/Whats-App-Image-2025-06-22-at-8.jpg",
+    hint: "cupcakes box"
+  },
 ];
 
 export default function MenuPage() {

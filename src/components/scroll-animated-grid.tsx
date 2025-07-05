@@ -5,11 +5,12 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 const collagePhotos = [
-  { src: "https://i.postimg.cc/JtVSVxLw/Whats-App-Image-2025-06-23-at-1.jpg", hint: "chocolate cake" },
-  { src: "https://i.postimg.cc/MG375cTk/Whats-App-Image-2025-06-23-at-11.jpg", hint: "cake layers" },
-  { src: "https://i.postimg.cc/nzSKs5yt/Whats-App-Image-2025-06-23-at-7.jpg", hint: "decorated cake" },
-  { src: "https://i.postimg.cc/wBm35rRp/Whats-App-Image-2025-06-23-at-7.jpg", hint: "pink cake" },
-  { src: "https://i.postimg.cc/3Nmxm0kF/Whats-App-Image-2025-06-23-at-7.jpg", hint: "pastry design" },
+  { src: "https://i.postimg.cc/9X13qWm8/Whats-App-Image-2025-06-22-at-8.jpg", hint: "cake design" },
+  { src: "https://i.postimg.cc/Pr9Zj3Vt/Whats-App-Image-2025-06-23-at-1.jpg", hint: "sweet delight" },
+  { src: "https://i.postimg.cc/qMznWVLb/Whats-App-Image-2025-06-23-at-7.jpg", hint: "cake art" },
+  { src: "https://i.postimg.cc/gJm87xS8/Whats-App-Image-2025-06-23-at-7.jpg", hint: "pink pastry" },
+  { src: "https://i.postimg.cc/gJs8bGQ5/Whats-App-Image-2025-06-23-at-7.jpg", hint: "decorated pastry" },
+  { src: "https://i.postimg.cc/k58vz3n3/Whats-App-Image-2025-06-23-at-8.jpg", hint: "chocolate pastry" },
 ];
 
 export function ScrollAnimatedGrid() {

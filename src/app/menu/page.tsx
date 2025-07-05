@@ -326,7 +326,7 @@ const menuCategories = [
     items: [
       {
         name: "Delicious Combos",
-        price: "Contact for pricing",
+        price: "Customizable",
         src: "https://i.postimg.cc/L6N1Fc3g/Whats-App-Image-2025-07-05-at-9.jpg",
         hint: "cake combo",
         referenceImages: [

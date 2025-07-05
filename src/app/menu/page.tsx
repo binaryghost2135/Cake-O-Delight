@@ -62,7 +62,7 @@ const menuItems = [
   {
     name: "Modak chocolates",
     price: "Box of 11: ₹251/- | Box of 21: ₹501/-",
-    src: "https://placehold.co/400x300.png",
+    src: "https://i.postimg.cc/YqVHzVbB/Whats-App-Image-2025-07-01-at-1.jpg",
     hint: "modak chocolates"
   },
   {

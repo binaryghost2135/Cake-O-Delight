@@ -267,7 +267,7 @@ const menuCategories = [
       {
         name: "BOX of 8",
         price: "Rs.1600/-",
-        src: "https://placehold.co/400x300.png",
+        src: "https://i.postimg.cc/4x4BB3Kq/Whats-App-Image-2025-07-05-at-9.jpg",
         hint: "bomboloni box",
       },
     ],

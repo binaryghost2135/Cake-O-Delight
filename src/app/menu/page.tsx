@@ -282,13 +282,13 @@ const menuCategories = [
       {
         name: "BOX of 4",
         price: "Rs.259/- onwards",
-        src: "https://placehold.co/400x300.png",
+        src: "https://i.postimg.cc/FHSrJDrs/Whats-App-Image-2025-06-23-at-8.jpg",
         hint: "cookies box",
       },
       {
         name: "BOX of 6",
         price: "Rs.389/- onwards",
-        src: "https://placehold.co/400x300.png",
+        src: "https://i.postimg.cc/90qVrhHF/Whats-App-Image-2025-07-05-at-9.jpg",
         hint: "cookies box",
       },
     ],

@@ -36,7 +36,7 @@ export function CartButton() {
 
     message += "\nThank you!";
 
-    const phoneNumber = "919910365323";
+    const phoneNumber = "917303981369";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
     window.open(whatsappUrl, '_blank');

@@ -29,7 +29,7 @@ export function Header() {
           <Link href="/#more-sweet-delights-section" className="transition-colors hover:text-foreground/80 text-foreground/60">
             Delights
           </Link>
-          <Link href="#" className="transition-colors hover:text-foreground/80 text-foreground/60">
+          <Link href="https://www.instagram.com/_cake_o_delight__/" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-foreground/80 text-foreground/60">
             Contact
           </Link>
         </nav>
@@ -53,7 +53,7 @@ export function Header() {
                         <Link href="/#more-sweet-delights-section" className="transition-colors hover:text-primary text-foreground font-semibold">Delights</Link>
                     </SheetClose>
                     <SheetClose asChild>
-                        <Link href="#" className="transition-colors hover:text-primary text-foreground font-semibold">Contact</Link>
+                        <Link href="https://www.instagram.com/_cake_o_delight__/" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-primary text-foreground font-semibold">Contact</Link>
                     </SheetClose>
                 </nav>
             </SheetContent>

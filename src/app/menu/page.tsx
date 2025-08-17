@@ -312,13 +312,11 @@ const menuCategories = [
         src: "https://i.postimg.cc/YqVHzVbB/Whats-App-Image-2025-07-01-at-1.jpg",
         hint: "modak chocolates",
         referenceImages: [
-            "https://i.postimg.cc/k58vz3n3/Whats-App-Image-2025-06-23-at-8.jpg",
             "https://i.postimg.cc/YqVHzVbB/Whats-App-Image-2025-07-01-at-1.jpg",
             "https://i.postimg.cc/7L4yV1Hn/Whats-App-Image-2025-06-23-at-8.jpg",
             "https://i.postimg.cc/sX6dstpT/Whats-App-Image-2025-06-23-at-8.jpg",
             "https://i.postimg.cc/ZK1m9tXg/Whats-App-Image-2025-06-23-at-8.jpg",
-            "https://i.postimg.cc/wjLpL4pB/Whats-App-Image-2025-06-23-at-8.jpg",
-            "https://i.postimg.cc/Yq4kqqDY/Whats-App-Image-2025-06-23-at-8.jpg"
+            "https://i.postimg.cc/wjLpL4pB/Whats-App-Image-2025-06-23-at-8.jpg"
         ]
       },
     ],
